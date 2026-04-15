@@ -47,7 +47,6 @@
             font-weight: 500;
         }
 
-        /* Language selector */
         .lang-selector {
             display: flex;
             justify-content: flex-end;
@@ -163,11 +162,10 @@
         .full-title {
             text-align: center;
             margin: 1.5rem 0 2rem;
-            padding: 1.2rem;
+            padding: 1.5rem;
             background: #f5f0ff;
             border-radius: 24px;
             border: 1px solid #e2d9f0;
-            position: relative;
         }
 
         .full-title h3 {
@@ -177,15 +175,17 @@
             margin-bottom: 0.5rem;
         }
 
+        .full-title p {
+            margin-bottom: 1.5rem;
+        }
+
         .logo-ministry {
-            position: absolute;
-            right: 1.5rem;
-            top: 50%;
-            transform: translateY(-50%);
+            text-align: center;
+            margin-top: 0.5rem;
         }
 
         .logo-ministry img {
-            max-height: 80px;
+            max-height: 100px;
             width: auto;
         }
 
@@ -227,14 +227,8 @@
             .subsection {
                 padding: 1.2rem;
             }
-            .logo-ministry {
-                position: static;
-                transform: none;
-                text-align: center;
-                margin-top: 1rem;
-            }
-            .full-title {
-                padding-bottom: 1.5rem;
+            .logo-ministry img {
+                max-height: 70px;
             }
         }
     </style>
@@ -275,7 +269,6 @@
 </div>
 
 <div class="container">
-    <!-- HOME Section -->
     <div id="home" class="section active-section">
         <h2 id="home-title">HOME</h2>
 
@@ -309,7 +302,6 @@
         </div>
     </div>
 
-    <!-- TEAM Section -->
     <div id="team" class="section">
         <h2 id="team-title">TEAM</h2>
         <div class="team-grid">
@@ -319,7 +311,6 @@
         </div>
     </div>
 
-    <!-- PUBLICATIONS Section -->
     <div id="publications" class="section">
         <h2 id="pubs-title">PUBLICATIONS</h2>
         <div class="subsection"><h3 id="pubs-journal">Peer-reviewed articles</h3><p id="pubs-journal-text">[Add journal publications]</p></div>
@@ -327,7 +318,6 @@
         <div class="subsection"><h3 id="pubs-open">Open access & preprints</h3><p id="pubs-open-text">[Repositories, DOIs]</p></div>
     </div>
 
-    <!-- THESIS Section -->
     <div id="thesis" class="section">
         <h2 id="thesis-title">THESIS</h2>
         <div class="subsection"><h3 id="thesis-phd">Doctoral dissertations</h3><p id="thesis-phd-text">[PhD projects associated with PRODUCE]</p></div>
@@ -335,7 +325,6 @@
         <div class="subsection"><h3 id="thesis-predoctoral">Predoctoral contracts</h3><p id="thesis-predoctoral-text">[Funding and training programme]</p></div>
     </div>
 
-    <!-- EVENTS Section -->
     <div id="events" class="section">
         <h2 id="events-title">EVENTS</h2>
         <div class="subsection"><h3 id="events-congress">International Congresses</h3><p id="events-congress-text">3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.</p></div>
@@ -343,7 +332,6 @@
         <div class="subsection"><h3 id="events-conferences">Conference presentations</h3><p id="events-conferences-text">[ICA, IAMCR, ECREA, AE-IC]</p></div>
     </div>
 
-    <!-- PRESS Section -->
     <div id="press" class="section">
         <h2 id="press-title">PRESS</h2>
         <div class="subsection"><h3 id="press-media">Media coverage</h3><p id="press-media-text">[Interviews, articles, podcasts]</p></div>
@@ -351,7 +339,6 @@
         <div class="subsection"><h3 id="press-kit">Press kit</h3><p id="press-kit-text">[Downloadable resources]</p></div>
     </div>
 
-    <!-- CONTACT Section -->
     <div id="contact" class="section">
         <h2 id="contact-title">CONTACT</h2>
         <div class="contact-grid">
@@ -369,11 +356,10 @@
 </footer>
 
 <script>
-    // TRANSLATIONS
     const translations = {
         en: {
             subtitle: "Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact",
-            nav: { home: "HOME", team: "TEAM", publications: "PUBLICATIONS", thesis: "THESIS", events: "EVENTS", press: "PRESS", contact: "CONTACT" },
+            nav_home: "HOME", nav_team: "TEAM", nav_pubs: "PUBLICATIONS", nav_thesis: "THESIS", nav_events: "EVENTS", nav_press: "PRESS", nav_contact: "CONTACT",
             home_title: "HOME",
             full_title: "Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact",
             project_number: "\"PRODUCE\" (PID2024-160145NB-C21)",
@@ -433,7 +419,7 @@
         },
         ca: {
             subtitle: "Producció de continguts audiovisuals LGBTIQ+: Agents, contextos industrials, plataformes i expectatives d'impacte",
-            nav: { home: "INICI", team: "EQUIP", publications: "PUBLICACIONS", thesis: "TESIS", events: "ESDEVENIMENTS", press: "PREMSA", contact: "CONTACTE" },
+            nav_home: "INICI", nav_team: "EQUIP", nav_pubs: "PUBLICACIONS", nav_thesis: "TESIS", nav_events: "ESDEVENIMENTS", nav_press: "PREMSA", nav_contact: "CONTACTE",
             home_title: "INICI",
             full_title: "Producció de continguts audiovisuals LGBTIQ+: Agents, contextos industrials, plataformes i expectatives d'impacte",
             project_number: "\"PRODUCE\" (PID2024-160145NB-C21)",
@@ -493,7 +479,7 @@
         },
         es: {
             subtitle: "Producción de contenidos audiovisuales LGBTIQ+: Agentes, contextos industriales, plataformas y expectativas de impacto",
-            nav: { home: "INICIO", team: "EQUIPO", publications: "PUBLICACIONES", thesis: "TESIS", events: "EVENTOS", press: "PRENSA", contact: "CONTACTO" },
+            nav_home: "INICIO", nav_team: "EQUIPO", nav_pubs: "PUBLICACIONES", nav_thesis: "TESIS", nav_events: "EVENTOS", nav_press: "PRENSA", nav_contact: "CONTACTO",
             home_title: "INICIO",
             full_title: "Producción de contenidos audiovisuales LGBTIQ+: Agentes, contextos industriales, plataformas y expectativas de impacto",
             project_number: "\"PRODUCE\" (PID2024-160145NB-C21)",
@@ -549,4 +535,10 @@
             contact_project_email: "Correo electrónico: produce.project@[universidad].es",
             contact_address: "Dirección",
             contact_address_text: "Departamento de Comunicación Audiovisual y Publicidad<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (España)",
-            footer_text: "© 2026–2029 PRODUCE – Ministerio de Ciencia, Innovación y Universidades
+            footer_text: "© 2026–2029 PRODUCE – Ministerio de Ciencia, Innovación y Universidades. Todos los derechos reservados."
+        }
+    };
+
+    let currentLang = 'en';
+
+    function
