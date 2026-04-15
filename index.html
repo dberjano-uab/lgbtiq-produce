@@ -1,353 +1,348 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.65">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCE – Research Project on LGBTIQ+ Audiovisual Production</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f9fafc;
+            color: #1a1a2e;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e9eef3;
+            padding-bottom: 1.5rem;
+        }
+
+        .logo-area img {
+            max-height: 85px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .project-subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #4a5b6e;
+            margin-top: 0.75rem;
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            background: #ffffff;
+            border-bottom: 1px solid #e9eef3;
+            margin: 0 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(4px);
+            border-radius: 0 0 16px 16px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            padding: 0.8rem 0;
+            margin: 0;
+        }
+
+        .nav-links li button {
+            background: none;
+            border: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #2c3e50;
+            cursor: pointer;
+            transition: all 0.2s;
+            padding: 0.4rem 0;
+            font-family: inherit;
+        }
+
+        .nav-links li button:hover {
+            color: #9b4d96;
+        }
+
+        .nav-links li button.active {
+            color: #9b4d96;
+            border-bottom: 2px solid #c77dff;
+            padding-bottom: 0.2rem;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .section.active-section {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2b2d5c;
+            margin-bottom: 1.8rem;
+            letter-spacing: -0.3px;
+            border-left: 5px solid #c77dff;
+            padding-left: 1rem;
+        }
+
+        .subsection {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.8rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+            border: 1px solid #edeff5;
+        }
+
+        .subsection h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #5b3e8c;
+            margin-bottom: 1rem;
+        }
+
+        .full-title {
+            text-align: center;
+            margin: 1.5rem 0 2rem;
+            padding: 1.2rem;
+            background: #f5f0ff;
+            border-radius: 24px;
+            border: 1px solid #e2d9f0;
+        }
+
+        .full-title h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #3b2e5e;
+            margin-bottom: 0.5rem;
+        }
+
+        .logo-ministry {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .logo-ministry img {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .team-grid, .contact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .team-card, .contact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid #edeff5;
+        }
+
+        .team-card h3, .contact-card h3 {
+            font-size: 1.3rem;
+            color: #5b3e8c;
+            margin-bottom: 0.75rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0 1rem;
+            border-top: 1px solid #e9eef3;
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #5a6e85;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 1.2rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+            .subsection {
+                padding: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f9fafc;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #1a1a2e;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.5;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem 2rem 4rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.header {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid #e9eef3;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.logo-area img {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-height: 85px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.project-subtitle {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.85rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 1px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #4a5b6e;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 0.75rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-menu {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #e9eef3;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 0 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: sticky;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: 100;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.96);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(4px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0 0 16px 16px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-links {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0.8rem 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-links li button {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.95rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #2c3e50;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0.4rem 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: inherit;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-links li button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #9b4d96;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-links li button.active {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #9b4d96;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid #c77dff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 0.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.section {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: fadeIn 0.3s ease;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.section.active-section {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>@keyframes fadeIn {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>from { opacity: 0; transform: translateY(8px);}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>to { opacity: 1; transform: translateY(0);}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>h2 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #2b2d5c;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: -0.3px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid #c77dff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-left: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.subsection {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #edeff5;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.subsection h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #5b3e8c;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.full-title {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 1.5rem 0 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #f5f0ff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #e2d9f0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.full-title h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #3b2e5e;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.logo-ministry {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.logo-ministry img {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-height: 60px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: auto;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.team-grid, .contact-grid {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.team-card, .contact-card {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #edeff5;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.team-card h3, .contact-card h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.3rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #5b3e8c;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 0.75rem;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem 0 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-top: 1px solid #e9eef3;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 3rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #5a6e85;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 700px) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.nav-links {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>gap: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.subsection {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="container" style="padding-top: 0;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo-area"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/produceeee-1.jpg" alt="PRODUCE project logo" style="max-width:220px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="project-subtitle"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="nav-menu"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="nav-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;button class="nav-btn active" data-section="home"&gt;HOME&lt;/button&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;button class="nav-btn" data-section="team"&gt;TEAM&lt;/button&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;button class="nav-btn" data-section="publications"&gt;PUBLICATIONS&lt;/button&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;button class="nav-btn" data-section="thesis"&gt;THESIS&lt;/button&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;button class="nav-btn" data-section="events"&gt;EVENTS&lt;/button&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;button class="nav-btn" data-section="press"&gt;PRESS&lt;/button&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;&lt;button class="nav-btn" data-section="contact"&gt;CONTACT&lt;/button&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="home" class="section active-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;HOME&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="full-title"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;“PRODUCE” (PID2024-160145NB-C21)&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="logo-ministry"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/ministerio.jpg" alt="Spanish Ministry of Science"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;What is PRODUCE?&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Building on the legacy of the previous LGBTIQ+ Screens project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;What do we do?&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;PRODUCE is structured around two interconnected processes:&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ol&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;The investigation of the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;The identification of emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ol&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Expected Outcomes&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;About us&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;PRODUCE is a coordinated effort made possible by the active participation of &lt;strong&gt;X researchers&lt;/strong&gt; from &lt;strong&gt;Y universities and institutions&lt;/strong&gt; across &lt;strong&gt;Z countries&lt;/strong&gt;.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="team" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;TEAM&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="team-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team-card"&gt;&lt;h3&gt;Principal Investigators&lt;/h3&gt;&lt;p&gt;[Add names, affiliations, roles]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team-card"&gt;&lt;h3&gt;Research Staff&lt;/h3&gt;&lt;p&gt;[List of researchers and postdocs]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team-card"&gt;&lt;h3&gt;Collaborating Institutions&lt;/h3&gt;&lt;p&gt;[Universities / research centres]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="publications" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;PUBLICATIONS&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;Peer-reviewed articles&lt;/h3&gt;&lt;p&gt;[Add journal publications]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;Books and chapters&lt;/h3&gt;&lt;p&gt;[Add monographs, edited volumes]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;Open access &amp; preprints&lt;/h3&gt;&lt;p&gt;[Repositories, DOIs]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="thesis" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;THESIS&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;Doctoral dissertations&lt;/h3&gt;&lt;p&gt;[PhD projects associated with PRODUCE]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;Master’s theses&lt;/h3&gt;&lt;p&gt;[Supervised final projects]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;Predoctoral contracts&lt;/h3&gt;&lt;p&gt;[Funding and training programme]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="events" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;EVENTS&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;International Congresses&lt;/h3&gt;&lt;p&gt;3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;Workshops &amp; Training&lt;/h3&gt;&lt;p&gt;[Courses for audiovisual communication students]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;Conference presentations&lt;/h3&gt;&lt;p&gt;[ICA, IAMCR, ECREA, AE-IC]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="press" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;PRESS&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;Media coverage&lt;/h3&gt;&lt;p&gt;[Interviews, articles, podcasts]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;Outreach activities&lt;/h3&gt;&lt;p&gt;[#científicas, 11F, institutional newsletters]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subsection"&gt;&lt;h3&gt;Press kit&lt;/h3&gt;&lt;p&gt;[Downloadable resources]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="contact" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;CONTACT&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="contact-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="contact-card"&gt;&lt;h3&gt;Principal Investigator&lt;/h3&gt;&lt;p&gt;Dr. María Teresa Soto Sanfel&lt;/p&gt;&lt;p&gt;Email: [your email]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="contact-card"&gt;&lt;h3&gt;Project management&lt;/h3&gt;&lt;p&gt;Email: produce.project@[university].es&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="contact-card"&gt;&lt;h3&gt;Address&lt;/h3&gt;&lt;p&gt;Department of Audiovisual Communication and Advertising&lt;br&gt;Universitat Autònoma de Barcelona&lt;br&gt;Bellaterra, Barcelona (Spain)&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const sections = document.querySelectorAll('.section');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const navBtns = document.querySelectorAll('.nav-btn');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function switchSection(sectionId) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>sections.forEach(section =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>section.classList.remove('active-section');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const activeSection = document.getElementById(sectionId);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if (activeSection) activeSection.classList.add('active-section');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>navBtns.forEach(btn =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>btn.classList.remove('active');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (btn.getAttribute('data-section') === sectionId) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>btn.classList.add('active');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>navBtns.forEach(btn =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>btn.addEventListener('click', (e) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const sectionId = btn.getAttribute('data-section');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>switchSection(sectionId);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1">&lt;/script&gt;</p>
+
+<div class="container" style="padding-top: 0;">
+    <div class="header">
+        <div class="logo-area">
+            <img src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/produceeee-1.jpg" alt="PRODUCE project logo" style="max-width:220px;">
+        </div>
+        <div class="project-subtitle">
+            Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact
+        </div>
+    </div>
+</div>
+
+<div class="nav-menu">
+    <div class="container">
+        <ul class="nav-links">
+            <li><button class="nav-btn active" data-section="home">HOME</button></li>
+            <li><button class="nav-btn" data-section="team">TEAM</button></li>
+            <li><button class="nav-btn" data-section="publications">PUBLICATIONS</button></li>
+            <li><button class="nav-btn" data-section="thesis">THESIS</button></li>
+            <li><button class="nav-btn" data-section="events">EVENTS</button></li>
+            <li><button class="nav-btn" data-section="press">PRESS</button></li>
+            <li><button class="nav-btn" data-section="contact">CONTACT</button></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div id="home" class="section active-section">
+        <h2>HOME</h2>
+
+        <div class="full-title">
+            <h3>Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact</h3>
+            <p><strong>"PRODUCE" (PID2024-160145NB-C21)</strong></p>
+            <div class="logo-ministry">
+                <img src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/ministerio.jpg" alt="Spanish Ministry of Science">
+            </div>
+        </div>
+
+        <div class="subsection">
+            <h3>What is PRODUCE?</h3>
+            <p>Building on the legacy of the previous LGBTIQ+ Screens project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.</p>
+        </div>
+
+        <div class="subsection">
+            <h3>What do we do?</h3>
+            <p>PRODUCE is structured around two interconnected processes:</p>
+            <ol>
+                <li>The investigation of the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations.</li>
+                <li>The identification of emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.</li>
+            </ol>
+        </div>
+
+        <div class="subsection">
+            <h3>Expected Outcomes</h3>
+            <p>PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.</p>
+        </div>
+
+        <div class="subsection">
+            <h3>About us</h3>
+            <p>PRODUCE is a coordinated effort made possible by the active participation of <strong>X researchers</strong> from <strong>Y universities and institutions</strong> across <strong>Z countries</strong>.</p>
+            <p>The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.</p>
+        </div>
+    </div>
+
+    <div id="team" class="section">
+        <h2>TEAM</h2>
+        <div class="team-grid">
+            <div class="team-card"><h3>Principal Investigators</h3><p>[Add names, affiliations, roles]</p></div>
+            <div class="team-card"><h3>Research Staff</h3><p>[List of researchers and postdocs]</p></div>
+            <div class="team-card"><h3>Collaborating Institutions</h3><p>[Universities / research centres]</p></div>
+        </div>
+    </div>
+
+    <div id="publications" class="section">
+        <h2>PUBLICATIONS</h2>
+        <div class="subsection"><h3>Peer-reviewed articles</h3><p>[Add journal publications]</p></div>
+        <div class="subsection"><h3>Books and chapters</h3><p>[Add monographs, edited volumes]</p></div>
+        <div class="subsection"><h3>Open access & preprints</h3><p>[Repositories, DOIs]</p></div>
+    </div>
+
+    <div id="thesis" class="section">
+        <h2>THESIS</h2>
+        <div class="subsection"><h3>Doctoral dissertations</h3><p>[PhD projects associated with PRODUCE]</p></div>
+        <div class="subsection"><h3>Master's theses</h3><p>[Supervised final projects]</p></div>
+        <div class="subsection"><h3>Predoctoral contracts</h3><p>[Funding and training programme]</p></div>
+    </div>
+
+    <div id="events" class="section">
+        <h2>EVENTS</h2>
+        <div class="subsection"><h3>International Congresses</h3><p>3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.</p></div>
+        <div class="subsection"><h3>Workshops & Training</h3><p>[Courses for audiovisual communication students]</p></div>
+        <div class="subsection"><h3>Conference presentations</h3><p>[ICA, IAMCR, ECREA, AE-IC]</p></div>
+    </div>
+
+    <div id="press" class="section">
+        <h2>PRESS</h2>
+        <div class="subsection"><h3>Media coverage</h3><p>[Interviews, articles, podcasts]</p></div>
+        <div class="subsection"><h3>Outreach activities</h3><p>[#científicas, 11F, institutional newsletters]</p></div>
+        <div class="subsection"><h3>Press kit</h3><p>[Downloadable resources]</p></div>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>CONTACT</h2>
+        <div class="contact-grid">
+            <div class="contact-card"><h3>Principal Investigator</h3><p>Dr. María Teresa Soto Sanfel</p><p>Email: [your email]</p></div>
+            <div class="contact-card"><h3>Project management</h3><p>Email: produce.project@[university].es</p></div>
+            <div class="contact-card"><h3>Address</h3><p>Department of Audiovisual Communication and Advertising<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Spain)</p></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const sections = document.querySelectorAll('.section');
+    const navBtns = document.querySelectorAll('.nav-btn');
+
+    function switchSection(sectionId) {
+        sections.forEach(section => {
+            section.classList.remove('active-section');
+        });
+        const activeSection = document.getElementById(sectionId);
+        if (activeSection) activeSection.classList.add('active-section');
+
+        navBtns.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-section') === sectionId) {
+                btn.classList.add('active');
+            }
+        });
+    }
+
+    navBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const sectionId = btn.getAttribute('data-section');
+            switchSection(sectionId);
+        });
+    });
+</script>
+
 </body>
 </html>
