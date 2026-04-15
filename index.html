@@ -172,12 +172,14 @@
       margin-bottom: 1.2rem;
     }
     .card h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.15rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
       color: var(--purple);
       margin-bottom: 0.7rem;
-    }
-    .card p { color: #374151; font-size: 0.95rem; }
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }    .card p { color: #374151; font-size: 0.95rem; }
 
     /* ── TEAM / CONTACT GRID ── */
     .item-card {
@@ -282,12 +284,13 @@
   </section>
 
   <!-- TEAM -->
-  <section id="team" class="section">
-    <h2 id="team-heading">TEAM</h2>
-    <div class="item-card"><h4 id="team-pi">Principal Investigators</h4><p id="team-pi-text">[Add names, affiliations, roles]</p></div>
-    <div class="item-card"><h4 id="team-staff">Research Staff</h4><p id="team-staff-text">[List of researchers and postdocs]</p></div>
-    <div class="item-card"><h4 id="team-collab">Collaborating Institutions</h4><p id="team-collab-text">[Universities / research centres]</p></div>
-  </section>
+<section id="team" class="section">
+  <h2 id="team-heading">TEAM</h2>
+  <div class="item-card">
+    <h4 id="team-members">Members</h4>
+    <p id="team-members-text">[Add team members]</p>
+  </div>
+</section>
 
   <!-- PUBLICATIONS -->
   <section id="publications" class="section">
@@ -366,9 +369,9 @@ const T = {
     aboutTitle: "About us",
     aboutText: "PRODUCE is a coordinated effort made possible by the active participation of <strong>X researchers</strong> from <strong>Y universities and institutions</strong> across <strong>Z countries</strong>.",
     aboutText2: "The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.",
-    teamHeading: "TEAM", teamPi: "Principal Investigators", teamPiText: "[Add names, affiliations, roles]",
-    teamStaff: "Research Staff", teamStaffText: "[List of researchers and postdocs]",
-    teamCollab: "Collaborating Institutions", teamCollabText: "[Universities / research centres]",
+    teamHeading: "TEAM", teamPi: "Principal Investigators", teamPiText: "[Add names, affiliations, roles]", teamHeading: "TEAM",
+    teamMembers: "Members",
+    teamMembersText: "[Add team members]",
     pubsHeading: "PUBLICATIONS", pubsJournal: "Peer-reviewed articles", pubsJournalText: "[Add journal publications]",
     pubsBooks: "Books and chapters", pubsBooksText: "[Add monographs, edited volumes]",
     pubsOpen: "Open access & preprints", pubsOpenText: "[Repositories, DOIs]",
@@ -397,15 +400,15 @@ const T = {
     whatTitle: "Què és PRODUCE?",
     whatText: "Partint del llegat de l'anterior projecte LGBTIQ+ Screens, PRODUCE és un projecte d'investigació finançat pel Ministeri de Ciència, Innovació i Universitats espanyol que va més enllà de l'estudi de la representació per explorar el veritable motor del contingut audiovisual: els creadors i els contextos de producció. Entre 2026 i 2029, aquest projecte investigarà com es produeix a Espanya el contingut audiovisual sobre persones LGBTIQ+ en un ric ecosistema de mitjans culturals – des del cinema i la televisió fins a les xarxes socials, la creació independent i l'activisme. PRODUCE busca comprendre com les dinàmiques de producció configuren no només el contingut LGBTIQ+, sinó també les realitats de qui el crea, i finalment com aquest contingut pot reduir prejudicis i fomentar una societat més inclusiva.",
     whatdoTitle: "Què fem?",
-    whatdoText: "PRODUCE investiga les dinàmiques de producció de contingut LGBTIQ+, entenent com els contextos de producció i variables interseccionals com l'edat, el gènere, l'ètnia i la classe de professionals, aficionats, activistes i creadors en línia influeixen en les rutines productives, els processos creatius, el valor professional percebut, el benestar i les representacions LGBTIQ+ resultants. També identificarem rols emergents (és a dir, consultors d'autenticitat LGBTIQ+ i coordinadors d'intimitat), oportunitats i tensions en la indústria, estudiant com les estructures mediàtiques actuals i les noves pràctiques culturals afecten l'autoestima creativa, l'agència i el potencial de reducció de prejudicis LGBTIQ+.",
+    whatdoText: "PRODUCE investiga les dinàmiques de producció de contingut LGBTIQ+, entenent com els contextos de producció i variables interseccionals com l'edat, el gènere, l'ètnia i la classe de professionals, aficionats, activistes i creadors en línia influeixen en les rutines productives, els processos creatius, el valor professional percebut, el benestar i les representacions LGBTIQ+ resultants. També identificarem rols emergents (per example, consultors d'autenticitat LGBTIQ+ i coordinadors d'intimitat), oportunitats i tensions en la indústria, estudiant com les estructures mediàtiques actuals i les noves pràctiques culturals afecten l'autoestima creativa, l'agència i el potencial de reducció de prejudicis LGBTIQ+.",
     outcomesTitle: "Resultats Esperats",
     outcomesText: "PRODUCE té com a objectiu cartografiar com les dinàmiques de producció configuren el contingut audiovisual LGBTIQ+ a l'Estat espanyol. La nostra investigació es difondrà mitjançant publicacions revisades per parells, cursos de formació per a l'educació universitària, manuals de bones pràctiques per a la indústria audiovisual i dos congressos internacionals sobre mitjans, gènere i sexualitat.",
     aboutTitle: "Sobre nosaltres",
     aboutText: "PRODUCE és un esforç coordinat possible gràcies a la participació activa de <strong>X investigadores</strong> de <strong>Y universitats i institucions</strong> a <strong>Z països</strong>.",
     aboutText2: "El projecte està liderat per la Universitat Autònoma de Barcelona, en col·laboració amb socis internacionals.",
-    teamHeading: "EQUIP", teamPi: "Investigadors principals", teamPiText: "[Afegeix noms, afiliacions, rols]",
-    teamStaff: "Personal investigador", teamStaffText: "[Llista d'investigadors i postdoctorands]",
-    teamCollab: "Institucions col·laboradores", teamCollabText: "[Universitats / centres de recerca]",
+    teamHeading: "EQUIP",
+    teamMembers: "Membres",
+    teamMembersText: "[Afegeix membres de l'equip]",
     pubsHeading: "PUBLICACIONS", pubsJournal: "Articles revisats per parells", pubsJournalText: "[Afegeix publicacions en revistes]",
     pubsBooks: "Llibres i capítols", pubsBooksText: "[Monografies, volums editats]",
     pubsOpen: "Accés obert i preprints", pubsOpenText: "[Repositoris, DOIs]",
@@ -434,15 +437,15 @@ const T = {
     whatTitle: "¿Qué es PRODUCE?",
     whatText: "Partiendo del legado del anterior proyecto LGBTIQ+ Screens, PRODUCE es un proyecto de investigación financiado por el Ministerio de Ciencia, Innovación y Universidades español que va más allá del estudio de la representación para explorar el verdadero motor del contenido audiovisual: los creadores y los contextos de producción. Entre 2026 y 2029, este proyecto investigará cómo se produce en España el contenido audiovisual sobre personas LGBTIQ+ en un rico ecosistema de medios culturales – desde el cine y la televisión hasta las redes sociales, la creación independiente y el activismo. PRODUCE busca comprender cómo las dinámicas de producción configuran no solo el contenido LGBTIQ+, sino también las realidades de quienes lo crean, y finalmente cómo dicho contenido puede reducir prejuicios y fomentar una sociedad más inclusiva.",
     whatdoTitle: "¿Qué hacemos?",
-    whatdoText: "PRODUCE investiga las dinámicas de producción de contenido LGBTIQ+, entendiendo cómo los contextos de producción y variables interseccionales como la edad, el género, la etnia y la clase de profesionales, aficionados, activistas y creadores en línea influyen en las rutinas productivas, los procesos creativos, el valor profesional percibido, el bienestar y las representaciones LGBTIQ+ resultantes. También identificaremos roles emergentes (es decir, consultores de autenticidad LGBTIQ+ y coordinadores de intimidad), oportunidades y tensiones en la industria, estudiando cómo las estructuras mediáticas actuales y las nuevas prácticas culturales afectan la autoestima creativa, la agencia y el potencial de reducción de prejuicios LGBTIQ+.",
+    whatdoText: "PRODUCE investiga las dinámicas de producción de contenido LGBTIQ+, entendiendo cómo los contextos de producción y variables interseccionales como la edad, el género, la etnia y la clase de profesionales, aficionados, activistas y creadores en línea influyen en las rutinas productivas, los procesos creativos, el valor profesional percibido, el bienestar y las representaciones LGBTIQ+ resultantes. También identificaremos roles emergentes (por ejemplo, consultores de autenticidad LGBTIQ+ y coordinadores de intimidad), oportunidades y tensiones en la industria, estudiando cómo las estructuras mediáticas actuales y las nuevas prácticas culturales afectan la autoestima creativa, la agencia y el potencial de reducción de prejuicios LGBTIQ+.",
     outcomesTitle: "Resultados Esperados",
     outcomesText: "PRODUCE tiene como objetivo cartografiar cómo las dinámicas de producción configuran el contenido audiovisual LGBTIQ+ en el Estado español. Nuestra investigación se difundirá a través de publicaciones revisadas por pares, cursos de formación para la educación universitaria, manuales de buenas prácticas para la industria audiovisual y dos congresos internacionales sobre medios, género y sexualidad.",
     aboutTitle: "Sobre nosotros",
     aboutText: "PRODUCE es un esfuerzo coordinado posible gracias a la participación activa de <strong>X investigadores</strong> de <strong>Y universidades e instituciones</strong> en <strong>Z países</strong>.",
     aboutText2: "El proyecto está liderado por la Universitat Autònoma de Barcelona, en colaboración con socios internacionales.",
-    teamHeading: "EQUIPO", teamPi: "Investigadores principales", teamPiText: "[Añade nombres, afiliaciones, roles]",
-    teamStaff: "Personal investigador", teamStaffText: "[Lista de investigadores y postdoctorandos]",
-    teamCollab: "Instituciones colaboradoras", teamCollabText: "[Universidades / centros de investigación]",
+    teamHeading: "EQUIPO",
+    teamMembers: "Miembros",
+    teamMembersText: "[Añade miembros del equipo]",
     pubsHeading: "PUBLICACIONES", pubsJournal: "Artículos revisados por pares", pubsJournalText: "[Añade publicaciones en revistas]",
     pubsBooks: "Libros y capítulos", pubsBooksText: "[Monografías, volúmenes editados]",
     pubsOpen: "Acceso abierto y preprints", pubsOpenText: "[Repositorios, DOIs]",
@@ -504,13 +507,8 @@ function setLang(lang) {
   set('about-text', t.aboutText, true);
   set('about-text2', t.aboutText2);
 
-  set('team-heading', t.teamHeading);
-  set('team-pi', t.teamPi);
-  set('team-pi-text', t.teamPiText);
-  set('team-staff', t.teamStaff);
-  set('team-staff-text', t.teamStaffText);
-  set('team-collab', t.teamCollab);
-  set('team-collab-text', t.teamCollabText);
+  set('team-members', t.teamMembers);
+  set('team-members-text', t.teamMembersText);
 
   set('pubs-heading', t.pubsHeading);
   set('pubs-journal', t.pubsJournal);
