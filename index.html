@@ -1,575 +1,559 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.65">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRODUCE – Research Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+    :root {
+      --purple: #7c3aed;
+      --purple-light: #ede9fe;
+      --purple-mid: #a78bfa;
+      --dark: #1e1b4b;
+      --mid: #4c4a7a;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #f9f8ff;
+      --white: #ffffff;
+      --radius: 16px;
+    }
+ 
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.65;
+    }
+ 
+    /* ── TOP STRIP ── */
+    .top-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.4rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.4rem;
+    }
+    .lang-btn {
+      background: none;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      transition: all 0.15s;
+      letter-spacing: 0.05em;
+    }
+    .lang-btn:hover { color: var(--purple); background: var(--purple-light); }
+    .lang-btn.active { color: var(--purple); background: var(--purple-light); }
+ 
+    /* ── HEADER ── */
+    header {
+      background: var(--white);
+      border-bottom: 2px solid var(--border);
+      padding: 1.5rem 2rem 1.2rem;
+      text-align: center;
+    }
+    header img.logo {
+      max-height: 90px;
+      width: auto;
+      display: block;
+      margin: 0 auto 0.8rem;
+    }
+    .subtitle {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+ 
+    /* ── NAV ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    .nav-btn {
+      background: none;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--mid);
+      cursor: pointer;
+      padding: 1rem 1.2rem;
+      letter-spacing: 0.06em;
+      border-bottom: 3px solid transparent;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .nav-btn:hover { color: var(--purple); }
+    .nav-btn.active { color: var(--purple); border-bottom-color: var(--purple); }
+ 
+    /* ── MAIN ── */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 4rem;
+    }
+ 
+    /* ── SECTIONS ── */
+    .section { display: none; }
+    .section.active { display: block; }
+ 
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      color: var(--dark);
+      border-left: 4px solid var(--purple);
+      padding-left: 1rem;
+      margin-bottom: 1.8rem;
+    }
+ 
+    /* ── TITLE BOX ── */
+    .title-box {
+      background: var(--purple-light);
+      border: 1px solid #ddd6fe;
+      border-radius: var(--radius);
+      padding: 1.5rem 1.8rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .title-box-text { flex: 1; }
+    .title-box-text h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--dark);
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+    .title-box-text p {
+      font-weight: 600;
+      color: var(--purple);
+      font-size: 0.95rem;
+    }
+    .ministry-logo {
+      flex-shrink: 0;
+      display: flex;
+      align-items: flex-end;
+      padding-top: 0.2rem;
+    }
+    .ministry-logo img {
+      max-height: 80px;
+      width: auto;
+    }
+ 
+    /* ── CARDS ── */
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--purple);
+      margin-bottom: 0.7rem;
+    }
+    .card p { color: #374151; font-size: 0.95rem; }
+ 
+    /* ── TEAM / CONTACT GRID ── */
+    .item-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .item-card h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--purple);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+    .item-card p { color: #374151; font-size: 0.93rem; }
+ 
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+ 
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .title-box { flex-direction: column; }
+      .ministry-logo { align-self: flex-start; }
+      .nav-btn { padding: 0.8rem 0.7rem; font-size: 0.75rem; }
+      main { padding: 1.5rem 1rem 3rem; }
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;PRODUCE – Research Project&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--purple: #7c3aed;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--purple-light: #ede9fe;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--purple-mid: #a78bfa;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--dark: #1e1b4b;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--mid: #4c4a7a;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--muted: #6b7280;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--border: #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg: #f9f8ff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--white: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--radius: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'DM Sans', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--dark);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.65;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ── TOP STRIP ── */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.top-strip {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--white);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.4rem 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: flex-end;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 0.4rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.lang-btn {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'DM Sans', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.3rem 0.6rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: all 0.15s;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.05em;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.lang-btn:hover { color: var(--purple); background: var(--purple-light); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.lang-btn.active { color: var(--purple); background: var(--purple-light); }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ── HEADER ── */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--white);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 2px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.5rem 2rem 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header img.logo {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-height: 90px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto 0.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.subtitle {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.72rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.12em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ── NAV ── */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>nav {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--white);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: sticky;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>z-index: 100;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-inner {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1100px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-btn {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'DM Sans', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.82rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--mid);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.06em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 3px solid transparent;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: all 0.15s;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>white-space: nowrap;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-btn:hover { color: var(--purple); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-btn.active { color: var(--purple); border-bottom-color: var(--purple); }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ── MAIN ── */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>main {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1100px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 2.5rem 2rem 4rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ── SECTIONS ── */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section { display: none; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section.active { display: block; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>h2 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'DM Serif Display', serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--dark);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-left: 4px solid var(--purple);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding-left: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ── TITLE BOX ── */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.title-box {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--purple-light);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ddd6fe;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.5rem 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: flex-start;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.title-box-text { flex: 1; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.title-box-text h3 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'DM Serif Display', serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--dark);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.4;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.title-box-text p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--purple);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.ministry-logo {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-shrink: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: flex-end;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding-top: 0.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.ministry-logo img {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-height: 80px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ── CARDS ── */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--white);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.5rem 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card h3 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'DM Serif Display', serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.15rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--purple);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.7rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card p { color: #374151; font-size: 0.95rem; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ── TEAM / CONTACT GRID ── */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.item-card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--white);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.2rem 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.item-card h4 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--purple);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.06em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.item-card p { color: #374151; font-size: 0.93rem; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ── FOOTER ── */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.75rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ── RESPONSIVE ── */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 640px) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.title-box { flex-direction: column; }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.ministry-logo { align-self: flex-start; }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.nav-btn { padding: 0.8rem 0.7rem; font-size: 0.75rem; }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>main { padding: 1.5rem 1rem 3rem; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Language selector --&gt;</p>
-<p class="p1">&lt;div class="top-strip"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="lang-btn active" onclick="setLang('en')"&gt;EN&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="lang-btn" onclick="setLang('ca')"&gt;CA&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="lang-btn" onclick="setLang('es')"&gt;ES&lt;/button&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Header --&gt;</p>
-<p class="p1">&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;img class="logo" src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/produceeee-1.jpg" alt="PRODUCE logo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="subtitle" id="subtitle-text"&gt;Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact&lt;/p&gt;</p>
-<p class="p1">&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Navigation --&gt;</p>
-<p class="p1">&lt;nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-inner"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="nav-btn active" onclick="showSection('home')" id="nav-home"&gt;HOME&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="nav-btn" onclick="showSection('team')" id="nav-team"&gt;TEAM&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="nav-btn" onclick="showSection('publications')" id="nav-publications"&gt;PUBLICATIONS&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="nav-btn" onclick="showSection('thesis')" id="nav-thesis"&gt;THESIS&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="nav-btn" onclick="showSection('events')" id="nav-events"&gt;EVENTS&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="nav-btn" onclick="showSection('press')" id="nav-press"&gt;PRESS&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="nav-btn" onclick="showSection('contact')" id="nav-contact"&gt;CONTACT&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- HOME --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="home" class="section active"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 id="home-heading"&gt;HOME&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="title-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="title-box-text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3 id="full-title"&gt;Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p id="project-code"&gt;"PRODUCE" (PID2024-160145NB-C21)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ministry-logo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/ministerio.jpg" alt="Ministry of Science"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3 id="what-title"&gt;What is PRODUCE?&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="what-text"&gt;Building on the legacy of the previous LGBTIQ+ Screens project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3 id="whatdo-title"&gt;What do we do?&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="whatdo-text"&gt;PRODUCE investigates the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations. We will also identify emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3 id="outcomes-title"&gt;Expected Outcomes&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="outcomes-text"&gt;PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3 id="about-title"&gt;About us&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="about-text"&gt;PRODUCE is a coordinated effort made possible by the active participation of &lt;strong&gt;X researchers&lt;/strong&gt; from &lt;strong&gt;Y universities and institutions&lt;/strong&gt; across &lt;strong&gt;Z countries&lt;/strong&gt;.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="about-text2" style="margin-top:0.5rem;"&gt;The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- TEAM --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="team" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 id="team-heading"&gt;TEAM&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="item-card"&gt;&lt;h4 id="team-pi"&gt;Principal Investigators&lt;/h4&gt;&lt;p id="team-pi-text"&gt;[Add names, affiliations, roles]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="item-card"&gt;&lt;h4 id="team-staff"&gt;Research Staff&lt;/h4&gt;&lt;p id="team-staff-text"&gt;[List of researchers and postdocs]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="item-card"&gt;&lt;h4 id="team-collab"&gt;Collaborating Institutions&lt;/h4&gt;&lt;p id="team-collab-text"&gt;[Universities / research centres]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- PUBLICATIONS --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="publications" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 id="pubs-heading"&gt;PUBLICATIONS&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="pubs-journal"&gt;Peer-reviewed articles&lt;/h3&gt;&lt;p id="pubs-journal-text"&gt;[Add journal publications]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="pubs-books"&gt;Books and chapters&lt;/h3&gt;&lt;p id="pubs-books-text"&gt;[Add monographs, edited volumes]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="pubs-open"&gt;Open access &amp;amp; preprints&lt;/h3&gt;&lt;p id="pubs-open-text"&gt;[Repositories, DOIs]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- THESIS --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="thesis" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 id="thesis-heading"&gt;THESIS&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="thesis-phd"&gt;Doctoral dissertations&lt;/h3&gt;&lt;p id="thesis-phd-text"&gt;[PhD projects associated with PRODUCE]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="thesis-master"&gt;Master's theses&lt;/h3&gt;&lt;p id="thesis-master-text"&gt;[Supervised final projects]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="thesis-predoc"&gt;Predoctoral contracts&lt;/h3&gt;&lt;p id="thesis-predoc-text"&gt;[Funding and training programme]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- EVENTS --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="events" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 id="events-heading"&gt;EVENTS&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="events-congress"&gt;International Congresses&lt;/h3&gt;&lt;p id="events-congress-text"&gt;3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="events-workshops"&gt;Workshops &amp;amp; Training&lt;/h3&gt;&lt;p id="events-workshops-text"&gt;[Courses for audiovisual communication students]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="events-conf"&gt;Conference presentations&lt;/h3&gt;&lt;p id="events-conf-text"&gt;[ICA, IAMCR, ECREA, AE-IC]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- PRESS --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="press" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 id="press-heading"&gt;PRESS&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="press-media"&gt;Media coverage&lt;/h3&gt;&lt;p id="press-media-text"&gt;[Interviews, articles, podcasts]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="press-outreach"&gt;Outreach activities&lt;/h3&gt;&lt;p id="press-outreach-text"&gt;[#científicas, 11F, institutional newsletters]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;&lt;h3 id="press-kit"&gt;Press kit&lt;/h3&gt;&lt;p id="press-kit-text"&gt;[Downloadable resources]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- CONTACT --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="contact" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 id="contact-heading"&gt;CONTACT&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="item-card"&gt;&lt;h4 id="contact-pi"&gt;Principal Investigator&lt;/h4&gt;&lt;p id="contact-pi-name"&gt;Dr. María Teresa Soto Sanfel&lt;/p&gt;&lt;p id="contact-pi-email"&gt;Email: [your email]&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="item-card"&gt;&lt;h4 id="contact-project"&gt;Project management&lt;/h4&gt;&lt;p id="contact-project-email"&gt;Email: produce.project@[university].es&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="item-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h4 id="contact-address"&gt;Address&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="contact-address-text"&gt;Department of Audiovisual Communication and Advertising&lt;br&gt;Universitat Autònoma de Barcelona&lt;br&gt;Bellaterra, Barcelona (Spain)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p id="footer-text"&gt;© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved.&lt;/p&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1">// ── SECTION SWITCHING ──</p>
-<p class="p1">function showSection(id) {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.section').forEach(s =&gt; s.classList.remove('active'));</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.nav-btn').forEach(b =&gt; b.classList.remove('active'));</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById(id).classList.add('active');</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('nav-' + id).classList.add('active');</p>
-<p class="p1"><span class="Apple-converted-space">  </span>window.scrollTo({ top: 0, behavior: 'smooth' });</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">// ── TRANSLATIONS ──</p>
-<p class="p1">const T = {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>en: {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>subtitle: "Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>navHome: "HOME", navTeam: "TEAM", navPubs: "PUBLICATIONS", navThesis: "THESIS",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>navEvents: "EVENTS", navPress: "PRESS", navContact: "CONTACT",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>homeHeading: "HOME",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>fullTitle: "Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>projectCode: '"PRODUCE" (PID2024-160145NB-C21)',</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatTitle: "What is PRODUCE?",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatText: "Building on the legacy of the previous LGBTIQ+ Screens project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatdoTitle: "What do we do?",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatdoText: "PRODUCE investigates the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations. We will also identify emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>outcomesTitle: "Expected Outcomes",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>outcomesText: "PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>aboutTitle: "About us",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>aboutText: "PRODUCE is a coordinated effort made possible by the active participation of &lt;strong&gt;X researchers&lt;/strong&gt; from &lt;strong&gt;Y universities and institutions&lt;/strong&gt; across &lt;strong&gt;Z countries&lt;/strong&gt;.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>aboutText2: "The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>teamHeading: "TEAM", teamPi: "Principal Investigators", teamPiText: "[Add names, affiliations, roles]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>teamStaff: "Research Staff", teamStaffText: "[List of researchers and postdocs]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>teamCollab: "Collaborating Institutions", teamCollabText: "[Universities / research centres]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pubsHeading: "PUBLICATIONS", pubsJournal: "Peer-reviewed articles", pubsJournalText: "[Add journal publications]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pubsBooks: "Books and chapters", pubsBooksText: "[Add monographs, edited volumes]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pubsOpen: "Open access &amp; preprints", pubsOpenText: "[Repositories, DOIs]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>thesisHeading: "THESIS", thesisPhd: "Doctoral dissertations", thesisPhdText: "[PhD projects associated with PRODUCE]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>thesisMaster: "Master's theses", thesisMasterText: "[Supervised final projects]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>thesisPredoc: "Predoctoral contracts", thesisPredocText: "[Funding and training programme]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>eventsHeading: "EVENTS", eventsCongress: "International Congresses", eventsCongressText: "3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>eventsWorkshops: "Workshops &amp; Training", eventsWorkshopsText: "[Courses for audiovisual communication students]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>eventsConf: "Conference presentations", eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pressHeading: "PRESS", pressMedia: "Media coverage", pressMediaText: "[Interviews, articles, podcasts]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pressOutreach: "Outreach activities", pressOutreachText: "[#científicas, 11F, institutional newsletters]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pressKit: "Press kit", pressKitText: "[Downloadable resources]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactHeading: "CONTACT", contactPi: "Principal Investigator", contactPiName: "Dr. María Teresa Soto Sanfel",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactPiEmail: "Email: [your email]", contactProject: "Project management",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactProjectEmail: "Email: produce.project@[university].es", contactAddress: "Address",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactAddressText: "Department of Audiovisual Communication and Advertising&lt;br&gt;Universitat Autònoma de Barcelona&lt;br&gt;Bellaterra, Barcelona (Spain)",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer: "© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved."</p>
-<p class="p1"><span class="Apple-converted-space">  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">  </span>ca: {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>subtitle: "Producció de continguts audiovisuals LGBTIQ+: Agents, contextos industrials, plataformes i expectatives d'impacte",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>navHome: "INICI", navTeam: "EQUIP", navPubs: "PUBLICACIONS", navThesis: "TESIS",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>navEvents: "ESDEVENIMENTS", navPress: "PREMSA", navContact: "CONTACTE",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>homeHeading: "INICI",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>fullTitle: "Producció de continguts audiovisuals LGBTIQ+: Agents, contextos industrials, plataformes i expectatives d'impacte",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>projectCode: '"PRODUCE" (PID2024-160145NB-C21)',</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatTitle: "Què és PRODUCE?",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatText: "Partint del llegat de l'anterior projecte LGBTIQ+ Screens, PRODUCE és un projecte d'investigació finançat pel Ministeri de Ciència, Innovació i Universitats espanyol que va més enllà de l'estudi de la representació per explorar el veritable motor del contingut audiovisual: els creadors i els contextos de producció. Entre 2026 i 2029, aquest projecte investigarà com es produeix a Espanya el contingut audiovisual sobre persones LGBTIQ+ en un ric ecosistema de mitjans culturals – des del cinema i la televisió fins a les xarxes socials, la creació independent i l'activisme. PRODUCE busca comprendre com les dinàmiques de producció configuren no només el contingut LGBTIQ+, sinó també les realitats de qui el crea, i finalment com aquest contingut pot reduir prejudicis i fomentar una societat més inclusiva.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatdoTitle: "Què fem?",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatdoText: "PRODUCE investiga les dinàmiques de producció de contingut LGBTIQ+, entenent com els contextos de producció i variables interseccionals com l'edat, el gènere, l'ètnia i la classe de professionals, aficionats, activistes i creadors en línia influeixen en les rutines productives, els processos creatius, el valor professional percebut, el benestar i les representacions LGBTIQ+ resultants. També identificarem rols emergents (és a dir, consultors d'autenticitat LGBTIQ+ i coordinadors d'intimitat), oportunitats i tensions en la indústria, estudiant com les estructures mediàtiques actuals i les noves pràctiques culturals afecten l'autoestima creativa, l'agència i el potencial de reducció de prejudicis LGBTIQ+.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>outcomesTitle: "Resultats Esperats",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>outcomesText: "PRODUCE té com a objectiu cartografiar com les dinàmiques de producció configuren el contingut audiovisual LGBTIQ+ a l'Estat espanyol. La nostra investigació es difondrà mitjançant publicacions revisades per parells, cursos de formació per a l'educació universitària, manuals de bones pràctiques per a la indústria audiovisual i dos congressos internacionals sobre mitjans, gènere i sexualitat.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>aboutTitle: "Sobre nosaltres",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>aboutText: "PRODUCE és un esforç coordinat possible gràcies a la participació activa de &lt;strong&gt;X investigadores&lt;/strong&gt; de &lt;strong&gt;Y universitats i institucions&lt;/strong&gt; a &lt;strong&gt;Z països&lt;/strong&gt;.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>aboutText2: "El projecte està liderat per la Universitat Autònoma de Barcelona, en col·laboració amb socis internacionals.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>teamHeading: "EQUIP", teamPi: "Investigadors principals", teamPiText: "[Afegeix noms, afiliacions, rols]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>teamStaff: "Personal investigador", teamStaffText: "[Llista d'investigadors i postdoctorands]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>teamCollab: "Institucions col·laboradores", teamCollabText: "[Universitats / centres de recerca]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pubsHeading: "PUBLICACIONS", pubsJournal: "Articles revisats per parells", pubsJournalText: "[Afegeix publicacions en revistes]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pubsBooks: "Llibres i capítols", pubsBooksText: "[Monografies, volums editats]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pubsOpen: "Accés obert i preprints", pubsOpenText: "[Repositoris, DOIs]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>thesisHeading: "TESIS", thesisPhd: "Tesis doctorals", thesisPhdText: "[Projectes de doctorat associats a PRODUCE]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>thesisMaster: "Treballs de màster", thesisMasterText: "[Projectes finals supervisats]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>thesisPredoc: "Contractes predoctorals", thesisPredocText: "[Programa de formació i finançament]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>eventsHeading: "ESDEVENIMENTS", eventsCongress: "Congressos internacionals", eventsCongressText: "3r i 4t ICMGS (2027, 2029) – Benasque, Espanya.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>eventsWorkshops: "Tallers i formació", eventsWorkshopsText: "[Cursos per a estudiants de Comunicació Audiovisual]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>eventsConf: "Presentacions en conferències", eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pressHeading: "PREMSA", pressMedia: "Cobertura mediàtica", pressMediaText: "[Entrevistes, articles, pòdcasts]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pressOutreach: "Activitats de divulgació", pressOutreachText: "[#científicas, 11F, butlletins institucionals]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pressKit: "Dossier de premsa", pressKitText: "[Recursos descarregables]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactHeading: "CONTACTE", contactPi: "Investigadora principal", contactPiName: "Dra. María Teresa Soto Sanfel",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactPiEmail: "Correu electrònic: [el teu correu]", contactProject: "Gestió del projecte",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactProjectEmail: "Correu electrònic: produce.project@[universitat].es", contactAddress: "Adreça",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactAddressText: "Departament de Comunicació Audiovisual i Publicitat&lt;br&gt;Universitat Autònoma de Barcelona&lt;br&gt;Bellaterra, Barcelona (Espanya)",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer: "© 2026–2029 PRODUCE – Ministeri de Ciència, Innovació i Universitats espanyol. Tots els drets reservats."</p>
-<p class="p1"><span class="Apple-converted-space">  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">  </span>es: {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>subtitle: "Producción de contenidos audiovisuales LGBTIQ+: Agentes, contextos industriales, plataformas y expectativas de impacto",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>navHome: "INICIO", navTeam: "EQUIPO", navPubs: "PUBLICACIONES", navThesis: "TESIS",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>navEvents: "EVENTOS", navPress: "PRENSA", navContact: "CONTACTO",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>homeHeading: "INICIO",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>fullTitle: "Producción de contenidos audiovisuales LGBTIQ+: Agentes, contextos industriales, plataformas y expectativas de impacto",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>projectCode: '"PRODUCE" (PID2024-160145NB-C21)',</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatTitle: "¿Qué es PRODUCE?",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatText: "Partiendo del legado del anterior proyecto LGBTIQ+ Screens, PRODUCE es un proyecto de investigación financiado por el Ministerio de Ciencia, Innovación y Universidades español que va más allá del estudio de la representación para explorar el verdadero motor del contenido audiovisual: los creadores y los contextos de producción. Entre 2026 y 2029, este proyecto investigará cómo se produce en España el contenido audiovisual sobre personas LGBTIQ+ en un rico ecosistema de medios culturales – desde el cine y la televisión hasta las redes sociales, la creación independiente y el activismo. PRODUCE busca comprender cómo las dinámicas de producción configuran no solo el contenido LGBTIQ+, sino también las realidades de quienes lo crean, y finalmente cómo dicho contenido puede reducir prejuicios y fomentar una sociedad más inclusiva.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatdoTitle: "¿Qué hacemos?",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>whatdoText: "PRODUCE investiga las dinámicas de producción de contenido LGBTIQ+, entendiendo cómo los contextos de producción y variables interseccionales como la edad, el género, la etnia y la clase de profesionales, aficionados, activistas y creadores en línea influyen en las rutinas productivas, los procesos creativos, el valor profesional percibido, el bienestar y las representaciones LGBTIQ+ resultantes. También identificaremos roles emergentes (es decir, consultores de autenticidad LGBTIQ+ y coordinadores de intimidad), oportunidades y tensiones en la industria, estudiando cómo las estructuras mediáticas actuales y las nuevas prácticas culturales afectan la autoestima creativa, la agencia y el potencial de reducción de prejuicios LGBTIQ+.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>outcomesTitle: "Resultados Esperados",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>outcomesText: "PRODUCE tiene como objetivo cartografiar cómo las dinámicas de producción configuran el contenido audiovisual LGBTIQ+ en el Estado español. Nuestra investigación se difundirá a través de publicaciones revisadas por pares, cursos de formación para la educación universitaria, manuales de buenas prácticas para la industria audiovisual y dos congresos internacionales sobre medios, género y sexualidad.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>aboutTitle: "Sobre nosotros",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>aboutText: "PRODUCE es un esfuerzo coordinado posible gracias a la participación activa de &lt;strong&gt;X investigadores&lt;/strong&gt; de &lt;strong&gt;Y universidades e instituciones&lt;/strong&gt; en &lt;strong&gt;Z países&lt;/strong&gt;.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>aboutText2: "El proyecto está liderado por la Universitat Autònoma de Barcelona, en colaboración con socios internacionales.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>teamHeading: "EQUIPO", teamPi: "Investigadores principales", teamPiText: "[Añade nombres, afiliaciones, roles]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>teamStaff: "Personal investigador", teamStaffText: "[Lista de investigadores y postdoctorandos]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>teamCollab: "Instituciones colaboradoras", teamCollabText: "[Universidades / centros de investigación]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pubsHeading: "PUBLICACIONES", pubsJournal: "Artículos revisados por pares", pubsJournalText: "[Añade publicaciones en revistas]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pubsBooks: "Libros y capítulos", pubsBooksText: "[Monografías, volúmenes editados]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pubsOpen: "Acceso abierto y preprints", pubsOpenText: "[Repositorios, DOIs]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>thesisHeading: "TESIS", thesisPhd: "Tesis doctorales", thesisPhdText: "[Proyectos de doctorado asociados a PRODUCE]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>thesisMaster: "Trabajos de máster", thesisMasterText: "[Proyectos finales supervisados]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>thesisPredoc: "Contratos predoctorales", thesisPredocText: "[Programa de formación y financiación]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>eventsHeading: "EVENTOS", eventsCongress: "Congresos internacionales", eventsCongressText: "3º y 4º ICMGS (2027, 2029) – Benasque, España.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>eventsWorkshops: "Talleres y formación", eventsWorkshopsText: "[Cursos para estudiantes de Comunicación Audiovisual]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>eventsConf: "Presentaciones en conferencias", eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pressHeading: "PRENSA", pressMedia: "Cobertura mediática", pressMediaText: "[Entrevistas, artículos, podcasts]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pressOutreach: "Actividades de divulgación", pressOutreachText: "[#científicas, 11F, boletines institucionales]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>pressKit: "Dosier de prensa", pressKitText: "[Recursos descargables]",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactHeading: "CONTACTO", contactPi: "Investigadora principal", contactPiName: "Dra. María Teresa Soto Sanfel",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactPiEmail: "Correo electrónico: [tu correo]", contactProject: "Gestión del proyecto",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactProjectEmail: "Correo electrónico: produce.project@[universidad].es", contactAddress: "Dirección",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>contactAddressText: "Departamento de Comunicación Audiovisual y Publicidad&lt;br&gt;Universitat Autònoma de Barcelona&lt;br&gt;Bellaterra, Barcelona (España)",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer: "© 2026–2029 PRODUCE – Ministerio de Ciencia, Innovación y Universidades. Todos los derechos reservados."</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1">};</p>
-<p class="p2"><br></p>
-<p class="p1">let currentLang = 'en';</p>
-<p class="p2"><br></p>
-<p class="p1">function set(id, text, html) {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>var el = document.getElementById(id);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>if (!el) return;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>if (html) el.innerHTML = text; else el.textContent = text;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function setLang(lang) {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>currentLang = lang;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>var t = T[lang];</p>
-<p class="p1"><span class="Apple-converted-space">  </span>if (!t) return;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Update lang buttons</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.lang-btn').forEach(function(b) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>b.classList.toggle('active', b.getAttribute('onclick').includes("'" + lang + "'"));</p>
-<p class="p1"><span class="Apple-converted-space">  </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Update nav labels</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('nav-home', t.navHome);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('nav-team', t.navTeam);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('nav-publications', t.navPubs);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('nav-thesis', t.navThesis);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('nav-events', t.navEvents);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('nav-press', t.navPress);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('nav-contact', t.navContact);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('subtitle-text', t.subtitle);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('home-heading', t.homeHeading);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('full-title', t.fullTitle);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('project-code', t.projectCode);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('what-title', t.whatTitle);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('what-text', t.whatText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('whatdo-title', t.whatdoTitle);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('whatdo-text', t.whatdoText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('outcomes-title', t.outcomesTitle);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('outcomes-text', t.outcomesText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('about-title', t.aboutTitle);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('about-text', t.aboutText, true);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('about-text2', t.aboutText2);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('team-heading', t.teamHeading);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('team-pi', t.teamPi);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('team-pi-text', t.teamPiText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('team-staff', t.teamStaff);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('team-staff-text', t.teamStaffText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('team-collab', t.teamCollab);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('team-collab-text', t.teamCollabText);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('pubs-heading', t.pubsHeading);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('pubs-journal', t.pubsJournal);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('pubs-journal-text', t.pubsJournalText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('pubs-books', t.pubsBooks);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('pubs-books-text', t.pubsBooksText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('pubs-open', t.pubsOpen);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('pubs-open-text', t.pubsOpenText);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('thesis-heading', t.thesisHeading);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('thesis-phd', t.thesisPhd);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('thesis-phd-text', t.thesisPhdText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('thesis-master', t.thesisMaster);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('thesis-master-text', t.thesisMasterText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('thesis-predoc', t.thesisPredoc);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('thesis-predoc-text', t.thesisPredocText);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('events-heading', t.eventsHeading);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('events-congress', t.eventsCongress);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('events-congress-text', t.eventsCongressText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('events-workshops', t.eventsWorkshops);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('events-workshops-text', t.eventsWorkshopsText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('events-conf', t.eventsConf);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('events-conf-text', t.eventsConfText);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('press-heading', t.pressHeading);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('press-media', t.pressMedia);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('press-media-text', t.pressMediaText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('press-outreach', t.pressOutreach);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('press-outreach-text', t.pressOutreachText);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('press-kit', t.pressKit);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('press-kit-text', t.pressKitText);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('contact-heading', t.contactHeading);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('contact-pi', t.contactPi);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('contact-pi-name', t.contactPiName);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('contact-pi-email', t.contactPiEmail);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('contact-project', t.contactProject);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('contact-project-email', t.contactProjectEmail);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('contact-address', t.contactAddress);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('contact-address-text', t.contactAddressText, true);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>set('footer-text', t.footer);</p>
-<p class="p1">}</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+ 
+<!-- Language selector -->
+<div class="top-strip">
+  <button class="lang-btn active" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" onclick="setLang('ca')">CA</button>
+  <button class="lang-btn" onclick="setLang('es')">ES</button>
+</div>
+ 
+<!-- Header -->
+<header>
+  <img class="logo" src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/produceeee-1.jpg" alt="PRODUCE logo">
+  <p class="subtitle" id="subtitle-text">Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact</p>
+</header>
+ 
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <button class="nav-btn active" onclick="showSection('home')" id="nav-home">HOME</button>
+    <button class="nav-btn" onclick="showSection('team')" id="nav-team">TEAM</button>
+    <button class="nav-btn" onclick="showSection('publications')" id="nav-publications">PUBLICATIONS</button>
+    <button class="nav-btn" onclick="showSection('thesis')" id="nav-thesis">THESIS</button>
+    <button class="nav-btn" onclick="showSection('events')" id="nav-events">EVENTS</button>
+    <button class="nav-btn" onclick="showSection('press')" id="nav-press">PRESS</button>
+    <button class="nav-btn" onclick="showSection('contact')" id="nav-contact">CONTACT</button>
+  </div>
+</nav>
+ 
+<main>
+ 
+  <!-- HOME -->
+  <section id="home" class="section active">
+    <h2 id="home-heading">HOME</h2>
+ 
+    <div class="title-box">
+      <div class="title-box-text">
+        <h3 id="full-title">Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact</h3>
+        <p id="project-code">"PRODUCE" (PID2024-160145NB-C21)</p>
+      </div>
+      <div class="ministry-logo">
+        <img src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/ministerio.jpg" alt="Ministry of Science">
+      </div>
+    </div>
+ 
+    <div class="card">
+      <h3 id="what-title">What is PRODUCE?</h3>
+      <p id="what-text">Building on the legacy of the previous LGBTIQ+ Screens project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.</p>
+    </div>
+ 
+    <div class="card">
+      <h3 id="whatdo-title">What do we do?</h3>
+      <p id="whatdo-text">PRODUCE investigates the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations. We will also identify emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.</p>
+    </div>
+ 
+    <div class="card">
+      <h3 id="outcomes-title">Expected Outcomes</h3>
+      <p id="outcomes-text">PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.</p>
+    </div>
+ 
+    <div class="card">
+      <h3 id="about-title">About us</h3>
+      <p id="about-text">PRODUCE is a coordinated effort made possible by the active participation of <strong>X researchers</strong> from <strong>Y universities and institutions</strong> across <strong>Z countries</strong>.</p>
+      <p id="about-text2" style="margin-top:0.5rem;">The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.</p>
+    </div>
+  </section>
+ 
+  <!-- TEAM -->
+  <section id="team" class="section">
+    <h2 id="team-heading">TEAM</h2>
+    <div class="item-card"><h4 id="team-pi">Principal Investigators</h4><p id="team-pi-text">[Add names, affiliations, roles]</p></div>
+    <div class="item-card"><h4 id="team-staff">Research Staff</h4><p id="team-staff-text">[List of researchers and postdocs]</p></div>
+    <div class="item-card"><h4 id="team-collab">Collaborating Institutions</h4><p id="team-collab-text">[Universities / research centres]</p></div>
+  </section>
+ 
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="section">
+    <h2 id="pubs-heading">PUBLICATIONS</h2>
+    <div class="card"><h3 id="pubs-journal">Peer-reviewed articles</h3><p id="pubs-journal-text">[Add journal publications]</p></div>
+    <div class="card"><h3 id="pubs-books">Books and chapters</h3><p id="pubs-books-text">[Add monographs, edited volumes]</p></div>
+    <div class="card"><h3 id="pubs-open">Open access &amp; preprints</h3><p id="pubs-open-text">[Repositories, DOIs]</p></div>
+  </section>
+ 
+  <!-- THESIS -->
+  <section id="thesis" class="section">
+    <h2 id="thesis-heading">THESIS</h2>
+    <div class="card"><h3 id="thesis-phd">Doctoral dissertations</h3><p id="thesis-phd-text">[PhD projects associated with PRODUCE]</p></div>
+    <div class="card"><h3 id="thesis-master">Master's theses</h3><p id="thesis-master-text">[Supervised final projects]</p></div>
+    <div class="card"><h3 id="thesis-predoc">Predoctoral contracts</h3><p id="thesis-predoc-text">[Funding and training programme]</p></div>
+  </section>
+ 
+  <!-- EVENTS -->
+  <section id="events" class="section">
+    <h2 id="events-heading">EVENTS</h2>
+    <div class="card"><h3 id="events-congress">International Congresses</h3><p id="events-congress-text">3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.</p></div>
+    <div class="card"><h3 id="events-workshops">Workshops &amp; Training</h3><p id="events-workshops-text">[Courses for audiovisual communication students]</p></div>
+    <div class="card"><h3 id="events-conf">Conference presentations</h3><p id="events-conf-text">[ICA, IAMCR, ECREA, AE-IC]</p></div>
+  </section>
+ 
+  <!-- PRESS -->
+  <section id="press" class="section">
+    <h2 id="press-heading">PRESS</h2>
+    <div class="card"><h3 id="press-media">Media coverage</h3><p id="press-media-text">[Interviews, articles, podcasts]</p></div>
+    <div class="card"><h3 id="press-outreach">Outreach activities</h3><p id="press-outreach-text">[#científicas, 11F, institutional newsletters]</p></div>
+    <div class="card"><h3 id="press-kit">Press kit</h3><p id="press-kit-text">[Downloadable resources]</p></div>
+  </section>
+ 
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2 id="contact-heading">CONTACT</h2>
+    <div class="item-card"><h4 id="contact-pi">Principal Investigator</h4><p id="contact-pi-name">Dr. María Teresa Soto Sanfel</p><p id="contact-pi-email">Email: [your email]</p></div>
+    <div class="item-card"><h4 id="contact-project">Project management</h4><p id="contact-project-email">Email: produce.project@[university].es</p></div>
+    <div class="item-card">
+      <h4 id="contact-address">Address</h4>
+      <p id="contact-address-text">Department of Audiovisual Communication and Advertising<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Spain)</p>
+    </div>
+  </section>
+ 
+</main>
+ 
+<footer>
+  <p id="footer-text">© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved.</p>
+</footer>
+ 
+<script>
+// ── SECTION SWITCHING ──
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('nav-' + id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+ 
+// ── TRANSLATIONS ──
+const T = {
+  en: {
+    subtitle: "Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact",
+    navHome: "HOME", navTeam: "TEAM", navPubs: "PUBLICATIONS", navThesis: "THESIS",
+    navEvents: "EVENTS", navPress: "PRESS", navContact: "CONTACT",
+    homeHeading: "HOME",
+    fullTitle: "Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact",
+    projectCode: '"PRODUCE" (PID2024-160145NB-C21)',
+    whatTitle: "What is PRODUCE?",
+    whatText: "Building on the legacy of the previous LGBTIQ+ Screens project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.",
+    whatdoTitle: "What do we do?",
+    whatdoText: "PRODUCE investigates the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations. We will also identify emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.",
+    outcomesTitle: "Expected Outcomes",
+    outcomesText: "PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.",
+    aboutTitle: "About us",
+    aboutText: "PRODUCE is a coordinated effort made possible by the active participation of <strong>X researchers</strong> from <strong>Y universities and institutions</strong> across <strong>Z countries</strong>.",
+    aboutText2: "The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.",
+    teamHeading: "TEAM", teamPi: "Principal Investigators", teamPiText: "[Add names, affiliations, roles]",
+    teamStaff: "Research Staff", teamStaffText: "[List of researchers and postdocs]",
+    teamCollab: "Collaborating Institutions", teamCollabText: "[Universities / research centres]",
+    pubsHeading: "PUBLICATIONS", pubsJournal: "Peer-reviewed articles", pubsJournalText: "[Add journal publications]",
+    pubsBooks: "Books and chapters", pubsBooksText: "[Add monographs, edited volumes]",
+    pubsOpen: "Open access & preprints", pubsOpenText: "[Repositories, DOIs]",
+    thesisHeading: "THESIS", thesisPhd: "Doctoral dissertations", thesisPhdText: "[PhD projects associated with PRODUCE]",
+    thesisMaster: "Master's theses", thesisMasterText: "[Supervised final projects]",
+    thesisPredoc: "Predoctoral contracts", thesisPredocText: "[Funding and training programme]",
+    eventsHeading: "EVENTS", eventsCongress: "International Congresses", eventsCongressText: "3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.",
+    eventsWorkshops: "Workshops & Training", eventsWorkshopsText: "[Courses for audiovisual communication students]",
+    eventsConf: "Conference presentations", eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",
+    pressHeading: "PRESS", pressMedia: "Media coverage", pressMediaText: "[Interviews, articles, podcasts]",
+    pressOutreach: "Outreach activities", pressOutreachText: "[#científicas, 11F, institutional newsletters]",
+    pressKit: "Press kit", pressKitText: "[Downloadable resources]",
+    contactHeading: "CONTACT", contactPi: "Principal Investigator", contactPiName: "Dr. María Teresa Soto Sanfel",
+    contactPiEmail: "Email: [your email]", contactProject: "Project management",
+    contactProjectEmail: "Email: produce.project@[university].es", contactAddress: "Address",
+    contactAddressText: "Department of Audiovisual Communication and Advertising<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Spain)",
+    footer: "© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved."
+  },
+  ca: {
+    subtitle: "Producció de continguts audiovisuals LGBTIQ+: Agents, contextos industrials, plataformes i expectatives d'impacte",
+    navHome: "INICI", navTeam: "EQUIP", navPubs: "PUBLICACIONS", navThesis: "TESIS",
+    navEvents: "ESDEVENIMENTS", navPress: "PREMSA", navContact: "CONTACTE",
+    homeHeading: "INICI",
+    fullTitle: "Producció de continguts audiovisuals LGBTIQ+: Agents, contextos industrials, plataformes i expectatives d'impacte",
+    projectCode: '"PRODUCE" (PID2024-160145NB-C21)',
+    whatTitle: "Què és PRODUCE?",
+    whatText: "Partint del llegat de l'anterior projecte LGBTIQ+ Screens, PRODUCE és un projecte d'investigació finançat pel Ministeri de Ciència, Innovació i Universitats espanyol que va més enllà de l'estudi de la representació per explorar el veritable motor del contingut audiovisual: els creadors i els contextos de producció. Entre 2026 i 2029, aquest projecte investigarà com es produeix a Espanya el contingut audiovisual sobre persones LGBTIQ+ en un ric ecosistema de mitjans culturals – des del cinema i la televisió fins a les xarxes socials, la creació independent i l'activisme. PRODUCE busca comprendre com les dinàmiques de producció configuren no només el contingut LGBTIQ+, sinó també les realitats de qui el crea, i finalment com aquest contingut pot reduir prejudicis i fomentar una societat més inclusiva.",
+    whatdoTitle: "Què fem?",
+    whatdoText: "PRODUCE investiga les dinàmiques de producció de contingut LGBTIQ+, entenent com els contextos de producció i variables interseccionals com l'edat, el gènere, l'ètnia i la classe de professionals, aficionats, activistes i creadors en línia influeixen en les rutines productives, els processos creatius, el valor professional percebut, el benestar i les representacions LGBTIQ+ resultants. També identificarem rols emergents (és a dir, consultors d'autenticitat LGBTIQ+ i coordinadors d'intimitat), oportunitats i tensions en la indústria, estudiant com les estructures mediàtiques actuals i les noves pràctiques culturals afecten l'autoestima creativa, l'agència i el potencial de reducció de prejudicis LGBTIQ+.",
+    outcomesTitle: "Resultats Esperats",
+    outcomesText: "PRODUCE té com a objectiu cartografiar com les dinàmiques de producció configuren el contingut audiovisual LGBTIQ+ a l'Estat espanyol. La nostra investigació es difondrà mitjançant publicacions revisades per parells, cursos de formació per a l'educació universitària, manuals de bones pràctiques per a la indústria audiovisual i dos congressos internacionals sobre mitjans, gènere i sexualitat.",
+    aboutTitle: "Sobre nosaltres",
+    aboutText: "PRODUCE és un esforç coordinat possible gràcies a la participació activa de <strong>X investigadores</strong> de <strong>Y universitats i institucions</strong> a <strong>Z països</strong>.",
+    aboutText2: "El projecte està liderat per la Universitat Autònoma de Barcelona, en col·laboració amb socis internacionals.",
+    teamHeading: "EQUIP", teamPi: "Investigadors principals", teamPiText: "[Afegeix noms, afiliacions, rols]",
+    teamStaff: "Personal investigador", teamStaffText: "[Llista d'investigadors i postdoctorands]",
+    teamCollab: "Institucions col·laboradores", teamCollabText: "[Universitats / centres de recerca]",
+    pubsHeading: "PUBLICACIONS", pubsJournal: "Articles revisats per parells", pubsJournalText: "[Afegeix publicacions en revistes]",
+    pubsBooks: "Llibres i capítols", pubsBooksText: "[Monografies, volums editats]",
+    pubsOpen: "Accés obert i preprints", pubsOpenText: "[Repositoris, DOIs]",
+    thesisHeading: "TESIS", thesisPhd: "Tesis doctorals", thesisPhdText: "[Projectes de doctorat associats a PRODUCE]",
+    thesisMaster: "Treballs de màster", thesisMasterText: "[Projectes finals supervisats]",
+    thesisPredoc: "Contractes predoctorals", thesisPredocText: "[Programa de formació i finançament]",
+    eventsHeading: "ESDEVENIMENTS", eventsCongress: "Congressos internacionals", eventsCongressText: "3r i 4t ICMGS (2027, 2029) – Benasque, Espanya.",
+    eventsWorkshops: "Tallers i formació", eventsWorkshopsText: "[Cursos per a estudiants de Comunicació Audiovisual]",
+    eventsConf: "Presentacions en conferències", eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",
+    pressHeading: "PREMSA", pressMedia: "Cobertura mediàtica", pressMediaText: "[Entrevistes, articles, pòdcasts]",
+    pressOutreach: "Activitats de divulgació", pressOutreachText: "[#científicas, 11F, butlletins institucionals]",
+    pressKit: "Dossier de premsa", pressKitText: "[Recursos descarregables]",
+    contactHeading: "CONTACTE", contactPi: "Investigadora principal", contactPiName: "Dra. María Teresa Soto Sanfel",
+    contactPiEmail: "Correu electrònic: [el teu correu]", contactProject: "Gestió del projecte",
+    contactProjectEmail: "Correu electrònic: produce.project@[universitat].es", contactAddress: "Adreça",
+    contactAddressText: "Departament de Comunicació Audiovisual i Publicitat<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Espanya)",
+    footer: "© 2026–2029 PRODUCE – Ministeri de Ciència, Innovació i Universitats espanyol. Tots els drets reservats."
+  },
+  es: {
+    subtitle: "Producción de contenidos audiovisuales LGBTIQ+: Agentes, contextos industriales, plataformas y expectativas de impacto",
+    navHome: "INICIO", navTeam: "EQUIPO", navPubs: "PUBLICACIONES", navThesis: "TESIS",
+    navEvents: "EVENTOS", navPress: "PRENSA", navContact: "CONTACTO",
+    homeHeading: "INICIO",
+    fullTitle: "Producción de contenidos audiovisuales LGBTIQ+: Agentes, contextos industriales, plataformas y expectativas de impacto",
+    projectCode: '"PRODUCE" (PID2024-160145NB-C21)',
+    whatTitle: "¿Qué es PRODUCE?",
+    whatText: "Partiendo del legado del anterior proyecto LGBTIQ+ Screens, PRODUCE es un proyecto de investigación financiado por el Ministerio de Ciencia, Innovación y Universidades español que va más allá del estudio de la representación para explorar el verdadero motor del contenido audiovisual: los creadores y los contextos de producción. Entre 2026 y 2029, este proyecto investigará cómo se produce en España el contenido audiovisual sobre personas LGBTIQ+ en un rico ecosistema de medios culturales – desde el cine y la televisión hasta las redes sociales, la creación independiente y el activismo. PRODUCE busca comprender cómo las dinámicas de producción configuran no solo el contenido LGBTIQ+, sino también las realidades de quienes lo crean, y finalmente cómo dicho contenido puede reducir prejuicios y fomentar una sociedad más inclusiva.",
+    whatdoTitle: "¿Qué hacemos?",
+    whatdoText: "PRODUCE investiga las dinámicas de producción de contenido LGBTIQ+, entendiendo cómo los contextos de producción y variables interseccionales como la edad, el género, la etnia y la clase de profesionales, aficionados, activistas y creadores en línea influyen en las rutinas productivas, los procesos creativos, el valor profesional percibido, el bienestar y las representaciones LGBTIQ+ resultantes. También identificaremos roles emergentes (es decir, consultores de autenticidad LGBTIQ+ y coordinadores de intimidad), oportunidades y tensiones en la industria, estudiando cómo las estructuras mediáticas actuales y las nuevas prácticas culturales afectan la autoestima creativa, la agencia y el potencial de reducción de prejuicios LGBTIQ+.",
+    outcomesTitle: "Resultados Esperados",
+    outcomesText: "PRODUCE tiene como objetivo cartografiar cómo las dinámicas de producción configuran el contenido audiovisual LGBTIQ+ en el Estado español. Nuestra investigación se difundirá a través de publicaciones revisadas por pares, cursos de formación para la educación universitaria, manuales de buenas prácticas para la industria audiovisual y dos congresos internacionales sobre medios, género y sexualidad.",
+    aboutTitle: "Sobre nosotros",
+    aboutText: "PRODUCE es un esfuerzo coordinado posible gracias a la participación activa de <strong>X investigadores</strong> de <strong>Y universidades e instituciones</strong> en <strong>Z países</strong>.",
+    aboutText2: "El proyecto está liderado por la Universitat Autònoma de Barcelona, en colaboración con socios internacionales.",
+    teamHeading: "EQUIPO", teamPi: "Investigadores principales", teamPiText: "[Añade nombres, afiliaciones, roles]",
+    teamStaff: "Personal investigador", teamStaffText: "[Lista de investigadores y postdoctorandos]",
+    teamCollab: "Instituciones colaboradoras", teamCollabText: "[Universidades / centros de investigación]",
+    pubsHeading: "PUBLICACIONES", pubsJournal: "Artículos revisados por pares", pubsJournalText: "[Añade publicaciones en revistas]",
+    pubsBooks: "Libros y capítulos", pubsBooksText: "[Monografías, volúmenes editados]",
+    pubsOpen: "Acceso abierto y preprints", pubsOpenText: "[Repositorios, DOIs]",
+    thesisHeading: "TESIS", thesisPhd: "Tesis doctorales", thesisPhdText: "[Proyectos de doctorado asociados a PRODUCE]",
+    thesisMaster: "Trabajos de máster", thesisMasterText: "[Proyectos finales supervisados]",
+    thesisPredoc: "Contratos predoctorales", thesisPredocText: "[Programa de formación y financiación]",
+    eventsHeading: "EVENTOS", eventsCongress: "Congresos internacionales", eventsCongressText: "3º y 4º ICMGS (2027, 2029) – Benasque, España.",
+    eventsWorkshops: "Talleres y formación", eventsWorkshopsText: "[Cursos para estudiantes de Comunicación Audiovisual]",
+    eventsConf: "Presentaciones en conferencias", eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",
+    pressHeading: "PRENSA", pressMedia: "Cobertura mediática", pressMediaText: "[Entrevistas, artículos, podcasts]",
+    pressOutreach: "Actividades de divulgación", pressOutreachText: "[#científicas, 11F, boletines institucionales]",
+    pressKit: "Dosier de prensa", pressKitText: "[Recursos descargables]",
+    contactHeading: "CONTACTO", contactPi: "Investigadora principal", contactPiName: "Dra. María Teresa Soto Sanfel",
+    contactPiEmail: "Correo electrónico: [tu correo]", contactProject: "Gestión del proyecto",
+    contactProjectEmail: "Correo electrónico: produce.project@[universidad].es", contactAddress: "Dirección",
+    contactAddressText: "Departamento de Comunicación Audiovisual y Publicidad<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (España)",
+    footer: "© 2026–2029 PRODUCE – Ministerio de Ciencia, Innovación y Universidades. Todos los derechos reservados."
+  }
+};
+ 
+let currentLang = 'en';
+ 
+function set(id, text, html) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  if (html) el.innerHTML = text; else el.textContent = text;
+}
+ 
+function setLang(lang) {
+  currentLang = lang;
+  var t = T[lang];
+  if (!t) return;
+ 
+  // Update lang buttons
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('onclick').includes("'" + lang + "'"));
+  });
+ 
+  // Update nav labels
+  set('nav-home', t.navHome);
+  set('nav-team', t.navTeam);
+  set('nav-publications', t.navPubs);
+  set('nav-thesis', t.navThesis);
+  set('nav-events', t.navEvents);
+  set('nav-press', t.navPress);
+  set('nav-contact', t.navContact);
+ 
+  set('subtitle-text', t.subtitle);
+  set('home-heading', t.homeHeading);
+  set('full-title', t.fullTitle);
+  set('project-code', t.projectCode);
+  set('what-title', t.whatTitle);
+  set('what-text', t.whatText);
+  set('whatdo-title', t.whatdoTitle);
+  set('whatdo-text', t.whatdoText);
+  set('outcomes-title', t.outcomesTitle);
+  set('outcomes-text', t.outcomesText);
+  set('about-title', t.aboutTitle);
+  set('about-text', t.aboutText, true);
+  set('about-text2', t.aboutText2);
+ 
+  set('team-heading', t.teamHeading);
+  set('team-pi', t.teamPi);
+  set('team-pi-text', t.teamPiText);
+  set('team-staff', t.teamStaff);
+  set('team-staff-text', t.teamStaffText);
+  set('team-collab', t.teamCollab);
+  set('team-collab-text', t.teamCollabText);
+ 
+  set('pubs-heading', t.pubsHeading);
+  set('pubs-journal', t.pubsJournal);
+  set('pubs-journal-text', t.pubsJournalText);
+  set('pubs-books', t.pubsBooks);
+  set('pubs-books-text', t.pubsBooksText);
+  set('pubs-open', t.pubsOpen);
+  set('pubs-open-text', t.pubsOpenText);
+ 
+  set('thesis-heading', t.thesisHeading);
+  set('thesis-phd', t.thesisPhd);
+  set('thesis-phd-text', t.thesisPhdText);
+  set('thesis-master', t.thesisMaster);
+  set('thesis-master-text', t.thesisMasterText);
+  set('thesis-predoc', t.thesisPredoc);
+  set('thesis-predoc-text', t.thesisPredocText);
+ 
+  set('events-heading', t.eventsHeading);
+  set('events-congress', t.eventsCongress);
+  set('events-congress-text', t.eventsCongressText);
+  set('events-workshops', t.eventsWorkshops);
+  set('events-workshops-text', t.eventsWorkshopsText);
+  set('events-conf', t.eventsConf);
+  set('events-conf-text', t.eventsConfText);
+ 
+  set('press-heading', t.pressHeading);
+  set('press-media', t.pressMedia);
+  set('press-media-text', t.pressMediaText);
+  set('press-outreach', t.pressOutreach);
+  set('press-outreach-text', t.pressOutreachText);
+  set('press-kit', t.pressKit);
+  set('press-kit-text', t.pressKitText);
+ 
+  set('contact-heading', t.contactHeading);
+  set('contact-pi', t.contactPi);
+  set('contact-pi-name', t.contactPiName);
+  set('contact-pi-email', t.contactPiEmail);
+  set('contact-project', t.contactProject);
+  set('contact-project-email', t.contactProjectEmail);
+  set('contact-address', t.contactAddress);
+  set('contact-address-text', t.contactAddressText, true);
+  set('footer-text', t.footer);
+}
+</script>
 </body>
 </html>
