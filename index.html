@@ -47,6 +47,35 @@
             font-weight: 500;
         }
 
+        /* Language selector */
+        .lang-selector {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .lang-selector button {
+            background: none;
+            border: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #4a5b6e;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .lang-selector button:hover {
+            color: #9b4d96;
+        }
+
+        .lang-selector button.active {
+            color: #9b4d96;
+            border-bottom: 2px solid #c77dff;
+        }
+
         .nav-menu {
             background: #ffffff;
             border-bottom: 1px solid #e9eef3;
@@ -138,6 +167,7 @@
             background: #f5f0ff;
             border-radius: 24px;
             border: 1px solid #e2d9f0;
+            position: relative;
         }
 
         .full-title h3 {
@@ -148,13 +178,14 @@
         }
 
         .logo-ministry {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .logo-ministry img {
-            max-height: 60px;
+            max-height: 80px;
             width: auto;
         }
 
@@ -196,17 +227,34 @@
             .subsection {
                 padding: 1.2rem;
             }
+            .logo-ministry {
+                position: static;
+                transform: none;
+                text-align: center;
+                margin-top: 1rem;
+            }
+            .full-title {
+                padding-bottom: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
+
+<div class="container" style="padding-bottom: 0;">
+    <div class="lang-selector">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ca">CA</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+</div>
 
 <div class="container" style="padding-top: 0;">
     <div class="header">
         <div class="logo-area">
             <img src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/produceeee-1.jpg" alt="PRODUCE project logo" style="max-width:220px;">
         </div>
-        <div class="project-subtitle">
+        <div class="project-subtitle" id="subtitle">
             Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact
         </div>
     </div>
@@ -215,134 +263,290 @@
 <div class="nav-menu">
     <div class="container">
         <ul class="nav-links">
-            <li><button class="nav-btn active" data-section="home">HOME</button></li>
-            <li><button class="nav-btn" data-section="team">TEAM</button></li>
-            <li><button class="nav-btn" data-section="publications">PUBLICATIONS</button></li>
-            <li><button class="nav-btn" data-section="thesis">THESIS</button></li>
-            <li><button class="nav-btn" data-section="events">EVENTS</button></li>
-            <li><button class="nav-btn" data-section="press">PRESS</button></li>
-            <li><button class="nav-btn" data-section="contact">CONTACT</button></li>
+            <li><button class="nav-btn active" data-section="home" id="nav-home">HOME</button></li>
+            <li><button class="nav-btn" data-section="team" id="nav-team">TEAM</button></li>
+            <li><button class="nav-btn" data-section="publications" id="nav-pubs">PUBLICATIONS</button></li>
+            <li><button class="nav-btn" data-section="thesis" id="nav-thesis">THESIS</button></li>
+            <li><button class="nav-btn" data-section="events" id="nav-events">EVENTS</button></li>
+            <li><button class="nav-btn" data-section="press" id="nav-press">PRESS</button></li>
+            <li><button class="nav-btn" data-section="contact" id="nav-contact">CONTACT</button></li>
         </ul>
     </div>
 </div>
 
 <div class="container">
+    <!-- HOME Section -->
     <div id="home" class="section active-section">
-        <h2>HOME</h2>
+        <h2 id="home-title">HOME</h2>
 
         <div class="full-title">
-            <h3>Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact</h3>
-            <p><strong>"PRODUCE" (PID2024-160145NB-C21)</strong></p>
+            <h3 id="full-title">Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact</h3>
+            <p id="project-number"><strong>"PRODUCE" (PID2024-160145NB-C21)</strong></p>
             <div class="logo-ministry">
                 <img src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/ministerio.jpg" alt="Spanish Ministry of Science">
             </div>
         </div>
 
         <div class="subsection">
-            <h3>What is PRODUCE?</h3>
-            <p>Building on the legacy of the previous LGBTIQ+ Screens project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.</p>
+            <h3 id="what-title">What is PRODUCE?</h3>
+            <p id="what-text">Building on the legacy of the previous LGBTIQ+ Screens project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.</p>
         </div>
 
         <div class="subsection">
-            <h3>What do we do?</h3>
-            <p>PRODUCE is structured around two interconnected processes:</p>
-            <ol>
-                <li>The investigation of the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations.</li>
-                <li>The identification of emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.</li>
-            </ol>
+            <h3 id="whatdo-title">What do we do?</h3>
+            <p id="whatdo-text">PRODUCE investigates the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations. We will also identify emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.</p>
         </div>
 
         <div class="subsection">
-            <h3>Expected Outcomes</h3>
-            <p>PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.</p>
+            <h3 id="outcomes-title">Expected Outcomes</h3>
+            <p id="outcomes-text">PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.</p>
         </div>
 
         <div class="subsection">
-            <h3>About us</h3>
-            <p>PRODUCE is a coordinated effort made possible by the active participation of <strong>X researchers</strong> from <strong>Y universities and institutions</strong> across <strong>Z countries</strong>.</p>
-            <p>The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.</p>
+            <h3 id="about-title">About us</h3>
+            <p id="about-text">PRODUCE is a coordinated effort made possible by the active participation of <strong>X researchers</strong> from <strong>Y universities and institutions</strong> across <strong>Z countries</strong>.</p>
+            <p id="about-text2">The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.</p>
         </div>
     </div>
 
+    <!-- TEAM Section -->
     <div id="team" class="section">
-        <h2>TEAM</h2>
+        <h2 id="team-title">TEAM</h2>
         <div class="team-grid">
-            <div class="team-card"><h3>Principal Investigators</h3><p>[Add names, affiliations, roles]</p></div>
-            <div class="team-card"><h3>Research Staff</h3><p>[List of researchers and postdocs]</p></div>
-            <div class="team-card"><h3>Collaborating Institutions</h3><p>[Universities / research centres]</p></div>
+            <div class="team-card"><h3 id="team-pi">Principal Investigators</h3><p id="team-pi-text">[Add names, affiliations, roles]</p></div>
+            <div class="team-card"><h3 id="team-staff">Research Staff</h3><p id="team-staff-text">[List of researchers and postdocs]</p></div>
+            <div class="team-card"><h3 id="team-collab">Collaborating Institutions</h3><p id="team-collab-text">[Universities / research centres]</p></div>
         </div>
     </div>
 
+    <!-- PUBLICATIONS Section -->
     <div id="publications" class="section">
-        <h2>PUBLICATIONS</h2>
-        <div class="subsection"><h3>Peer-reviewed articles</h3><p>[Add journal publications]</p></div>
-        <div class="subsection"><h3>Books and chapters</h3><p>[Add monographs, edited volumes]</p></div>
-        <div class="subsection"><h3>Open access & preprints</h3><p>[Repositories, DOIs]</p></div>
+        <h2 id="pubs-title">PUBLICATIONS</h2>
+        <div class="subsection"><h3 id="pubs-journal">Peer-reviewed articles</h3><p id="pubs-journal-text">[Add journal publications]</p></div>
+        <div class="subsection"><h3 id="pubs-books">Books and chapters</h3><p id="pubs-books-text">[Add monographs, edited volumes]</p></div>
+        <div class="subsection"><h3 id="pubs-open">Open access & preprints</h3><p id="pubs-open-text">[Repositories, DOIs]</p></div>
     </div>
 
+    <!-- THESIS Section -->
     <div id="thesis" class="section">
-        <h2>THESIS</h2>
-        <div class="subsection"><h3>Doctoral dissertations</h3><p>[PhD projects associated with PRODUCE]</p></div>
-        <div class="subsection"><h3>Master's theses</h3><p>[Supervised final projects]</p></div>
-        <div class="subsection"><h3>Predoctoral contracts</h3><p>[Funding and training programme]</p></div>
+        <h2 id="thesis-title">THESIS</h2>
+        <div class="subsection"><h3 id="thesis-phd">Doctoral dissertations</h3><p id="thesis-phd-text">[PhD projects associated with PRODUCE]</p></div>
+        <div class="subsection"><h3 id="thesis-master">Master's theses</h3><p id="thesis-master-text">[Supervised final projects]</p></div>
+        <div class="subsection"><h3 id="thesis-predoctoral">Predoctoral contracts</h3><p id="thesis-predoctoral-text">[Funding and training programme]</p></div>
     </div>
 
+    <!-- EVENTS Section -->
     <div id="events" class="section">
-        <h2>EVENTS</h2>
-        <div class="subsection"><h3>International Congresses</h3><p>3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.</p></div>
-        <div class="subsection"><h3>Workshops & Training</h3><p>[Courses for audiovisual communication students]</p></div>
-        <div class="subsection"><h3>Conference presentations</h3><p>[ICA, IAMCR, ECREA, AE-IC]</p></div>
+        <h2 id="events-title">EVENTS</h2>
+        <div class="subsection"><h3 id="events-congress">International Congresses</h3><p id="events-congress-text">3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.</p></div>
+        <div class="subsection"><h3 id="events-workshops">Workshops & Training</h3><p id="events-workshops-text">[Courses for audiovisual communication students]</p></div>
+        <div class="subsection"><h3 id="events-conferences">Conference presentations</h3><p id="events-conferences-text">[ICA, IAMCR, ECREA, AE-IC]</p></div>
     </div>
 
+    <!-- PRESS Section -->
     <div id="press" class="section">
-        <h2>PRESS</h2>
-        <div class="subsection"><h3>Media coverage</h3><p>[Interviews, articles, podcasts]</p></div>
-        <div class="subsection"><h3>Outreach activities</h3><p>[#científicas, 11F, institutional newsletters]</p></div>
-        <div class="subsection"><h3>Press kit</h3><p>[Downloadable resources]</p></div>
+        <h2 id="press-title">PRESS</h2>
+        <div class="subsection"><h3 id="press-media">Media coverage</h3><p id="press-media-text">[Interviews, articles, podcasts]</p></div>
+        <div class="subsection"><h3 id="press-outreach">Outreach activities</h3><p id="press-outreach-text">[#científicas, 11F, institutional newsletters]</p></div>
+        <div class="subsection"><h3 id="press-kit">Press kit</h3><p id="press-kit-text">[Downloadable resources]</p></div>
     </div>
 
+    <!-- CONTACT Section -->
     <div id="contact" class="section">
-        <h2>CONTACT</h2>
+        <h2 id="contact-title">CONTACT</h2>
         <div class="contact-grid">
-            <div class="contact-card"><h3>Principal Investigator</h3><p>Dr. María Teresa Soto Sanfel</p><p>Email: [your email]</p></div>
-            <div class="contact-card"><h3>Project management</h3><p>Email: produce.project@[university].es</p></div>
-            <div class="contact-card"><h3>Address</h3><p>Department of Audiovisual Communication and Advertising<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Spain)</p></div>
+            <div class="contact-card"><h3 id="contact-pi">Principal Investigator</h3><p id="contact-pi-name">Dr. María Teresa Soto Sanfel</p><p id="contact-pi-email">Email: [your email]</p></div>
+            <div class="contact-card"><h3 id="contact-project">Project management</h3><p id="contact-project-email">Email: produce.project@[university].es</p></div>
+            <div class="contact-card"><h3 id="contact-address">Address</h3><p id="contact-address-text">Department of Audiovisual Communication and Advertising<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Spain)</p></div>
         </div>
     </div>
 </div>
 
 <footer>
     <div class="container">
-        <p>© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved.</p>
+        <p id="footer-text">© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved.</p>
     </div>
 </footer>
 
 <script>
-    const sections = document.querySelectorAll('.section');
-    const navBtns = document.querySelectorAll('.nav-btn');
-
-    function switchSection(sectionId) {
-        sections.forEach(section => {
-            section.classList.remove('active-section');
-        });
-        const activeSection = document.getElementById(sectionId);
-        if (activeSection) activeSection.classList.add('active-section');
-
-        navBtns.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.getAttribute('data-section') === sectionId) {
-                btn.classList.add('active');
-            }
-        });
-    }
-
-    navBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const sectionId = btn.getAttribute('data-section');
-            switchSection(sectionId);
-        });
-    });
-</script>
-
-</body>
-</html>
+    // TRANSLATIONS
+    const translations = {
+        en: {
+            subtitle: "Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact",
+            nav: { home: "HOME", team: "TEAM", publications: "PUBLICATIONS", thesis: "THESIS", events: "EVENTS", press: "PRESS", contact: "CONTACT" },
+            home_title: "HOME",
+            full_title: "Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact",
+            project_number: "\"PRODUCE\" (PID2024-160145NB-C21)",
+            what_title: "What is PRODUCE?",
+            what_text: "Building on the legacy of the previous LGBTIQ+ Screens project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.",
+            whatdo_title: "What do we do?",
+            whatdo_text: "PRODUCE investigates the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations. We will also identify emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.",
+            outcomes_title: "Expected Outcomes",
+            outcomes_text: "PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.",
+            about_title: "About us",
+            about_text: "PRODUCE is a coordinated effort made possible by the active participation of <strong>X researchers</strong> from <strong>Y universities and institutions</strong> across <strong>Z countries</strong>.",
+            about_text2: "The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.",
+            team_title: "TEAM",
+            team_pi: "Principal Investigators",
+            team_pi_text: "[Add names, affiliations, roles]",
+            team_staff: "Research Staff",
+            team_staff_text: "[List of researchers and postdocs]",
+            team_collab: "Collaborating Institutions",
+            team_collab_text: "[Universities / research centres]",
+            pubs_title: "PUBLICATIONS",
+            pubs_journal: "Peer-reviewed articles",
+            pubs_journal_text: "[Add journal publications]",
+            pubs_books: "Books and chapters",
+            pubs_books_text: "[Add monographs, edited volumes]",
+            pubs_open: "Open access & preprints",
+            pubs_open_text: "[Repositories, DOIs]",
+            thesis_title: "THESIS",
+            thesis_phd: "Doctoral dissertations",
+            thesis_phd_text: "[PhD projects associated with PRODUCE]",
+            thesis_master: "Master's theses",
+            thesis_master_text: "[Supervised final projects]",
+            thesis_predoctoral: "Predoctoral contracts",
+            thesis_predoctoral_text: "[Funding and training programme]",
+            events_title: "EVENTS",
+            events_congress: "International Congresses",
+            events_congress_text: "3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.",
+            events_workshops: "Workshops & Training",
+            events_workshops_text: "[Courses for audiovisual communication students]",
+            events_conferences: "Conference presentations",
+            events_conferences_text: "[ICA, IAMCR, ECREA, AE-IC]",
+            press_title: "PRESS",
+            press_media: "Media coverage",
+            press_media_text: "[Interviews, articles, podcasts]",
+            press_outreach: "Outreach activities",
+            press_outreach_text: "[#científicas, 11F, institutional newsletters]",
+            press_kit: "Press kit",
+            press_kit_text: "[Downloadable resources]",
+            contact_title: "CONTACT",
+            contact_pi: "Principal Investigator",
+            contact_pi_name: "Dr. María Teresa Soto Sanfel",
+            contact_pi_email: "Email: [your email]",
+            contact_project: "Project management",
+            contact_project_email: "Email: produce.project@[university].es",
+            contact_address: "Address",
+            contact_address_text: "Department of Audiovisual Communication and Advertising<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Spain)",
+            footer_text: "© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved."
+        },
+        ca: {
+            subtitle: "Producció de continguts audiovisuals LGBTIQ+: Agents, contextos industrials, plataformes i expectatives d'impacte",
+            nav: { home: "INICI", team: "EQUIP", publications: "PUBLICACIONS", thesis: "TESIS", events: "ESDEVENIMENTS", press: "PREMSA", contact: "CONTACTE" },
+            home_title: "INICI",
+            full_title: "Producció de continguts audiovisuals LGBTIQ+: Agents, contextos industrials, plataformes i expectatives d'impacte",
+            project_number: "\"PRODUCE\" (PID2024-160145NB-C21)",
+            what_title: "Què és PRODUCE?",
+            what_text: "Partint del llegat de l'anterior projecte LGBTIQ+ Screens, PRODUCE és un projecte d'investigació finançat pel Ministeri de Ciència, Innovació i Universitats espanyol que va més enllà de l'estudi de la representació per explorar el veritable motor del contingut audiovisual: els creadors i els contextos de producció. Entre 2026 i 2029, aquest projecte investigarà com es produeix a Espanya el contingut audiovisual sobre persones LGBTIQ+ en un ric ecosistema de mitjans culturals – des del cinema i la televisió fins a les xarxes socials, la creació independent i l'activisme. PRODUCE busca comprendre com les dinàmiques de producció configuren no només el contingut LGBTIQ+, sinó també les realitats de qui el crea, i finalment com aquest contingut pot reduir prejudicis i fomentar una societat més inclusiva.",
+            whatdo_title: "Què fem?",
+            whatdo_text: "PRODUCE investiga les dinàmiques de producció de contingut LGBTIQ+, entenent com els contextos de producció i variables interseccionals com l'edat, el gènere, l'ètnia i la classe de professionals, aficionats, activistes i creadors en línia influeixen en les rutines productives, els processos creatius, el valor professional percebut, el benestar i les representacions LGBTIQ+ resultants. També identificarem rols emergents (és a dir, consultors d'autenticitat LGBTIQ+ i coordinadors d'intimitat), oportunitats i tensions en la indústria, estudiant com les estructures mediàtiques actuals i les noves pràctiques culturals afecten l'autoestima creativa, l'agència i el potencial de reducció de prejudicis LGBTIQ+.",
+            outcomes_title: "Resultats Esperats",
+            outcomes_text: "PRODUCE té com a objectiu cartografiar com les dinàmiques de producció configuren el contingut audiovisual LGBTIQ+ a l'Estat espanyol. La nostra investigació es difondrà mitjançant publicacions revisades per parells, cursos de formació per a l'educació universitària, manuals de bones pràctiques per a la indústria audiovisual i dos congressos internacionals sobre mitjans, gènere i sexualitat.",
+            about_title: "Sobre nosaltres",
+            about_text: "PRODUCE és un esforç coordinat possible gràcies a la participació activa de <strong>X investigadores</strong> de <strong>Y universitats i institucions</strong> en <strong>Z països</strong>.",
+            about_text2: "El projecte està liderat per la Universitat Autònoma de Barcelona, en col·laboració amb socis internacionals.",
+            team_title: "EQUIP",
+            team_pi: "Investigadors principals",
+            team_pi_text: "[Afegeix noms, afiliacions, rols]",
+            team_staff: "Personal investigador",
+            team_staff_text: "[Llista d'investigadors i postdoctorands]",
+            team_collab: "Institucions col·laboradores",
+            team_collab_text: "[Universitats / centres de recerca]",
+            pubs_title: "PUBLICACIONS",
+            pubs_journal: "Articles revisats per parells",
+            pubs_journal_text: "[Afegeix publicacions en revistes]",
+            pubs_books: "Llibres i capítols",
+            pubs_books_text: "[Monografies, volums editats]",
+            pubs_open: "Accés obert i preprints",
+            pubs_open_text: "[Repositoris, DOIs]",
+            thesis_title: "TESIS",
+            thesis_phd: "Tesis doctorals",
+            thesis_phd_text: "[Projectes de doctorat associats a PRODUCE]",
+            thesis_master: "Treballs de màster",
+            thesis_master_text: "[Projectes finals supervisats]",
+            thesis_predoctoral: "Contractes predoctorals",
+            thesis_predoctoral_text: "[Programa de formació i finançament]",
+            events_title: "ESDEVENIMENTS",
+            events_congress: "Congressos internacionals",
+            events_congress_text: "3r i 4t ICMGS (2027, 2029) – Benasque, Espanya.",
+            events_workshops: "Tallers i formació",
+            events_workshops_text: "[Cursos per a estudiants de Comunicació Audiovisual]",
+            events_conferences: "Presentacions en conferències",
+            events_conferences_text: "[ICA, IAMCR, ECREA, AE-IC]",
+            press_title: "PREMSA",
+            press_media: "Cobertura mediàtica",
+            press_media_text: "[Entrevistes, articles, pòdcasts]",
+            press_outreach: "Activitats de divulgació",
+            press_outreach_text: "[#científicas, 11F, butlletins institucionals]",
+            press_kit: "Dossier de premsa",
+            press_kit_text: "[Recursos descarregables]",
+            contact_title: "CONTACTE",
+            contact_pi: "Investigadora principal",
+            contact_pi_name: "Dra. María Teresa Soto Sanfel",
+            contact_pi_email: "Correu electrònic: [el teu correu]",
+            contact_project: "Gestió del projecte",
+            contact_project_email: "Correu electrònic: produce.project@[universitat].es",
+            contact_address: "Adreça",
+            contact_address_text: "Departament de Comunicació Audiovisual i Publicitat<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Espanya)",
+            footer_text: "© 2026–2029 PRODUCE – Ministeri de Ciència, Innovació i Universitats espanyol. Tots els drets reservats."
+        },
+        es: {
+            subtitle: "Producción de contenidos audiovisuales LGBTIQ+: Agentes, contextos industriales, plataformas y expectativas de impacto",
+            nav: { home: "INICIO", team: "EQUIPO", publications: "PUBLICACIONES", thesis: "TESIS", events: "EVENTOS", press: "PRENSA", contact: "CONTACTO" },
+            home_title: "INICIO",
+            full_title: "Producción de contenidos audiovisuales LGBTIQ+: Agentes, contextos industriales, plataformas y expectativas de impacto",
+            project_number: "\"PRODUCE\" (PID2024-160145NB-C21)",
+            what_title: "¿Qué es PRODUCE?",
+            what_text: "Partiendo del legado del anterior proyecto LGBTIQ+ Screens, PRODUCE es un proyecto de investigación financiado por el Ministerio de Ciencia, Innovación y Universidades español que va más allá del estudio de la representación para explorar el verdadero motor del contenido audiovisual: los creadores y los contextos de producción. Entre 2026 y 2029, este proyecto investigará cómo se produce en España el contenido audiovisual sobre personas LGBTIQ+ en un rico ecosistema de medios culturales – desde el cine y la televisión hasta las redes sociales, la creación independiente y el activismo. PRODUCE busca comprender cómo las dinámicas de producción configuran no solo el contenido LGBTIQ+, sino también las realidades de quienes lo crean, y finalmente cómo dicho contenido puede reducir prejuicios y fomentar una sociedad más inclusiva.",
+            whatdo_title: "¿Qué hacemos?",
+            whatdo_text: "PRODUCE investiga las dinámicas de producción de contenido LGBTIQ+, entendiendo cómo los contextos de producción y variables interseccionales como la edad, el género, la etnia y la clase de profesionales, aficionados, activistas y creadores en línea influyen en las rutinas productivas, los procesos creativos, el valor profesional percibido, el bienestar y las representaciones LGBTIQ+ resultantes. También identificaremos roles emergentes (es decir, consultores de autenticidad LGBTIQ+ y coordinadores de intimidad), oportunidades y tensiones en la industria, estudiando cómo las estructuras mediáticas actuales y las nuevas prácticas culturales afectan la autoestima creativa, la agencia y el potencial de reducción de prejuicios LGBTIQ+.",
+            outcomes_title: "Resultados Esperados",
+            outcomes_text: "PRODUCE tiene como objetivo cartografiar cómo las dinámicas de producción configuran el contenido audiovisual LGBTIQ+ en el Estado español. Nuestra investigación se difundirá a través de publicaciones revisadas por pares, cursos de formación para la educación universitaria, manuales de buenas prácticas para la industria audiovisual y dos congresos internacionales sobre medios, género y sexualidad.",
+            about_title: "Sobre nosotros",
+            about_text: "PRODUCE es un esfuerzo coordinado posible gracias a la participación activa de <strong>X investigadores</strong> de <strong>Y universidades e instituciones</strong> en <strong>Z países</strong>.",
+            about_text2: "El proyecto está liderado por la Universitat Autònoma de Barcelona, en colaboración con socios internacionales.",
+            team_title: "EQUIPO",
+            team_pi: "Investigadores principales",
+            team_pi_text: "[Añade nombres, afiliaciones, roles]",
+            team_staff: "Personal investigador",
+            team_staff_text: "[Lista de investigadores y postdoctorandos]",
+            team_collab: "Instituciones colaboradoras",
+            team_collab_text: "[Universidades / centros de investigación]",
+            pubs_title: "PUBLICACIONES",
+            pubs_journal: "Artículos revisados por pares",
+            pubs_journal_text: "[Añade publicaciones en revistas]",
+            pubs_books: "Libros y capítulos",
+            pubs_books_text: "[Monografías, volúmenes editados]",
+            pubs_open: "Acceso abierto y preprints",
+            pubs_open_text: "[Repositorios, DOIs]",
+            thesis_title: "TESIS",
+            thesis_phd: "Tesis doctorales",
+            thesis_phd_text: "[Proyectos de doctorado asociados a PRODUCE]",
+            thesis_master: "Trabajos de máster",
+            thesis_master_text: "[Proyectos finales supervisados]",
+            thesis_predoctoral: "Contratos predoctorales",
+            thesis_predoctoral_text: "[Programa de formación y financiación]",
+            events_title: "EVENTOS",
+            events_congress: "Congresos internacionales",
+            events_congress_text: "3º y 4º ICMGS (2027, 2029) – Benasque, España.",
+            events_workshops: "Talleres y formación",
+            events_workshops_text: "[Cursos para estudiantes de Comunicación Audiovisual]",
+            events_conferences: "Presentaciones en conferencias",
+            events_conferences_text: "[ICA, IAMCR, ECREA, AE-IC]",
+            press_title: "PRENSA",
+            press_media: "Cobertura mediática",
+            press_media_text: "[Entrevistas, artículos, podcasts]",
+            press_outreach: "Actividades de divulgación",
+            press_outreach_text: "[#científicas, 11F, boletines institucionales]",
+            press_kit: "Dosier de prensa",
+            press_kit_text: "[Recursos descargables]",
+            contact_title: "CONTACTO",
+            contact_pi: "Investigadora principal",
+            contact_pi_name: "Dra. María Teresa Soto Sanfel",
+            contact_pi_email: "Correo electrónico: [tu correo]",
+            contact_project: "Gestión del proyecto",
+            contact_project_email: "Correo electrónico: produce.project@[universidad].es",
+            contact_address: "Dirección",
+            contact_address_text: "Departamento de Comunicación Audiovisual y Publicidad<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (España)",
+            footer_text: "© 2026–2029 PRODUCE – Ministerio de Ciencia, Innovación y Universidades
