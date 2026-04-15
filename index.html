@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
- 
+
     :root {
       --purple: #7c3aed;
       --purple-light: #ede9fe;
@@ -21,14 +21,14 @@
       --white: #ffffff;
       --radius: 16px;
     }
- 
+
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--bg);
       color: var(--dark);
       line-height: 1.65;
     }
- 
+
     /* ── TOP STRIP ── */
     .top-strip {
       background: var(--white);
@@ -53,7 +53,7 @@
     }
     .lang-btn:hover { color: var(--purple); background: var(--purple-light); }
     .lang-btn.active { color: var(--purple); background: var(--purple-light); }
- 
+
     /* ── HEADER ── */
     header {
       background: var(--white);
@@ -73,7 +73,7 @@
       letter-spacing: 0.12em;
       color: var(--muted);
     }
- 
+
     /* ── NAV ── */
     nav {
       background: var(--white);
@@ -107,18 +107,18 @@
     }
     .nav-btn:hover { color: var(--purple); }
     .nav-btn.active { color: var(--purple); border-bottom-color: var(--purple); }
- 
+
     /* ── MAIN ── */
     main {
       max-width: 1100px;
       margin: 0 auto;
       padding: 2.5rem 2rem 4rem;
     }
- 
+
     /* ── SECTIONS ── */
     .section { display: none; }
     .section.active { display: block; }
- 
+
     h2 {
       font-family: 'DM Serif Display', serif;
       font-size: 1.8rem;
@@ -127,7 +127,7 @@
       padding-left: 1rem;
       margin-bottom: 1.8rem;
     }
- 
+
     /* ── TITLE BOX ── */
     .title-box {
       background: var(--purple-light);
@@ -162,7 +162,7 @@
       max-height: 80px;
       width: auto;
     }
- 
+
     /* ── CARDS ── */
     .card {
       background: var(--white);
@@ -178,7 +178,7 @@
       margin-bottom: 0.7rem;
     }
     .card p { color: #374151; font-size: 0.95rem; }
- 
+
     /* ── TEAM / CONTACT GRID ── */
     .item-card {
       background: var(--white);
@@ -196,7 +196,7 @@
       margin-bottom: 0.5rem;
     }
     .item-card p { color: #374151; font-size: 0.93rem; }
- 
+
     /* ── FOOTER ── */
     footer {
       text-align: center;
@@ -205,7 +205,7 @@
       font-size: 0.75rem;
       color: var(--muted);
     }
- 
+
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
       .title-box { flex-direction: column; }
@@ -216,20 +216,20 @@
   </style>
 </head>
 <body>
- 
+
 <!-- Language selector -->
 <div class="top-strip">
   <button class="lang-btn active" onclick="setLang('en')">EN</button>
   <button class="lang-btn" onclick="setLang('ca')">CA</button>
   <button class="lang-btn" onclick="setLang('es')">ES</button>
 </div>
- 
+
 <!-- Header -->
 <header>
   <img class="logo" src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/produceeee-1.jpg" alt="PRODUCE logo">
   <p class="subtitle" id="subtitle-text">Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact</p>
 </header>
- 
+
 <!-- Navigation -->
 <nav>
   <div class="nav-inner">
@@ -242,13 +242,13 @@
     <button class="nav-btn" onclick="showSection('contact')" id="nav-contact">CONTACT</button>
   </div>
 </nav>
- 
+
 <main>
- 
+
   <!-- HOME -->
   <section id="home" class="section active">
     <h2 id="home-heading">HOME</h2>
- 
+
     <div class="title-box">
       <div class="title-box-text">
         <h3 id="full-title">Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact</h3>
@@ -258,29 +258,29 @@
         <img src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/ministerio.jpg" alt="Ministry of Science">
       </div>
     </div>
- 
+
     <div class="card">
       <h3 id="what-title">What is PRODUCE?</h3>
       <p id="what-text">Building on the legacy of the previous LGBTIQ+ Screens project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.</p>
     </div>
- 
+
     <div class="card">
       <h3 id="whatdo-title">What do we do?</h3>
       <p id="whatdo-text">PRODUCE investigates the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations. We will also identify emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.</p>
     </div>
- 
+
     <div class="card">
       <h3 id="outcomes-title">Expected Outcomes</h3>
       <p id="outcomes-text">PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.</p>
     </div>
- 
+
     <div class="card">
       <h3 id="about-title">About us</h3>
       <p id="about-text">PRODUCE is a coordinated effort made possible by the active participation of <strong>X researchers</strong> from <strong>Y universities and institutions</strong> across <strong>Z countries</strong>.</p>
       <p id="about-text2" style="margin-top:0.5rem;">The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.</p>
     </div>
   </section>
- 
+
   <!-- TEAM -->
   <section id="team" class="section">
     <h2 id="team-heading">TEAM</h2>
@@ -288,7 +288,7 @@
     <div class="item-card"><h4 id="team-staff">Research Staff</h4><p id="team-staff-text">[List of researchers and postdocs]</p></div>
     <div class="item-card"><h4 id="team-collab">Collaborating Institutions</h4><p id="team-collab-text">[Universities / research centres]</p></div>
   </section>
- 
+
   <!-- PUBLICATIONS -->
   <section id="publications" class="section">
     <h2 id="pubs-heading">PUBLICATIONS</h2>
@@ -296,7 +296,7 @@
     <div class="card"><h3 id="pubs-books">Books and chapters</h3><p id="pubs-books-text">[Add monographs, edited volumes]</p></div>
     <div class="card"><h3 id="pubs-open">Open access &amp; preprints</h3><p id="pubs-open-text">[Repositories, DOIs]</p></div>
   </section>
- 
+
   <!-- THESIS -->
   <section id="thesis" class="section">
     <h2 id="thesis-heading">THESIS</h2>
@@ -304,7 +304,7 @@
     <div class="card"><h3 id="thesis-master">Master's theses</h3><p id="thesis-master-text">[Supervised final projects]</p></div>
     <div class="card"><h3 id="thesis-predoc">Predoctoral contracts</h3><p id="thesis-predoc-text">[Funding and training programme]</p></div>
   </section>
- 
+
   <!-- EVENTS -->
   <section id="events" class="section">
     <h2 id="events-heading">EVENTS</h2>
@@ -312,7 +312,7 @@
     <div class="card"><h3 id="events-workshops">Workshops &amp; Training</h3><p id="events-workshops-text">[Courses for audiovisual communication students]</p></div>
     <div class="card"><h3 id="events-conf">Conference presentations</h3><p id="events-conf-text">[ICA, IAMCR, ECREA, AE-IC]</p></div>
   </section>
- 
+
   <!-- PRESS -->
   <section id="press" class="section">
     <h2 id="press-heading">PRESS</h2>
@@ -320,7 +320,7 @@
     <div class="card"><h3 id="press-outreach">Outreach activities</h3><p id="press-outreach-text">[#científicas, 11F, institutional newsletters]</p></div>
     <div class="card"><h3 id="press-kit">Press kit</h3><p id="press-kit-text">[Downloadable resources]</p></div>
   </section>
- 
+
   <!-- CONTACT -->
   <section id="contact" class="section">
     <h2 id="contact-heading">CONTACT</h2>
@@ -331,13 +331,13 @@
       <p id="contact-address-text">Department of Audiovisual Communication and Advertising<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Spain)</p>
     </div>
   </section>
- 
+
 </main>
- 
+
 <footer>
   <p id="footer-text">© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved.</p>
 </footer>
- 
+
 <script>
 // ── SECTION SWITCHING ──
 function showSection(id) {
@@ -347,7 +347,7 @@ function showSection(id) {
   document.getElementById('nav-' + id).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
- 
+
 // ── TRANSLATIONS ──
 const T = {
   en: {
@@ -462,25 +462,25 @@ const T = {
     footer: "© 2026–2029 PRODUCE – Ministerio de Ciencia, Innovación y Universidades. Todos los derechos reservados."
   }
 };
- 
+
 let currentLang = 'en';
- 
+
 function set(id, text, html) {
   var el = document.getElementById(id);
   if (!el) return;
   if (html) el.innerHTML = text; else el.textContent = text;
 }
- 
+
 function setLang(lang) {
   currentLang = lang;
   var t = T[lang];
   if (!t) return;
- 
+
   // Update lang buttons
   document.querySelectorAll('.lang-btn').forEach(function(b) {
     b.classList.toggle('active', b.getAttribute('onclick').includes("'" + lang + "'"));
   });
- 
+
   // Update nav labels
   set('nav-home', t.navHome);
   set('nav-team', t.navTeam);
@@ -489,7 +489,7 @@ function setLang(lang) {
   set('nav-events', t.navEvents);
   set('nav-press', t.navPress);
   set('nav-contact', t.navContact);
- 
+
   set('subtitle-text', t.subtitle);
   set('home-heading', t.homeHeading);
   set('full-title', t.fullTitle);
@@ -503,7 +503,7 @@ function setLang(lang) {
   set('about-title', t.aboutTitle);
   set('about-text', t.aboutText, true);
   set('about-text2', t.aboutText2);
- 
+
   set('team-heading', t.teamHeading);
   set('team-pi', t.teamPi);
   set('team-pi-text', t.teamPiText);
@@ -511,7 +511,7 @@ function setLang(lang) {
   set('team-staff-text', t.teamStaffText);
   set('team-collab', t.teamCollab);
   set('team-collab-text', t.teamCollabText);
- 
+
   set('pubs-heading', t.pubsHeading);
   set('pubs-journal', t.pubsJournal);
   set('pubs-journal-text', t.pubsJournalText);
@@ -519,7 +519,7 @@ function setLang(lang) {
   set('pubs-books-text', t.pubsBooksText);
   set('pubs-open', t.pubsOpen);
   set('pubs-open-text', t.pubsOpenText);
- 
+
   set('thesis-heading', t.thesisHeading);
   set('thesis-phd', t.thesisPhd);
   set('thesis-phd-text', t.thesisPhdText);
@@ -527,7 +527,7 @@ function setLang(lang) {
   set('thesis-master-text', t.thesisMasterText);
   set('thesis-predoc', t.thesisPredoc);
   set('thesis-predoc-text', t.thesisPredocText);
- 
+
   set('events-heading', t.eventsHeading);
   set('events-congress', t.eventsCongress);
   set('events-congress-text', t.eventsCongressText);
@@ -535,7 +535,7 @@ function setLang(lang) {
   set('events-workshops-text', t.eventsWorkshopsText);
   set('events-conf', t.eventsConf);
   set('events-conf-text', t.eventsConfText);
- 
+
   set('press-heading', t.pressHeading);
   set('press-media', t.pressMedia);
   set('press-media-text', t.pressMediaText);
@@ -543,7 +543,7 @@ function setLang(lang) {
   set('press-outreach-text', t.pressOutreachText);
   set('press-kit', t.pressKit);
   set('press-kit-text', t.pressKitText);
- 
+
   set('contact-heading', t.contactHeading);
   set('contact-pi', t.contactPi);
   set('contact-pi-name', t.contactPiName);
