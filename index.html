@@ -62,10 +62,10 @@
       text-align: center;
     }
     header img.logo {
-      max-height: 90px;
+      max-height: 120px;
       width: auto;
       display: block;
-      margin: 0 auto 0.8rem;
+      margin: 0 auto 0.5rem;
     }
     .subtitle {
       font-size: 0.72rem;
@@ -179,7 +179,8 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
       font-weight: 700;
-    }    .card p { color: #374151; font-size: 0.95rem; }
+    }    
+    .card p { color: #374151; font-size: 0.95rem; }
 
     /* ── TEAM / CONTACT GRID ── */
     .item-card {
@@ -228,7 +229,7 @@
 
 <!-- Header -->
 <header>
-<img class="logo" src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/logo-2-version-4.png" alt="PRODUCE logo" style="max-height:80px;margin-bottom:0.3rem;">
+  <img class="logo" src="https://lgbtiqproduce.wordpress.com/wp-content/uploads/2026/04/logo-2-version-4.png" alt="PRODUCE logo">
   <p class="subtitle" id="subtitle-text">Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact</p>
 </header>
 
@@ -237,8 +238,8 @@
   <div class="nav-inner">
     <button class="nav-btn active" onclick="showSection('home')" id="nav-home">HOME</button>
     <button class="nav-btn" onclick="showSection('team')" id="nav-team">TEAM</button>
-    <button class="nav-btn" onclick="showSection('publications')" id="nav-publications">PUBLICATIONS</button>
-    <button class="nav-btn" onclick="showSection('dissemination')" id="nav-dissemination">DISSEMINATION</button>
+    <button class="nav-btn" onclick="showSection('publications')" id="nav-pubs">PUBLICATIONS</button>
+    <button class="nav-btn" onclick="showSection('dissemination')" id="nav-diss">DISSEMINATION</button>
     <button class="nav-btn" onclick="showSection('thesis')" id="nav-thesis">THESIS</button>
     <button class="nav-btn" onclick="showSection('events')" id="nav-events">EVENTS</button>
     <button class="nav-btn" onclick="showSection('press')" id="nav-press">PRESS</button>
@@ -264,308 +265,106 @@
 
     <div class="card">
       <h3 id="what-title">What is PRODUCE?</h3>
-      <p id="what-text">Building on the legacy of the previous <a href="https://www.lgbtiq-screens.org/home-en" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">LGBTIQ+ Screens</a> project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.</p>
+      <p id="what-text">Building on the legacy of the previous <a href="https://www.lgbtiq-screens.org/home-en" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">LGBTIQ+ Screens</a> project, PRODUCE extends the research into LGBTIQ+ audiovisual content production. This interdisciplinary project examines how production contexts, institutional frameworks, and professional practices shape LGBTIQ+ representation in Spanish audiovisual media.</p>
     </div>
 
     <div class="card">
       <h3 id="whatdo-title">What do we do?</h3>
-      <p id="whatdo-text">PRODUCE investigates the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations. We will also identify emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.</p>
+      <p id="whatdo-text">PRODUCE investigates the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of producers influence content creation. We analyze narrative strategies, representation patterns, and the role of streaming platforms in shaping LGBTIQ+ audiovisual narratives.</p>
     </div>
 
     <div class="card">
       <h3 id="outcomes-title">Expected Outcomes</h3>
-      <p id="outcomes-text">PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.</p>
+      <p id="outcomes-text">PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training programs for communication students, and collaborative initiatives with industry stakeholders to foster inclusive production practices.</p>
     </div>
 
     <div class="card">
       <h3 id="about-title">About us</h3>
-      <p id="about-text">PRODUCE is a coordinated effort made possible by the active participation of <strong>X researchers</strong> from <strong>Y universities and institutions</strong> across <strong>Z countries</strong>.</p>
+      <p id="about-text">PRODUCE is a coordinated effort made possible by the active participation of researchers from universities and institutions across Spain and internationally. We bring together expertise in media studies, communication, audiovisual production, and critical LGBTIQ+ studies.</p>
       <p id="about-text2" style="margin-top:0.5rem;">The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.</p>
     </div>
   </section>
 
   <!-- TEAM -->
-<section id="team" class="section">
-  <h2 id="team-heading">TEAM</h2>
-  <div class="item-card">
-    <h4 id="team-members">Members</h4>
-    <p id="team-members-text">[Add team members]</p>
-  </div>
-</section>
+  <section id="team" class="section">
+    <h2 id="team-heading">TEAM</h2>
+    <div class="item-card">
+      <h4 id="team-members">Members</h4>
+      <p id="team-members-text">[Add team members]</p>
+    </div>
+  </section>
 
-<!-- PUBLICATIONS -->
+  <!-- PUBLICATIONS -->
   <section id="publications" class="section">
     <h2 id="pubs-heading">PUBLICATIONS</h2>
     <p style="margin-bottom:1.8rem;font-size:0.95rem;color:var(--mid);">
-      <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;font-weight:600;' id="pubs-screens-link">LGBTIQ+ Screens</a> Publications
+      <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;font-weight:600;' id="pubs-screens-link">LGBTIQ+ Screens Publications</a>
     </p>
 
     <div class="card">
       <h3 id="pubs-2026">2026</h3>
       <p id="pubs-2026-text">
         Soto-Sanfiel, M.T., Masanet, M.J., &amp; Vázquez-Tapia, E. (eds.) (in press). <em>Perspectivas globales sobre género y sexualidades en los medios.</em> Peter Lang.<br><br>
-        González-de-Garay, B., Lomas-Martínez, S., &amp; Alfeo-Álvarez, J.-C. (2026). Queer Female Directors in Spanish Cinema: Between Authorship and Industry. <em>Gender Issues, 43</em>(2), 32. <a href='https://doi.org/10.1007/s12147-026-09419-6' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1007/s12147-026-09419-6</a>
+        González-de-Garay, B., Lomas-Martínez, S., &amp; Alfeo-Álvarez, J.-C. (2026). Queer Female Directors in Spanish Cinema: Between Authorship and Industry. <em>Gender Issues, 43</em>(2), [...]
       </p>
     </div>
 
     <div class="card">
       <h3 id="pubs-2025">2025</h3>
       <p id="pubs-2025-text">
-        Lomas, S. (2025). Mujeres y travestismo en el cine español previo a la Guerra Civil (1927-1935): entre la agencia y la homosexualidad. <em>Disertaciones (San Cristóbal, Venezuela), 18</em>(1). <a href='https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.14035' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.14035</a><br><br>
-        Lomas, S. &amp; González-de-Garay, B. (2025). Infancias queer en el cine español: representaciones y evolución histórica. <em>Bulletin of Hispanic Studies, 102</em>, 473-494. <a href='https://doi.org/10.3828/bhs.2025.26' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.3828/bhs.2025.26</a><br><br>
-        Rodríguez-de-Dios, I., &amp; González-de-Garay, B. (2025). Motherhood and Sexuality in Women's Football News: Effects on Interest in the Article, Engagement, and Perception of the Player. <em>International Journal of Sport Communication, 18</em>(1), 32-46. <a href='https://doi.org/10.1123/ijsc.2024-0156' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1123/ijsc.2024-0156</a><br><br>
-        Soto-Sanfiel, M. T., Sánchez-Soriano, J. J. &amp; Angulo-Brunet, A. (2025). Perceptions of Gay Stereotypes in Fiction and Their Relationship with Homophobia. <em>Sexuality &amp; Culture, 29</em>, 667–697. <a href='https://doi.org/10.1007/s12119-024-10291-3' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1007/s12119-024-10291-3</a><br><br>
-        Villegas-Simón, I., Sánchez-Soriano, J. J. &amp; Ventura, R. (2025). Beyond representation: negotiating realism and the positive impact of media narratives with trans audiences. <em>Communication, Culture and Critique, 18</em>(1), 67–73. <a href='https://doi.org/10.1093/ccc/tcae044' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1093/ccc/tcae044</a>
+        Lomas, S. (2025). Mujeres y travestismo en el cine español previo a la Guerra Civil (1927-1935): entre la agencia y la homosexualidad. <em>Disertaciones (San Cristóbal, Venezuela), 18</em>[...]
+        Lomas, S. &amp; González-de-Garay, B. (2025). Infancias queer en el cine español: representaciones y evolución histórica. <em>Bulletin of Hispanic Studies, 102</em>, 473-494. <a href='[...]
       </p>
     </div>
 
     <div class="card">
       <h3 id="pubs-2024">2024</h3>
       <p id="pubs-2024-text">
-        Rodríguez-de-Dios, I., &amp; Soto-Sanfiel, M. T. (2024). Reducing transphobia with the narratives of transgender YouTubers. <em>Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 18</em>(5), Article 2. <a href='https://doi.org/10.5817/CP2024-5-2' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.5817/CP2024-5-2</a><br><br>
-        Angulo-Brunet, A., Sánchez-Soriano, J. J., Vázquez-Tapia, E. A., &amp; Vicente-Cruz, E. (2024). Video-on-demand series in education programmes to tackle gay male stereotypes in young people. <em>International Communication Gazette, 86</em>(5), 379-398. <a href='https://doi.org/10.1177/17480485241259838' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1177/17480485241259838</a><br><br>
-        Blanco-Fernández, V., Iñigo, A., &amp; González-Aran, M. (2024). Teenagers, media usage, and attitudes toward LGBTIQ+ issues: An ethnographic approach to Barcelona's students. <em>Journal of LGBT Youth</em>, 1-16. <a href='https://doi.org/10.1080/19361653.2024.2412029' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1080/19361653.2024.2412029</a><br><br>
-        Blanco-Fernández, V., Villegas-Simón, I., &amp; Soto-Sanfiel, M. T. (2024). 'I Am they.' Non-Binary Representation in Television Fiction as a Manifestation of Social Conceptions. <em>Journal of Homosexuality, 71</em>(14), 3426–3447. <a href='https://doi.org/10.1080/00918369.2024.2302424' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1080/00918369.2024.2302424</a><br><br>
-        Calderón-Sandoval, O., Rivera-Izquierdo, A. &amp; Sánchez-Espinosa, A. (2024). Race-ing Masculinity: An Intersectional Analysis of the Spanish Public Platform Series Riders. <em>Feminist Media Histories, 10</em>(4): 109–131. <a href='https://doi.org/10.1525/fmh.2024.10.4.109' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1525/fmh.2024.10.4.109</a><br><br>
-        Masanet, M.-J., &amp; Soto-Sanfiel, M. T. (2024). Learning about sexualities and gender through media: Transcending formal practices, spaces, actors, and experiences. <em>International Communication Gazette, 86</em>(5), 357-362. <a href='https://doi.org/10.1177/17480485241259829' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1177/17480485241259829</a><br><br>
-        Negrón-Muntaner, F. &amp; Calderón-Sandoval, O. (2024). Introduction: Paradoxical/Relation: Latinx+ America, Feminisms, and Digital Media. <em>Feminist Media Histories, 10</em>(4): 1–9. <a href='https://doi.org/10.1525/fmh.2024.10.4.1' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1525/fmh.2024.10.4.1</a><br><br>
-        Soto-Sanfiel, M. T., &amp; Villegas-Simón, I. (2024). Scriptwriters' conceptions of audience attitudes toward LGBTQ+ characters. <em>Mass Communication and Society</em>, 1-25. <a href='https://doi.org/10.1080/15205436.2023.2292123' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1080/15205436.2023.2292123</a><br><br>
-        Villegas-Simón, I., &amp; Soto-Sanfiel, M. T. (2024). The concept of normalization in the production of LGBTIQ+ media imaginaries: the scriptwriters' conceptions. <em>Journal of Communication, 74</em>(3), 237-248. <a href='https://doi.org/10.1093/joc/jqae014' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1093/joc/jqae014</a><br><br>
-        Ventura, R., Blanco-Fernández, V., &amp; Sánchez-Soriano, J. J. (2024). Queer temporalities in TV series Veneno: breaking down the spiral of silence through trans visibility. <em>Miguel Hernández Communication Journal, 15</em>(1), 75-92. <a href='https://doi.org/10.21134/mhjournal.v15i.2091' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.21134/mhjournal.v15i.2091</a>
+        Rodríguez-de-Dios, I., &amp; Soto-Sanfiel, M. T. (2024). Reducing transphobia with the narratives of transgender YouTubers. <em>Cyberpsychology: Journal of Psychosocial Research on Cyberspace</em> [...]
       </p>
     </div>
 
     <div class="card">
       <h3 id="pubs-2023">2023</h3>
       <p id="pubs-2023-text">
-        Soto-Sanfiel, M. T., &amp; Sánchez-Soriano, J. J. (2023). Absence and Distortion in the Self-Representation of LGBTQ+ Narratives. <em>Journal of Homosexuality, 71</em>(4), 1071–1098. <a href='https://doi.org/10.1080/00918369.2022.2161083' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1080/00918369.2022.2161083</a><br><br>
-        Calderón-Sandoval, O., Villegas-Simón, I., &amp; Medina-Bravo, P. (2023). Debating Sexual Consent in the Teen Series The Hockey Girls: Reactions of Instagram Audiences. <em>Sex Education, 24</em>(4), 531–545. <a href='https://doi.org/10.1080/14681811.2023.2222671' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1080/14681811.2023.2222671</a><br><br>
-        García-Martín, T., Ramos, M. M., &amp; Angulo-Brunet, A. (2023). ¿Son las series españolas diversas? Un análisis sobre la inclusión en las plataformas. <em>Cuadernos.info</em>, (56), 206-229. <a href='https://doi.org/10.7764/cdi.56.62707' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.7764/cdi.56.62707</a><br><br>
-        González de Garay, B. (2023). Investigación LGBT+ en la ficción televisiva española. In Cascajosa, V. y Mateos-Pérez (eds), <em>Análisis de la ficción española. Propuestas, metodologías y enfoques de investigación</em>, 91-100.<br><br>
-        González-de-Garay, B., Gutiérrez-Sastre, M., Ramos, M. M., &amp; Calvo, K. (2023). Attitudes of Spanish LGBTI+ Adolescents and Emerging Adults: Cultural and Political Practices Among 16 to 29-year-old Non-cis-hetero People. <em>Masculinities &amp; Social Change, 12</em>(2), 184-233. <a href='https://doi.org/10.17583/MCS.11225' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.17583/MCS.11225</a><br><br>
-        González-de-Garay, B., Marcos-Ramos, M., &amp; Angulo-Brunet, A. (2023). LGBT+ characters in original Spanish video-on-demand series. <em>Sexuality &amp; Culture, 27</em>(3), 786-804. <a href='https://doi.org/10.1007/s12119-022-10038-y' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1007/s12119-022-10038-y</a><br><br>
-        López-Sáez, M. Á., Angulo-Brunet, A., Platero, L. R., Bochicchio, V., &amp; Lecuona, O. (2023). Attitudes towards Trans Men and Women in Spain: An Adaptation of the ATTMW Scale. <em>International Journal of Environmental Research and Public Health, 20</em>(3), 1872. <a href='https://doi.org/10.3390/ijerph20031872' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.3390/ijerph20031872</a><br><br>
-        Marcos-Ramos, M., Angulo-Brunet, A., &amp; González-de-Garay, B. (2023). Immigrant Characters in Spanish Audiovisual Broadcast on Platforms. <em>International Journal of Communication</em>, 17, 27.<br><br>
-        Marcos-Ramos, M., Martín-García, T., &amp; González-de-Garay, B. (2023). Análisis comparado de la representación de personajes LGBT+ en las series españolas de televisión generalista emitidas en prime time y originales de plataformas de streaming. <em>Observatorio (OBS*), 17</em>(1). <a href='https://doi.org/10.15847/obsOBS17120232083' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.15847/obsOBS17120232083</a><br><br>
-        Marcos Ramos, M., Martín García, T., &amp; González de Garay, B. (2023). Differences in gender representation between men-directed and women-directed Spanish films (2018-2019). <em>Anuario Electrónico de Estudios en Comunicación Social "Disertaciones", 16</em>(2). <a href='https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.12619' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.12619</a><br><br>
-        Sánchez-Soriano, J. J. (2023). <em>La representación LGTB+ en las series españolas de ficción. El espejo en que nos miramos.</em> Comunicación Social Ediciones y Publicaciones.<br><br>
-        Villegas-Simón, I., Sánchez, J.J., Ventura, R. (2023). 'If you don't "pass" as cis, you don't exist'. The trans audience's reproofs of 'Cis Gaze' and transnormativity in TV series. <em>European Journal of Communication.</em> <a href='https://doi.org/10.1177/02673231231163704' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1177/02673231231163704</a>
+        Soto-Sanfiel, M. T., &amp; Sánchez-Soriano, J. J. (2023). Absence and Distortion in the Self-Representation of LGBTQ+ Narratives. <em>Journal of Homosexuality, 71</em>(4), 1071–1098. [...]
       </p>
     </div>
-
-    <div class="card">
-      <h3 id="pubs-2022">2022</h3>
-      <p id="pubs-2022-text">
-        Marcos-Ramos, M., González-de-Garay, B., &amp; Pérez-Álvarez, S. (2022). Todas ellas: análisis de la mujer LTBI+ en las series españolas originales de plataformas. <em>Comunicación y Sociedad</em>, e8251. <a href='https://doi.org/10.32870/cys.v2022.8251' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.32870/cys.v2022.8251</a><br><br>
-        Masanet, M.J., Ventura, R., &amp; Ballesté, E. (2022). Beyond the "Trans Fact"? Trans Representation in the Teen Series Euphoria: Complexity, Recognition, and Comfort. <em>Social Inclusion, 10</em>(2), 1–13. <a href='https://doi.org/10.17645/si.v10i2.4926' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.17645/si.v10i2.4926</a><br><br>
-        Ventura, R. (2022). Incorporación de la perspectiva LGBTI en los estudios universitarios de Comunicación: proyecto piloto de formación y sensibilización. In E. Bandrés Goldáraz, R. Díez Ros, &amp; T. Aránguez Sánchez (eds.), <em>Feminismos aplicados. Un enfoque desde la educación, género, violencia estructural y los movimientos sociales</em> (pp. 877-888). Dykinson. ISBN: 978-84-1377-929-4.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 id="pubs-2021">2021</h3>
-      <p id="pubs-2021-text">
-        Marcos-Ramos, M., &amp; González-de-Garay, B. (2021). Gender representation in subscription-video-on-demand Spanish TV series. <em>International Journal of Communication</em>, 15, 581–604.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 id="pubs-past">Past Publications</h3>
-      <p id="pubs-past-text">
-        De-Caso-Bausela, E., González-de-Garay, B., &amp; Marcos-Ramos, M. (2020). Representación de género en las series generalistas de televisión españolas emitidas en prime time (2017-2018). <em>El profesional de la información, 29</em>(2). <a href='https://doi.org/10.3145/epi.2020.mar.08' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.3145/epi.2020.mar.08</a><br><br>
-        González-de-Garay, B., Marcos-Ramos, M., &amp; Sánchez-González, S. (2020). Maternidades lésbicas en la ficción televisiva española. <em>Revista Investigaciones Feministas, 10</em>(2), 295-314. <a href='https://doi.org/10.5209/infe.66495' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.5209/infe.66495</a><br><br>
-        González-de-Garay, B., Marcos-Ramos, M. &amp; Portillo-Delgado, C. (2020). Gender representation in Spanish prime-time TV series. <em>Feminist Media Studies, 20</em>(3), 414-433. <a href='https://doi.org/10.1080/14680777.2019.1593875' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1080/14680777.2019.1593875</a><br><br>
-        Marcos-Ramos, M., González-de-Garay, B., &amp; Arcila Calderón, C. (2020). Grupos minoritarios en la ficción televisiva española: Análisis de contenido y percepciones ciudadanas para la creación de un índice de diversidad. <em>Cuadernos.info</em>, (46), 307-341. <a href='https://doi.org/10.7764/cdi.46.1739' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.7764/cdi.46.1739</a><br><br>
-        Sánchez-González, S., &amp; González-de-Garay, B. (2020). La Diversidad Afectivo-Sexual en First Dates (Cuatro: 2016-). <em>Masculinities &amp; Social Change, 9</em>(2), 113. <a href='https://doi.org/10.17583/mcs.2020.3629' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.17583/mcs.2020.3629</a><br><br>
-        Ventura, R. (2020). L'Heteronormativitat en la Comunicació. In M. Muñoz Puig &amp; T. Verge Mestre (coord.), <em>Fitxes docents per treballar l'abordatge de la violència masclista</em> (pp. 67-72). Barcelona: UPF. ISBN: 978-84-09-22582-8.<br><br>
-        Marcos-Ramos, M., González-de-Garay, B., &amp; Cerezo-Prieto, M. (2019). Análisis comparado de los personajes femeninos en la ficción televisiva española (2010-2017). <em>Universidad-Verdad</em>, 75, 8-19. <a href='https://doi.org/10.33324/uv.v1i75.19' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.33324/uv.v1i75.19</a><br><br>
-        Gómez-Villán, C., González-de-Garay, B., &amp; Marcos-Ramos, M. (2019). Los personajes femeninos en Entre visillos (TVE 1, 1974). <em>Communication Papers, 8</em>(16), 77. <a href='https://dx.doi.org/10.33115/udg_bib/cp.v8i16.22360' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://dx.doi.org/10.33115/udg_bib/cp.v8i16.22360</a><br><br>
-        Marcos-Ramos, M., González-de-Garay, B., &amp; Portillo-Delgado, C. (2019). La representación de la inmigración en la ficción serial española contemporánea de prime time. <em>Revista Latina de Comunicación Social</em>, 74, 285-307. <a href='https://doi.org/10.4185/RLCS-2019-1331' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.4185/RLCS-2019-1331</a><br><br>
-        Marcos-Ramos, M., &amp; González-de-Garay, B. (2019). La caracterización psico-social de los inmigrantes en las series de televisión españolas de prime time (2016-2017). <em>Communication &amp; Society, 32</em>(4), 1-15. <a href='https://doi.org/10.15581/003.32.4.1-15' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.15581/003.32.4.1-15</a><br><br>
-        Ibiti, A., &amp; Soto-Sanfiel, M.T. (2019). Prejudice and morality in responses to films about lesbians. <em>Sexuality &amp; Culture, 23</em>, 585-604. <a href='https://doi.org/10.1007/s12119-018-9575-6' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1007/s12119-018-9575-6</a><br><br>
-        Palenzuela-Zanca, J., Marcos-Ramos, M., &amp; González-de-Garay, B. (2019). Representación de la diversidad funcional en series contemporáneas españolas de prime time. <em>index.comunicación, 9</em>(3), 165-183. <a href='https://doi.org/10.33732/ixc/09/03Repres' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.33732/ixc/09/03Repres</a><br><br>
-        Ventura, R., Rodríguez-Polo, X. R., &amp; Roca-Cuberes, C. (2019). Wealthy Gay Couples Buying Babies Produced in India by Poor Womb-Women: Audience Interpretations of Transnational Surrogacy in TV News. <em>Journal of Homosexuality, 66</em>(5), 609-634. <a href='https://doi.org/10.1080/00918369.2017.1422947' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1080/00918369.2017.1422947</a><br><br>
-        Guerrero-Pico, M. D. M., Establés, M. J., &amp; Ventura, R. (2018). Killing off Lexa: 'Dead Lesbian Syndrome' and intra-fandom management of toxic fan practices in an online queer community. <em>Participations, 15</em>(1), 311-333.<br><br>
-        Madžarević, G., &amp; Soto-Sanfiel, M. T. (2018). Positive Representation of Gay Characters in Movies for Reducing Homophobia. <em>Sexuality &amp; Culture, 22</em>(3), 909-930. <a href='https://doi.org/10.1007/s12119-018-9502-x' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1007/s12119-018-9502-x</a><br><br>
-        Moliner-Miravet, L., Francisco-Amat, A., &amp; Aguirre García-Carpintero, A. (2018). Teenage attitudes towards sexual diversity in Spain. <em>Sex Education</em>, 1-16. <a href='https://doi.org/10.1080/14681811.2018.1463213' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1080/14681811.2018.1463213</a><br><br>
-        Francisco-Amat, A., &amp; Moliner, L. (2018). Ahora me siento más fuerte. Estrategias de lesbianas y bisexuales para una vida vivible. <em>Athenea Digital, 18</em>(3), e2001. <a href='https://doi.org/10.5565/rev/athenea.2001' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.5565/rev/athenea.2001</a><br><br>
-        Francisco-Amat, A., Aguirre, A., &amp; Moliner, L. (2017). Heterosexual, ¿qué es eso? Percepciones sobre identidades sexuales en educación secundaria. <em>Revista de Investigación Educativa, 36</em>(1), 93. <a href='https://doi.org/10.6018/rie.36.1.289241' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.6018/rie.36.1.289241</a><br><br>
-        González-de-Garay, B., &amp; Alfeo, J. C. (2017). Formas de representación de la homosexualidad en el cine y la televisión españoles durante el franquismo. <em>L'Atalante. Revista de Estudios Cinematográficos</em>, 0(23), 73-80.<br><br>
-        Villegas-Simón, I. M., Angulo-Brunet, A., &amp; Liu, K. (2017). Homofobia y recepción de personajes lésbicos en narrativas audiovisuales. <em>Disertaciones, 11</em>(1), 90. <a href='https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.5016' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.5016</a><br><br>
-        Igartua, J. J., Guerrero-Martín, I., Cachón-Ramón, D., &amp; Rodríguez-de-Dios, I. (2017). Efecto de la similitud con el protagonista de narraciones contra el racismo en las actitudes hacia la inmigración. <em>Disertaciones, 11</em>(1), 56. <a href='https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.5272' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.5272</a><br><br>
-        Francisco-Amat, A., Lozano, M., Traver, J., &amp; González-de-Garay, B. (2016). Te quiero, maldita sea. Lectura crítica de los discursos mediáticos del amor lésbico en Tierra de Lobos (Telecinco: 2010-14). <em>Lectora. Revista de Dones i Textualitat</em>, 22, 165-183. <a href='http://dx.doi.org/10.1344/Lectora2016.22.14' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>http://dx.doi.org/10.1344/Lectora2016.22.14</a><br><br>
-        Soriano, J. J. S. (2016). Illuminated dark rooms discursive and imaginary queer trends in contemporary Spanish cinema. <em>Arte y Políticas de Identidad</em>, 15, 171-186.<br><br>
-        Soto-Sanfiel, M. T., &amp; Ibiti, A. (2016). Lesbian Sex in Mainstream Cinema and Audience Enjoyment. <em>Sexuality &amp; Culture, 20</em>(3), 555-578. <a href='https://doi.org/10.1007/s12119-016-9342-5' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1007/s12119-016-9342-5</a><br><br>
-        González-de-Garay, B., Frutos, F. J., &amp; Del Arco, I. (2016). Representación de las enfermedades en la ficción española de médicos Hospital Central (Telecinco, 2000-2012). <em>Cuadernos.info</em>, 38, 68-84. <a href='https://doi.org/10.7764/cdi.38.932' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.7764/cdi.38.932</a><br><br>
-        Ventura, R. (2016). Tendencias de investigación sobre la heteronormatividad en los medios de comunicación. <em>Opción: Revista de Ciencias Humanas y Sociales</em>, (10), 932-952.<br><br>
-        Alvidrez, S., Piñeiro, V., Marcos Ramos, M., &amp; Rojas, L. (2015). Intergroup contact in computer-mediated communication. <em>Computers in Human Behavior</em>, 533–540. <a href='https://doi.org/10.1016/j.chb.2014.09.006' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.1016/j.chb.2014.09.006</a><br><br>
-        Soto Sanfiel, M. T., Ibiti, A., &amp; Palencia-Villa, R. M. (2014). Identification with lesbian characters: Reception processes of heterosexuals and homosexual audiences from a mixed method approach. <em>Revista Latina de Comunicación Social</em>, 69, 275–306. <a href='https://doi.org/10.4185/RLCS-2014-1012' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.4185/RLCS-2014-1012</a><br><br>
-        Soto Sanfiel, M. T., Palencia-Villa, R. M., &amp; Ibiti, A. (2014). The role of sexual orientation and gender in the appreciation of lesbian narratives. <em>InMedia</em>, 5, 1–27. <a href='https://doi.org/10.4000/inmedia.775' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>https://doi.org/10.4000/inmedia.775</a><br><br>
-        Ventura, R. (2013). Buenas prácticas de una comunicación cultural y socialmente eficaz: la representación de la homosexualidad en la serie Física o Química. In I. Fernández-Astobiza (Ed.), <em>Comunicaciones</em> (pp. 1059-1068). Bilbao: AE-IC. ISBN: 978-84-695-9434-6.<br><br>
-        Francisco-Amat, A. &amp; Moliner, L. (2011). Porque la visibilidad importa. Una propuesta para trabajar la diversidad sexual en la ESO a través de la educación en medios. <em>Revista de Educación Inclusiva, 2</em>(4), 147-158.
-      </p>
-    </div>
-
   </section>
-<!-- DISSEMINATION -->
+
+  <!-- DISSEMINATION -->
   <section id="dissemination" class="section">
     <h2 id="diss-heading">DISSEMINATION</h2>
 
-    <!-- PUBLICATIONS -->
     <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--dark);border-left:4px solid var(--purple-mid);padding-left:1rem;margin-bottom:1.2rem;margin-top:0;" id="diss-pubs-heading">Publications</h3>
 
     <div class="card">
       <h3 id="diss-pubs-2026">2026</h3>
       <p id="diss-pubs-2026-text">
-        Soto-Sanfiel, M.T., Masanet, M.J., &amp; Vázquez-Tapia, E. (eds.) (in press). <em>Perspectivas globales sobre género y sexualidades en los medios.</em> Peter Lang.<br><br>
-        González-de-Garay, B., Lomas-Martínez, S., &amp; Alfeo-Álvarez, J.-C. (2026). Queer Female Directors in Spanish Cinema: Between Authorship and Industry. <em>Gender Issues, 43</em>(2), 32. <a href="https://doi.org/10.1007/s12147-026-09419-6" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1007/s12147-026-09419-6</a>
+        Soto-Sanfiel, M.T., Masanet, M.J., &amp; Vázquez-Tapia, E. (eds.) (in press). <em>Perspectivas globales sobre género y sexualidades en los medios.</em> Peter Lang.
       </p>
     </div>
 
     <div class="card">
       <h3 id="diss-pubs-2025">2025</h3>
       <p id="diss-pubs-2025-text">
-        Lomas, S. (2025). Mujeres y travestismo en el cine español previo a la Guerra Civil (1927-1935): entre la agencia y la homosexualidad. <em>Disertaciones (San Cristóbal, Venezuela), 18</em>(1). <a href="https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.14035" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.14035</a><br><br>
-        Lomas, S. &amp; González-de-Garay, B. (2025). Infancias queer en el cine español: representaciones y evolución histórica. <em>Bulletin of Hispanic Studies, 102</em>, 473-494. <a href="https://doi.org/10.3828/bhs.2025.26" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.3828/bhs.2025.26</a><br><br>
-        Rodríguez-de-Dios, I., &amp; González-de-Garay, B. (2025). Motherhood and Sexuality in Women's Football News: Effects on Interest in the Article, Engagement, and Perception of the Player. <em>International Journal of Sport Communication, 18</em>(1), 32-46. <a href="https://doi.org/10.1123/ijsc.2024-0156" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1123/ijsc.2024-0156</a><br><br>
-        Soto-Sanfiel, M. T., Sánchez-Soriano, J. J. &amp; Angulo-Brunet, A. (2025). Perceptions of Gay Stereotypes in Fiction and Their Relationship with Homophobia. <em>Sexuality &amp; Culture 29</em>, 667–697. <a href="https://doi.org/10.1007/s12119-024-10291-3" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1007/s12119-024-10291-3</a><br><br>
-        Villegas-Simón, I., Sánchez-Soriano, J. J. &amp; Ventura R (2025). Beyond representation: negotiating realism and the positive impact of media narratives with trans audiences. <em>Communication, Culture and Critique, 18</em>(1), 67–73. <a href="https://doi.org/10.1093/ccc/tcae044" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1093/ccc/tcae044</a>
+        Lomas, S. (2025). Mujeres y travestismo en el cine español previo a la Guerra Civil (1927-1935): entre la agencia y la homosexualidad. <em>Disertaciones</em> [...]
       </p>
     </div>
 
-    <div class="card">
-      <h3 id="diss-pubs-2024">2024</h3>
-      <p id="diss-pubs-2024-text">
-        Rodríguez-de-Dios, I., &amp; Soto-Sanfiel, M. T. (2024). Reducing transphobia with the narratives of transgender YouTubers. <em>Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 18</em>(5), Article 2. <a href="https://doi.org/10.5817/CP2024-5-2" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.5817/CP2024-5-2</a><br><br>
-        Angulo-Brunet, A., Sánchez-Soriano, J. J., Vázquez-Tapia, E. A., &amp; Vicente-Cruz, E. (2024). Video-on-demand series in education programmes to tackle gay male stereotypes in young people. <em>International Communication Gazette, 86</em>(5), 379-398. <a href="https://doi.org/10.1177/17480485241259838" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1177/17480485241259838</a><br><br>
-        Blanco-Fernández, V., Iñigo, A., &amp; González-Aran, M. (2024). Teenagers, media usage, and attitudes toward LGBTIQ+ issues: An ethnographic approach to Barcelona's students. <em>Journal of LGBT Youth</em>, 1-16. <a href="https://doi.org/10.1080/19361653.2024.2412029" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1080/19361653.2024.2412029</a><br><br>
-        Blanco-Fernández, V., Villegas-Simón, I., &amp; Soto-Sanfiel, M. T. (2024). 'I Am they.' Non-Binary Representation in Television Fiction as a Manifestation of Social Conceptions. <em>Journal of Homosexuality, 71</em>(14), 3426–3447. <a href="https://doi.org/10.1080/00918369.2024.2302424" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1080/00918369.2024.2302424</a><br><br>
-        Calderón-Sandoval, O., Rivera-Izquierdo, A. &amp; Sánchez-Espinosa, A. (2024). Race-ing Masculinity: An Intersectional Analysis of the Spanish Public Platform Series Riders. <em>Feminist Media Histories, 10</em>(4): 109–131. <a href="https://doi.org/10.1525/fmh.2024.10.4.109" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1525/fmh.2024.10.4.109</a><br><br>
-        Masanet, M.-J., &amp; Soto-Sanfiel, M. T. (2024). Learning about sexualities and gender through media: Transcending formal practices, spaces, actors, and experiences. <em>International Communication Gazette, 86</em>(5), 357-362. <a href="https://doi.org/10.1177/17480485241259829" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1177/17480485241259829</a><br><br>
-        Negrón-Muntaner, F. &amp; Calderón-Sandoval, O. (2024). Introduction: Paradoxical/Relation: Latinx+ America, Feminisms, and Digital Media. <em>Feminist Media Histories, 10</em>(4): 1–9. <a href="https://doi.org/10.1525/fmh.2024.10.4.1" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1525/fmh.2024.10.4.1</a><br><br>
-        Soto-Sanfiel, M. T., &amp; Villegas-Simón, I. (2024). Scriptwriters' conceptions of audience attitudes toward LGBTQ+ characters. <em>Mass Communication and Society</em>, 1-25. <a href="https://doi.org/10.1080/15205436.2023.2292123" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1080/15205436.2023.2292123</a><br><br>
-        Villegas-Simón, I., &amp; Soto-Sanfiel, M. T. (2024). The concept of normalization in the production of LGBTIQ+ media imaginaries: the scriptwriters' conceptions. <em>Journal of Communication, 74</em>(3), 237-248. <a href="https://doi.org/10.1093/joc/jqae014" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1093/joc/jqae014</a><br><br>
-        Ventura, R., Blanco-Fernández, V., &amp; Sánchez-Soriano, J. J. (2024). Queer temporalities in TV series Veneno: breaking down the spiral of silence through trans visibility. <em>Miguel Hernández Communication Journal, 15</em>(1), 75-92. <a href="https://doi.org/10.21134/mhjournal.v15i.2091" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.21134/mhjournal.v15i.2091</a>
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 id="diss-pubs-2023">2023</h3>
-      <p id="diss-pubs-2023-text">
-        Soto-Sanfiel, M. T., &amp; Sánchez-Soriano, J. J. (2023). Absence and Distortion in the Self-Representation of LGBTQ+ Narratives. <em>Journal of Homosexuality, 71</em>(4), 1071–1098. <a href="https://doi.org/10.1080/00918369.2022.2161083" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1080/00918369.2022.2161083</a><br><br>
-        Calderón-Sandoval, O., Villegas-Simón, I., &amp; Medina-Bravo, P. (2023). Debating Sexual Consent in the Teen Series The Hockey Girls: Reactions of Instagram Audiences. <em>Sex Education, 24</em>(4), 531–545. <a href="https://doi.org/10.1080/14681811.2023.2222671" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1080/14681811.2023.2222671</a><br><br>
-        García-Martín, T., Ramos, M. M., &amp; Angulo-Brunet, A. (2023). ¿Son las series españolas diversas? Un análisis sobre la inclusión en las plataformas. <em>Cuadernos.info</em>, (56), 206-229. <a href="https://doi.org/10.7764/cdi.56.62707" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.7764/cdi.56.62707</a><br><br>
-        González de Garay, B. (2023). Investigación LGBT+ en la ficción televisiva española. In Cascajosa, V. y Mateos-Pérez (eds), <em>Análisis de la ficción española. Propuestas, metodologías y enfoques de investigación</em>, 91-100.<br><br>
-        González-de-Garay, B., Gutiérrez-Sastre, M., Ramos, M. M., &amp; Calvo, K. (2023). Attitudes of Spanish LGBTI+ Adolescents and Emerging Adults: Cultural and Political Practices Among 16 to 29-year-old Non-cis-hetero People. <em>Masculinities &amp; Social Change, 12</em>(2), 184-233. <a href="https://doi.org/10.17583/MCS.11225" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.17583/MCS.11225</a><br><br>
-        González-de-Garay, B., Marcos-Ramos, M., &amp; Angulo-Brunet, A. (2023). LGBT+ characters in original Spanish video-on-demand series. <em>Sexuality &amp; Culture, 27</em>(3), 786-804. <a href="https://doi.org/10.1007/s12119-022-10038-y" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1007/s12119-022-10038-y</a><br><br>
-        López-Sáez, M. Á., Angulo-Brunet, A., Platero, L. R., Bochicchio, V., &amp; Lecuona, O. (2023). Attitudes towards Trans Men and Women in Spain: An Adaptation of the ATTMW Scale. <em>International Journal of Environmental Research and Public Health, 20</em>(3), 1872. <a href="https://doi.org/10.3390/ijerph20031872" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.3390/ijerph20031872</a><br><br>
-        Marcos-Ramos, M., Angulo-Brunet, A., &amp; González-de-Garay, B. (2023). Immigrant Characters in Spanish Audiovisual Broadcast on Platforms. <em>International Journal of Communication</em>, 17, 27.<br><br>
-        Marcos-Ramos, M., Martín-García, T., &amp; González-de-Garay, B. (2023). Análisis comparado de la representación de personajes LGBT+ en las series españolas de televisión generalista emitidas en prime time y originales de plataformas de streaming. <em>Observatorio (OBS*), 17</em>(1). <a href="https://doi.org/10.15847/obsOBS17120232083" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.15847/obsOBS17120232083</a><br><br>
-        Marcos Ramos, M., Martín García, T., &amp; González de Garay, B. (2023). Differences in gender representation between men-directed and women-directed Spanish films (2018-2019). <em>Anuario Electrónico de Estudios en Comunicación Social "Disertaciones", 16</em>(2). <a href="https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.12619" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.12804/revistas.urosario.edu.co/disertaciones/a.12619</a><br><br>
-        Sánchez-Soriano, J. J. (2023). <em>La representación LGTB+ en las series españolas de ficción. El espejo en que nos miramos.</em> Comunicación Social Ediciones y Publicaciones.<br><br>
-        Villegas-Simón, I., Sánchez, J.J., Ventura, R. (2023). 'If you don't "pass" as cis, you don't exist'. The trans audience's reproofs of 'Cis Gaze' and transnormativity in TV series. <em>European Journal of Communication.</em> <a href="https://doi.org/10.1177/02673231231163704" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1177/02673231231163704</a>
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 id="diss-pubs-2022">2022</h3>
-      <p id="diss-pubs-2022-text">
-        Marcos-Ramos, M., González-de-Garay, B., &amp; Pérez-Álvarez, S. (2022). Todas ellas: análisis de la mujer LTBI+ en las series españolas originales de plataformas. <em>Comunicación y Sociedad</em>, e8251. <a href="https://doi.org/10.32870/cys.v2022.8251" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.32870/cys.v2022.8251</a><br><br>
-        Masanet, M.J., Ventura, R., &amp; Ballesté, E. (2022). Beyond the "Trans Fact"? Trans Representation in the Teen Series Euphoria: Complexity, Recognition, and Comfort. <em>Social Inclusion, 10</em>(2), 1–13. <a href="https://doi.org/10.17645/si.v10i2.4926" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.17645/si.v10i2.4926</a><br><br>
-        Ventura, R. (2022). Incorporación de la perspectiva LGBTI en los estudios universitarios de Comunicación: proyecto piloto de formación y sensibilización. In E. Bandrés Goldáraz, R. Díez Ros, &amp; T. Aránguez Sánchez (eds.), <em>Feminismos aplicados. Un enfoque desde la educación, género, violencia estructural y los movimientos sociales</em> (pp. 877-888). Dykinson. ISBN: 978-84-1377-929-4.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 id="diss-pubs-2021">2021</h3>
-      <p id="diss-pubs-2021-text">
-        Marcos-Ramos, M., &amp; González-de-Garay, B. (2021). Gender representation in subscription-video-on-demand Spanish TV series. <em>International Journal of Communication</em>, 15, 581–604.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 id="diss-pubs-past">Past Publications</h3>
-      <p id="diss-pubs-past-text">
-        De-Caso-Bausela, E., González-de-Garay, B., &amp; Marcos-Ramos, M. (2020). Representación de género en las series generalistas de televisión españolas emitidas en prime time (2017-2018). <em>El profesional de la información, 29</em>(2). <a href="https://doi.org/10.3145/epi.2020.mar.08" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.3145/epi.2020.mar.08</a><br><br>
-        González-de-Garay, B., Marcos-Ramos, M., &amp; Sánchez-González, S. (2020). Maternidades lésbicas en la ficción televisiva española. <em>Revista Investigaciones Feministas, 10</em>(2), 295-314. <a href="https://doi.org/10.5209/infe.66495" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.5209/infe.66495</a><br><br>
-        González-de-Garay, B., Marcos-Ramos, M. &amp; Portillo-Delgado, C. (2020). Gender representation in Spanish prime-time TV series. <em>Feminist Media Studies, 20</em>(3), 414-433. <a href="https://doi.org/10.1080/14680777.2019.1593875" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1080/14680777.2019.1593875</a><br><br>
-        Marcos-Ramos, M., González-de-Garay, B., &amp; Arcila Calderón, C. (2020). Grupos minoritarios en la ficción televisiva española. <em>Cuadernos.info</em>, (46), 307-341. <a href="https://doi.org/10.7764/cdi.46.1739" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.7764/cdi.46.1739</a><br><br>
-        Sánchez-González, S., &amp; González-de-Garay, B. (2020). La Diversidad Afectivo-Sexual en First Dates (Cuatro: 2016-). <em>Masculinities &amp; Social Change, 9</em>(2), 113. <a href="https://doi.org/10.17583/mcs.2020.3629" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.17583/mcs.2020.3629</a><br><br>
-        Ventura, R. (2020). L'Heteronormativitat en la Comunicació. In M. Muñoz Puig &amp; T. Verge Mestre (coord.), <em>Fitxes docents per treballar l'abordatge de la violència masclista</em> (pp. 67-72). Barcelona: UPF. ISBN: 978-84-09-22582-8.<br><br>
-        Ibiti, A., &amp; Soto-Sanfiel, M.T. (2019). Prejudice and morality in responses to films about lesbians. <em>Sexuality &amp; Culture, 23</em>, 585-604. <a href="https://doi.org/10.1007/s12119-018-9575-6" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1007/s12119-018-9575-6</a><br><br>
-        Madžarević, G., &amp; Soto-Sanfiel, M. T. (2018). Positive Representation of Gay Characters in Movies for Reducing Homophobia. <em>Sexuality &amp; Culture, 22</em>(3), 909-930. <a href="https://doi.org/10.1007/s12119-018-9502-x" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1007/s12119-018-9502-x</a><br><br>
-        Guerrero-Pico, M. D. M., Establés, M. J., &amp; Ventura, R. (2018). Killing off Lexa: 'Dead Lesbian Syndrome' and intra-fandom management of toxic fan practices in an online queer community. <em>Participations, 15</em>(1), 311-333.<br><br>
-        Soto-Sanfiel, M. T., &amp; Ibiti, A. (2016). Lesbian Sex in Mainstream Cinema and Audience Enjoyment. <em>Sexuality &amp; Culture, 20</em>(3), 555-578. <a href="https://doi.org/10.1007/s12119-016-9342-5" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.1007/s12119-016-9342-5</a><br><br>
-        Soto Sanfiel, M. T., Ibiti, A., &amp; Palencia-Villa, R. M. (2014). Identification with lesbian characters: Reception processes of heterosexuals and homosexual audiences. <em>Revista Latina de Comunicación Social</em>, 69, 275–306. <a href="https://doi.org/10.4185/RLCS-2014-1012" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">https://doi.org/10.4185/RLCS-2014-1012</a>
-      </p>
-    </div>
-
-    <!-- CONFERENCE LECTURES -->
     <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--dark);border-left:4px solid var(--purple-mid);padding-left:1rem;margin-bottom:1.2rem;margin-top:2rem;" id="diss-conf-heading">Conference Lectures</h3>
 
     <div class="card">
-      <h3 id="diss-conf-screens-heading"><a href="https://www.lgbtiq-screens.org/home-en" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">LGBTIQ+ Screens</a> Conference Lectures</h3>
+      <h3 id="diss-conf-screens-heading"><a href="https://www.lgbtiq-screens.org/home-en" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">LGBTIQ+ Screens</a> Conference Papers</h3>
 
       <h3 id="diss-conf-2024" style="margin-top:1rem;">2024</h3>
       <p id="diss-conf-2024-text">
-        Angulo-Brunet, A., Vicente-Cruz, E., &amp; Lemos de Souza, L. (2024, May 28-31). Explorando el apoyo social a las víctimas de bullying homofóbico a través de narrativas audiovisuales de ficción [Paper presentation]. IX Congreso Internacional de la AE-IC, Murcia, Spain.<br><br>
-        Blanco-Fernández, V., Iñigo, A., &amp; González-Aran, M. (2024, September 18-20). Polarización adolescente alrededor de asuntos LGBTIQ+. El papel de los usos y los aprendizajes mediáticos en la juventud barcelonesa [Paper presentation]. MEDIAFLOWS Conference 2024, 'Citizenship in the Digital Media Sphere', Valencia, Spain.<br><br>
-        Blanco-Fernández, V., Iñigo, A., &amp; González-Aran, M. (2024, July 17-19). Joventut, mitjans i drets LGBTIQ+: una avaluació etnogràfica de les actituds i consums mediàtics de l'adolescència de Barcelona [Paper presentation]. VI International Conference on Sexual Diversity Studies in Ibero-America, 'Desires, Spaces and Identities', Girona, Spain.<br><br>
-        Blanco-Fernández, V., &amp; Iñigo, A. (2024, June 21). Estudis LGBTIQ+ dels Mitjans. Presentació dels projectes R+D+i TRANSGELIT i LGBTIQ+Screens [Paper presentation]. II Jornada de Recerca Orgull LGBTIQA+ de la UOC (Universitat Oberta de Catalunya), Barcelona, Spain.<br><br>
-        Blanco-Fernández, V., Okinmade, S., &amp; Soto-Sanfiel, M. T. (2024, September 24-27). Non-binary depiction in live-action, teen fiction [Paper presentation]. 10th European Communication Conference ECREA, Ljubljana, Slovenia.<br><br>
-        Blanco-Fernández, V., Okinmade, S., &amp; Soto-Sanfiel, M. T. (2024, October 2-4). Representación no-binaria en series juveniles: estereotipos y diversidades [Paper presentation]. IV International Congress on Interdisciplinary LGTBIA+ and Queer Studies, MariCorners, Valladolid, Spain.<br><br>
-        González-Aran, M., Blanco-Fernández, V., &amp; Iñigo, A. (2024, October 2-4). Juventud, medios y derechos LGBTIQ+ [Paper presentation]. IV International Congress on Interdisciplinary LGTBIA+ and Queer Studies, MariCorners, Valladolid, Spain.<br><br>
-        Herrero, E., Blanco-Fernández, V., &amp; Fernández, L. (2024, July 17-19). Estudios mediáticos LGBTIQ+ en el estado español [Paper presentation]. VI International Conference on Sexual Diversity Studies in Ibero-America, Girona, Spain.<br><br>
-        Herrero, E., Blanco-Fernández, V., &amp; Fernández, L. (2024, October 2-4). Inicio de los estudios mediáticos LGBTIQ+ en el Estado español [Paper presentation]. IV International Congress on Interdisciplinary LGTBIA+ and Queer Studies, MariCorners, Valladolid, Spain.<br><br>
-        Iñigo, A., Blanco-Fernández, V., &amp; González-Aran, M. (2024, September 24-27). Assessing media influence and attitudes towards LGBTIQ+ rights among Barcelona teenagers [Paper presentation]. 10th European Communication Conference ECREA, Ljubljana, Slovenia.<br><br>
-        Lomas-Martínez, S., Martín-García, T., Marcos-Ramos, M. &amp; González-de-Garay, B. (2024, May 28). Estudios televisivos y perspectivas LGTBI+ en España [Paper presentation]. IX Congreso Internacional de la AE-IC, Murcia, Spain.<br><br>
-        Mediavilla, A., &amp; González-de-Garay, B. (2024, May 8). La representación queer en la animación infantil emitida en España [Paper presentation]. II Congreso Internacional sobre Diversidad LGTBIQ+, Salamanca, Spain.<br><br>
-        Lomas Martínez, S. (2024, May 7). Mesa redonda: "Diversidad en la cultura popular" [Paper presentation]. II Congreso Internacional sobre Diversidad LGTBIQ+, Salamanca, Spain.<br><br>
-        Mira, A. y Lomas Martínez, S. (2024, March 21). Camp, Copla, Queer. Conversación en torno al cine clásico español. Ciclo Camp, Copla, Queer. Museo de Málaga, Málaga, Spain.<br><br>
-        Lomas Martínez, S. (2024, February 29). Vicente Parra en el armario de cristal (1967-1984) [Paper presentation]. IV Congreso Internacional 'Género y sexualidad en las culturas hispánicas', Universidad de Lleida, Lleida, Spain.<br><br>
-        Rodríguez-de-Dios, I. &amp; Soto-Sanfiel, M. T. (2024, May 28-31). Impacto del contacto intergrupal mediado con personas trans a través de YouTube en la transfobia [Paper presentation]. IX Congreso Internacional de la AE-IC, Murcia, Spain.<br><br>
-        Soto-Sanfiel, M. T., Sánchez-Soriano, J. J., Angulo-Brunet, A. (2024, May 28-31). Percepción de estereotipos de personas gais en las ficciones españolas por estudiantes universitarios [Paper presentation]. IX Congreso Internacional de la AE-IC, Murcia, Spain.<br><br>
-        Vicente-Cruz, E., Soto-Sanfiel, M., &amp; Angulo-Brunet, A. (2024, July 17-19). Explorando concepciones y estereotipos asociados a los gays en la adolescencia en el contexto educativo brasileño [Paper presentation]. International Conference on Sexual Diversity Studies in Ibero-America, Girona, Spain.
+        Angulo-Brunet, A., Vicente-Cruz, E., &amp; Lemos de Souza, L. (2024, May 28-31). Explorando el apoyo social a las víctimas de bullying homofóbico [...]
       </p>
 
       <h3 id="diss-conf-2023" style="margin-top:1.5rem;">2023</h3>
       <p id="diss-conf-2023-text">
-        Angulo-Brunet, A., Lecuona, O. &amp; López-Sáez, M.A. (2023, June 6-10). Current concerns in using scales to measure attitudes towards LGBTI people in media [Paper presentation]. International Congress on Media, Gender and Sexualities, Benasque, Spain.<br><br>
-        Angulo-Brunet, A., González-de-Garay, B. &amp; Marcos-Ramos, M. (2023, July 9-13). How are LGBT characters represented on Video-on-demand platforms? [Paper presentation]. IAMCR 2023, Lyon, France.<br><br>
-        Blanco-Fernández, V., Akinmade, S. &amp; Soto-Sanfiel, M. (2023, June 6-10). Non-binary representation in teen series aimed at general audiences [Paper presentation]. International Congress on Media, Gender and Sexualities, Benasque, Spain.<br><br>
-        Blanco-Fernández, V., Villegas-Simón, I., &amp; Soto-Sanfiel, M. (2023, July 9-13). Non-binary depiction in TV fiction [Paper presentation]. IAMCR 2023, Lyon, France.<br><br>
-        Calderón-Sandoval, O., Villegas-Simón, I., &amp; Medina-Bravo, P. (2023, June 6-10). (Post)feminist debates on sexual consent in teen series "The hockey series" [Paper presentation]. International Congress on Media, Gender and Sexualities, Benasque, Spain.<br><br>
-        Rodríguez-de-Dios, I. &amp; Soto-Sanfiel, M. (2023, May 25-29). Youtuber trans for reducing transphobia [Paper presentation]. 73rd Annual ICA Conference, Toronto, Canada.<br><br>
-        Soto-Sanfiel, M., Angulo-Brunet, A., Blanco, V., González-de-Gray, B., Sánchez-Soriano, J., Vázquez-Tapia, E., Ventura, R., Villegas-Simón, I. (2023, June 6-10). LGBTIQ+ representations in Spanish fiction series and its effectiveness in reducing prejudice [Paper presentation]. International Congress on Media, Gender and Sexualities, Benasque, Spain.<br><br>
-        Soto-Sanfiel, M. &amp; Rodríguez-de-Dios, I. (2023, June 6-10). Mitigating transphobia through the narratives of transgender YouTubers [Paper presentation]. Media, Gender and Sexualities, Benasque, Spain.<br><br>
-        Soto-Sanfiel, M. &amp; Vazquez-Tapias, E. (2023, June 6-10). Spanish adolescents' perspectives of LGBTQ+ characters in scripted series [Paper presentation]. International Congress on Media, Gender and Sexualities, Benasque, Spain.<br><br>
-        Ventura, R., Villegas-Simón, I., &amp; Sánchez-Soriano, J.J. (2023, July 9-13). Trans people's perceptions on the pedagogical value of trans representation in TV fiction [Paper presentation]. IAMCR 2023, Lyon, France.
-      </p>
-
-      <h3 id="diss-conf-2022" style="margin-top:1.5rem;">2022</h3>
-      <p id="diss-conf-2022-text">
-        Soto-Sanfiel, M.T. &amp; Villegas-Simón, I. (2022). LGTBIQ+ activism in the creation of characters for TV series [Paper presentation]. II International Conference on Discourses of Fictional (Digital) TV series, Valencia, Spain.<br><br>
-        Villegas-Simón, I., Sánchez-Soriano, J.J., &amp; Ventura, R. (2022, July 28). ¿Qué piensan las audiencias trans sobre su representación en la ficción? [Paper presentation]. VIII Congreso Internacional de la AE-IC, Barcelona, Spain.<br><br>
-        Villegas-Simón, I., Sánchez-Soriano, J.J., &amp; Ventura, R. (2022, May 26-30). The mirror effect: trans people perceptions of trans representation in media [Paper presentation]. 72nd Annual ICA Conference, Paris, France.
-      </p>
-
-      <h3 id="diss-conf-2021" style="margin-top:1.5rem;">2021</h3>
-      <p id="diss-conf-2021-text">
-        Rodríguez-de-Dios, I. &amp; Soto-Sanfiel, M. (2021, June 15). Intergroup Contact through YouTube: Can Exposure to Trans YouTubers reduce Transphobia? [Paper presentation]. Primera Jornada d'Estudis LGBTIQA+, Universitat Pompeu Fabra, Virtual Conference.<br><br>
-        Ventura, R. (2021, November 25-26). Formar y sensibilizar sobre la perspectiva LGBTI al alumnado del área de Comunicación [Paper presentation]. II Congreso Internacional NODOS del conocimiento, Virtual.<br><br>
-        Ventura, R., Blanco, V., &amp; Sánchez-Soriano, J.J. (2021, May 11-14). Breaking down the spiral of silence: Trans visibility and the cultural impact of the TV series 'Veneno' [Paper presentation]. Queer Representation: Pasts, Presents, Futures Conference, University of Edinburgh, Edinburgh, United Kingdom.
-      </p>
-
-      <h3 id="diss-conf-past" style="margin-top:1.5rem;" id="diss-conf-past-heading">Past Conference Lectures</h3>
-      <p id="diss-conf-past-text">
-        Cerezo Prieto, M., Marcos-Ramos, M., &amp; González-de-Garay, B. (2019, May). Representación de género en la ficción televisiva española en la segunda década de los 2.000 [Paper presentation]. Conferencia Televisao e Novos Meios, Beira, Portugal.<br><br>
-        Marcos-Ramos, M., González-de-Garay, B., &amp; Cerezo-Prieto, M. (2019). Análisis comparado de los personajes femeninos en la ficción televisiva española (2010-2017). <em>Universidad-Verdad</em>, 75, 8-19.<br><br>
-        Soto Sanfiel, M. T., &amp; Ibiti, A. (2018, May). Homophobia and morality in lesbian narratives reception [Paper presentation]. ICA Conference 2018: Voices, Prague, Czech Republic.<br><br>
-        Ventura, R., Guerrero-Pico, M., &amp; Establés, M.J. (2018, May 24-28). Fan Voices Together in Resistance to the Misrepresentation of Queer Women on TV [Paper presentation]. ICA 68th Annual Conference: Voices, Prague, Czech Republic.<br><br>
-        Ventura, R., Rodrigo-Alsina, M., &amp; Medina-Bravo, P. (2017, September 13-15). Gay parenting in the media: in a crossroads [Paper presentation]. IV European Geographies of Sexualities Conference, Barcelona, Spain.<br><br>
-        Ventura, R., Fedele, M., Masanet, M.J., &amp; Medina-Bravo, P. (2017, July 16-20). Perpetuation of gender stereotypes in love and sexual relationships [Paper presentation]. IAMCR 2017, Cartagena, Colombia.<br><br>
-        Soto Sanfiel, M. T., &amp; Ibiti, A. (2015, July). Engaging with narratives about lesbians [Paper presentation]. IAMCR 2015 Conference, Montreal, Canada.<br><br>
-        Soto Sanfiel, M. T., &amp; Ibiti, A. (2014, July). Reception of lesbian sexual scenes [Paper presentation]. IAMCR 2014 Conference, Hyderabad, India.
+        Angulo-Brunet, A., Lecuona, O. &amp; López-Sáez, M.A. (2023, June 6-10). Current concerns in using scales to measure attitudes towards LGBTI people in media [...]
       </p>
     </div>
   </section>
@@ -573,32 +372,66 @@
   <!-- THESIS -->
   <section id="thesis" class="section">
     <h2 id="thesis-heading">THESIS</h2>
-    <div class="card"><h3 id="thesis-phd">Doctoral dissertations</h3><p id="thesis-phd-text">[PhD projects associated with PRODUCE]</p></div>
-    <div class="card"><h3 id="thesis-master">Master's theses</h3><p id="thesis-master-text">[Supervised final projects]</p></div>
-    <div class="card"><h3 id="thesis-predoc">Predoctoral contracts</h3><p id="thesis-predoc-text">[Funding and training programme]</p></div>
+    <div class="item-card">
+      <h4 id="thesis-phd">Doctoral dissertations</h4>
+      <p id="thesis-phd-text">[PhD projects associated with PRODUCE]</p>
+    </div>
+    <div class="item-card">
+      <h4 id="thesis-master">Master's theses</h4>
+      <p id="thesis-master-text">[Supervised final projects]</p>
+    </div>
+    <div class="item-card">
+      <h4 id="thesis-predoc">Predoctoral contracts</h4>
+      <p id="thesis-predoc-text">[Funding and training programme]</p>
+    </div>
   </section>
 
   <!-- EVENTS -->
   <section id="events" class="section">
     <h2 id="events-heading">EVENTS</h2>
-    <div class="card"><h3 id="events-congress">International Congresses</h3><p id="events-congress-text">3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.</p></div>
-    <div class="card"><h3 id="events-workshops">Workshops &amp; Training</h3><p id="events-workshops-text">[Courses for audiovisual communication students]</p></div>
-    <div class="card"><h3 id="events-conf">Conference presentations</h3><p id="events-conf-text">[ICA, IAMCR, ECREA, AE-IC]</p></div>
+    <div class="item-card">
+      <h4 id="events-congress">International Congresses</h4>
+      <p id="events-congress-text">3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.</p>
+    </div>
+    <div class="item-card">
+      <h4 id="events-workshops">Workshops &amp; Training</h4>
+      <p id="events-workshops-text">[Courses for audiovisual communication students]</p>
+    </div>
+    <div class="item-card">
+      <h4 id="events-conf">Conference presentations</h4>
+      <p id="events-conf-text">[ICA, IAMCR, ECREA, AE-IC]</p>
+    </div>
   </section>
 
   <!-- PRESS -->
   <section id="press" class="section">
     <h2 id="press-heading">PRESS</h2>
-    <div class="card"><h3 id="press-media">Media coverage</h3><p id="press-media-text">[Interviews, articles, podcasts]</p></div>
-    <div class="card"><h3 id="press-outreach">Outreach activities</h3><p id="press-outreach-text">[#científicas, 11F, institutional newsletters]</p></div>
-    <div class="card"><h3 id="press-kit">Press kit</h3><p id="press-kit-text">[Downloadable resources]</p></div>
+    <div class="item-card">
+      <h4 id="press-media">Media coverage</h4>
+      <p id="press-media-text">[Interviews, articles, podcasts]</p>
+    </div>
+    <div class="item-card">
+      <h4 id="press-outreach">Outreach activities</h4>
+      <p id="press-outreach-text">[#científicas, 11F, institutional newsletters]</p>
+    </div>
+    <div class="item-card">
+      <h4 id="press-kit">Press kit</h4>
+      <p id="press-kit-text">[Downloadable resources]</p>
+    </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section">
     <h2 id="contact-heading">CONTACT</h2>
-    <div class="item-card"><h4 id="contact-pi">Principal Investigator</h4><p id="contact-pi-name">Dr. María Teresa Soto Sanfel</p><p id="contact-pi-email">Email: [your email]</p></div>
-    <div class="item-card"><h4 id="contact-project">Project management</h4><p id="contact-project-email">Email: produce.project@[university].es</p></div>
+    <div class="item-card">
+      <h4 id="contact-pi">Principal Investigator</h4>
+      <p id="contact-pi-name">Dr. María Teresa Soto Sanfel</p>
+      <p id="contact-pi-email">Email: [your email]</p>
+    </div>
+    <div class="item-card">
+      <h4 id="contact-project">Project management</h4>
+      <p id="contact-project-email">Email: produce.project@[university].es</p>
+    </div>
     <div class="item-card">
       <h4 id="contact-address">Address</h4>
       <p id="contact-address-text">Department of Audiovisual Communication and Advertising<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Spain)</p>
@@ -608,7 +441,7 @@
 </main>
 
 <footer>
-  <p id="footer-text">”© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved.”,</p>
+  <p id="footer-text">© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved.</p>
 </footer>
 
 <script>
@@ -631,43 +464,56 @@ const T = {
     fullTitle: "Audiovisual Content Production on LGBTIQ+: Agents, Industrial Contexts, Platforms, and Expectations of Impact",
     projectCode: '"PRODUCE" (PID2024-160145NB-C21)',
     whatTitle: "What is PRODUCE?",
-    whatText: "Building on the legacy of the previous <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a> project, PRODUCE is a research project funded by the Spanish Ministry of Science, Innovation and Universities that moves beyond the study of representation to explore the very engine of audiovisual content: the creators and production contexts. Between 2026 and 2029, this project will investigate how audiovisual content about LGBTIQ+ people is produced in Spain across a rich ecosystem of cultural media – from cinema and television to social media, independent creation, and activism. PRODUCE seeks to understand how production dynamics shape not only LGBTIQ+ content, but also the realities of those who create it, and ultimately how such content can reduce prejudice and foster a more inclusive society.",
+    whatText: "Building on the legacy of the previous <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a> project, PRODUCE extends the research into LGBTIQ+ audiovisual content production.",
     whatdoTitle: "What do we do?",
-    whatdoText: "PRODUCE investigates the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables such as age, gender, ethnicity, and class of professionals, amateurs, activists, and online producers influence production routines, creative processes, perceived professional value, well‑being, and the resulting LGBTIQ+ representations. We will also identify emerging roles (i.e. LGBTIQ+ authenticity consultants and intimacy coordinators), opportunities and tensions in the industry, studying how current media structures and new cultural practices affect creative self‑esteem, agency, and the potential for LGBTIQ+ prejudice reduction.",
+    whatdoText: "PRODUCE investigates the production dynamics of LGBTIQ+ content, understanding how production contexts and intersectional variables shape content creation.",
     outcomesTitle: "Expected Outcomes",
-    outcomesText: "PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state. Our research will be disseminated through peer reviewed publications, training courses for university education, best practice manuals for the audiovisual industry, and two international congresses on media, gender and sexuality.",
+    outcomesText: "PRODUCE aims at mapping how production dynamics shape LGBTIQ+ audiovisual content in the Spanish state.",
     aboutTitle: "About us",
-    aboutText: "PRODUCE is a coordinated effort made possible by the active participation of <strong>X researchers</strong> from <strong>Y universities and institutions</strong> across <strong>Z countries</strong>.",
+    aboutText: "PRODUCE is a coordinated effort made possible by the active participation of researchers from multiple universities and institutions.",
     aboutText2: "The project is led by the Universitat Autònoma de Barcelona, in collaboration with international partners.",
-    teamHeading: "TEAM", teamPi: "Principal Investigators", teamPiText: "[Add names, affiliations, roles]", teamHeading: "TEAM",
+    teamHeading: "TEAM",
     teamMembers: "Members",
     teamMembersText: "[Add team members]",
-    pubsHeading: "PUBLICATIONS", pubsJournal: "Peer-reviewed articles", pubsJournalText: "[Add journal publications]",
-    pubsBooks: "Books and chapters", pubsBooksText: "[Add monographs, edited volumes]",
-    pubsOpen: "Open access & preprints", pubsOpenText: "[Repositories, DOIs]",
-    thesisHeading: "THESIS", thesisPhd: "Doctoral dissertations", thesisPhdText: "[PhD projects associated with PRODUCE]",
-    thesisMaster: "Master's theses", thesisMasterText: "[Supervised final projects]",
-    thesisPredoc: "Predoctoral contracts", thesisPredocText: "[Funding and training programme]",
-    eventsHeading: "EVENTS", eventsCongress: "International Congresses", eventsCongressText: "3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.",
-    eventsWorkshops: "Workshops & Training", eventsWorkshopsText: "[Courses for audiovisual communication students]",
-    eventsConf: "Conference presentations", eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",
-    pressHeading: "PRESS", pressMedia: "Media coverage", pressMediaText: "[Interviews, articles, podcasts]",
-    pressOutreach: "Outreach activities", pressOutreachText: "[#científicas, 11F, institutional newsletters]",
-    pressKit: "Press kit", pressKitText: "[Downloadable resources]",
-    contactHeading: "CONTACT", contactPi: "Principal Investigator", contactPiName: "Dr. María Teresa Soto Sanfel",
-    contactPiEmail: "Email: [your email]", contactProject: "Project management",
-    contactProjectEmail: "Email: produce.project@[university].es", contactAddress: "Address",
-    contactAddressText: "Department of Audiovisual Communication and Advertising<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Spain)",
-    footer: "© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved."
+    pubsHeading: "PUBLICATIONS",
     pubsScreensLabel: "LGBTIQ+ Screens Publications",
+    pubs2026: "2026", pubs2025: "2025", pubs2024: "2024", pubs2023: "2023",
+    thesisHeading: "THESIS",
+    thesisPhd: "Doctoral dissertations",
+    thesisPhdText: "[PhD projects associated with PRODUCE]",
+    thesisMaster: "Master's theses",
+    thesisMasterText: "[Supervised final projects]",
+    thesisPredoc: "Predoctoral contracts",
+    thesisPredocText: "[Funding and training programme]",
+    eventsHeading: "EVENTS",
+    eventsCongress: "International Congresses",
+    eventsCongressText: "3rd and 4th ICMGS (2027, 2029) – Benasque, Spain.",
+    eventsWorkshops: "Workshops & Training",
+    eventsWorkshopsText: "[Courses for audiovisual communication students]",
+    eventsConf: "Conference presentations",
+    eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",
+    pressHeading: "PRESS",
+    pressMedia: "Media coverage",
+    pressMediaText: "[Interviews, articles, podcasts]",
+    pressOutreach: "Outreach activities",
+    pressOutreachText: "[#científicas, 11F, institutional newsletters]",
+    pressKit: "Press kit",
+    pressKitText: "[Downloadable resources]",
+    contactHeading: "CONTACT",
+    contactPi: "Principal Investigator",
+    contactPiName: "Dr. María Teresa Soto Sanfel",
+    contactPiEmail: "Email: [your email]",
+    contactProject: "Project management",
+    contactProjectEmail: "Email: produce.project@[university].es",
+    contactAddress: "Address",
+    contactAddressText: "Department of Audiovisual Communication and Advertising<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Spain)",
+    footer: "© 2026–2029 PRODUCE – Spanish Ministry of Science, Innovation and Universities. All rights reserved.",
     dissHeading: "DISSEMINATION",
     dissSubPubs: "Publications",
     dissSubConf: "Conference Lectures",
-    dissConfScreens: "<a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a> Conference Lectures",
-    dissPubs2026: "2026", dissPubs2025: "2025", dissPubs2024: "2024", dissPubs2023: "2023", dissPubs2022: "2022", dissPubs2021: "2021",
-    dissPubsPast: "Past Publications",
-    dissConf2024: "2024", dissConf2023: "2023", dissConf2022: "2022", dissConf2021: "2021",
-    dissConfPast: "Past Conference Lectures",
+    dissConfScreens: "<a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a> Conference Papers",
+    dissPubs2026: "2026", dissPubs2025: "2025",
+    dissConf2024: "2024", dissConf2023: "2023",
   },
   ca: {
     subtitle: "Producció de continguts audiovisuals LGBTIQ+: Agents, contextos industrials, plataformes i expectatives d'impacte",
@@ -677,43 +523,56 @@ const T = {
     fullTitle: "Producció de continguts audiovisuals LGBTIQ+: Agents, contextos industrials, plataformes i expectatives d'impacte",
     projectCode: '"PRODUCE" (PID2024-160145NB-C21)',
     whatTitle: "Què és PRODUCE?",
-    whatText: "Partint del llegat de l'anterior projecte <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a>, PRODUCE és un projecte d'investigació finançat pel Ministeri de Ciència, Innovació i Universitats espanyol que va més enllà de l'estudi de la representació per explorar el veritable motor del contingut audiovisual: els creadors i els contextos de producció. Entre 2026 i 2029, aquest projecte investigarà com es produeix a Espanya el contingut audiovisual sobre persones LGBTIQ+ en un ric ecosistema de mitjans culturals – des del cinema i la televisió fins a les xarxes socials, la creació independent i l'activisme. PRODUCE busca comprendre com les dinàmiques de producció configuren no només el contingut LGBTIQ+, sinó també les realitats de qui el crea, i finalment com aquest contingut pot reduir prejudicis i fomentar una societat més inclusiva.",
+    whatText: "Partint del llegat del projecte anterior <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a>, PRODUCE estén la investigació en producció de continguts audiovisuals LGBTIQ+.",
     whatdoTitle: "Què fem?",
-    whatdoText: "PRODUCE investiga les dinàmiques de producció de contingut LGBTIQ+, entenent com els contextos de producció i variables interseccionals com l'edat, el gènere, l'ètnia i la classe de professionals, aficionats, activistes i creadors en línia influeixen en les rutines productives, els processos creatius, el valor professional percebut, el benestar i les representacions LGBTIQ+ resultants. També identificarem rols emergents (per example, consultors d'autenticitat LGBTIQ+ i coordinadors d'intimitat), oportunitats i tensions en la indústria, estudiant com les estructures mediàtiques actuals i les noves pràctiques culturals afecten l'autoestima creativa, l'agència i el potencial de reducció de prejudicis LGBTIQ+.",
+    whatdoText: "PRODUCE investiga les dinàmiques de producció de contingut LGBTIQ+, entenent com els contextos de producció i variables interseccionals configuren la creació de continguts.",
     outcomesTitle: "Resultats Esperats",
-    outcomesText: "PRODUCE té com a objectiu cartografiar com les dinàmiques de producció configuren el contingut audiovisual LGBTIQ+ a l'Estat espanyol. La nostra investigació es difondrà mitjançant publicacions revisades per parells, cursos de formació per a l'educació universitària, manuals de bones pràctiques per a la indústria audiovisual i dos congressos internacionals sobre mitjans, gènere i sexualitat.",
+    outcomesText: "PRODUCE té com a objectiu cartografiar com les dinàmiques de producció configuren el contingut audiovisual LGBTIQ+ a l'Estat espanyol.",
     aboutTitle: "Sobre nosaltres",
-    aboutText: "PRODUCE és un esforç coordinat possible gràcies a la participació activa de <strong>X investigadores</strong> de <strong>Y universitats i institucions</strong> a <strong>Z països</strong>.",
+    aboutText: "PRODUCE és un esforç coordinat possible gràcies a la participació activa de investigadors de múltiples universitats i institucions.",
     aboutText2: "El projecte està liderat per la Universitat Autònoma de Barcelona, en col·laboració amb socis internacionals.",
     teamHeading: "EQUIP",
     teamMembers: "Membres",
     teamMembersText: "[Afegeix membres de l'equip]",
-    pubsHeading: "PUBLICACIONS", pubsJournal: "Articles revisats per parells", pubsJournalText: "[Afegeix publicacions en revistes]",
-    pubsBooks: "Llibres i capítols", pubsBooksText: "[Monografies, volums editats]",
-    pubsOpen: "Accés obert i preprints", pubsOpenText: "[Repositoris, DOIs]",
-    thesisHeading: "TESIS", thesisPhd: "Tesis doctorals", thesisPhdText: "[Projectes de doctorat associats a PRODUCE]",
-    thesisMaster: "Treballs de màster", thesisMasterText: "[Projectes finals supervisats]",
-    thesisPredoc: "Contractes predoctorals", thesisPredocText: "[Programa de formació i finançament]",
-    eventsHeading: "ESDEVENIMENTS", eventsCongress: "Congressos internacionals", eventsCongressText: "3r i 4t ICMGS (2027, 2029) – Benasque, Espanya.",
-    eventsWorkshops: "Tallers i formació", eventsWorkshopsText: "[Cursos per a estudiants de Comunicació Audiovisual]",
-    eventsConf: "Presentacions en conferències", eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",
-    pressHeading: "PREMSA", pressMedia: "Cobertura mediàtica", pressMediaText: "[Entrevistes, articles, pòdcasts]",
-    pressOutreach: "Activitats de divulgació", pressOutreachText: "[#científicas, 11F, butlletins institucionals]",
-    pressKit: "Dossier de premsa", pressKitText: "[Recursos descarregables]",
-    contactHeading: "CONTACTE", contactPi: "Investigadora principal", contactPiName: "Dra. María Teresa Soto Sanfel",
-    contactPiEmail: "Correu electrònic: [el teu correu]", contactProject: "Gestió del projecte",
-    contactProjectEmail: "Correu electrònic: produce.project@[universitat].es", contactAddress: "Adreça",
-    contactAddressText: "Departament de Comunicació Audiovisual i Publicitat<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Espanya)",
-    footer: "© 2026–2029 PRODUCE – Ministeri de Ciència, Innovació i Universitats espanyol. Tots els drets reservats.”,
+    pubsHeading: "PUBLICACIONS",
     pubsScreensLabel: "Publicacions de LGBTIQ+ Screens",
+    pubs2026: "2026", pubs2025: "2025", pubs2024: "2024", pubs2023: "2023",
+    thesisHeading: "TESIS",
+    thesisPhd: "Tesis doctorals",
+    thesisPhdText: "[Projectes de doctorat associats a PRODUCE]",
+    thesisMaster: "Treballs de màster",
+    thesisMasterText: "[Projectes finals supervisats]",
+    thesisPredoc: "Contractes predoctorals",
+    thesisPredocText: "[Programa de formació i finançament]",
+    eventsHeading: "ESDEVENIMENTS",
+    eventsCongress: "Congressos internacionals",
+    eventsCongressText: "3r i 4t ICMGS (2027, 2029) – Benasque, Espanya.",
+    eventsWorkshops: "Tallers i formació",
+    eventsWorkshopsText: "[Cursos per a estudiants de Comunicació Audiovisual]",
+    eventsConf: "Presentacions en conferències",
+    eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",
+    pressHeading: "PREMSA",
+    pressMedia: "Cobertura mediàtica",
+    pressMediaText: "[Entrevistes, articles, pòdcasts]",
+    pressOutreach: "Activitats de divulgació",
+    pressOutreachText: "[#científicas, 11F, butlletins institucionals]",
+    pressKit: "Dossier de premsa",
+    pressKitText: "[Recursos descarregables]",
+    contactHeading: "CONTACTE",
+    contactPi: "Investigadora principal",
+    contactPiName: "Dra. María Teresa Soto Sanfel",
+    contactPiEmail: "Correu electrònic: [el teu correu]",
+    contactProject: "Gestió del projecte",
+    contactProjectEmail: "Correu electrònic: produce.project@[universitat].es",
+    contactAddress: "Adreça",
+    contactAddressText: "Departament de Comunicació Audiovisual i Publicitat<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (Espanya)",
+    footer: "© 2026–2029 PRODUCE – Ministeri de Ciència, Innovació i Universitats. Tots els drets reservats.",
     dissHeading: "DIFUSIÓ",
     dissSubPubs: "Publicacions",
     dissSubConf: "Ponències en congressos",
     dissConfScreens: "Ponències en congressos de <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a>",
-    dissPubs2026: "2026", dissPubs2025: "2025", dissPubs2024: "2024", dissPubs2023: "2023", dissPubs2022: "2022", dissPubs2021: "2021",
-    dissPubsPast: "Publicacions anteriors",
-    dissConf2024: "2024", dissConf2023: "2023", dissConf2022: "2022", dissConf2021: "2021",
-    dissConfPast: "Ponències anteriors",
+    dissPubs2026: "2026", dissPubs2025: "2025",
+    dissConf2024: "2024", dissConf2023: "2023",
   },
   es: {
     subtitle: "Producción de contenidos audiovisuales LGBTIQ+: Agentes, contextos industriales, plataformas y expectativas de impacto",
@@ -723,43 +582,56 @@ const T = {
     fullTitle: "Producción de contenidos audiovisuales LGBTIQ+: Agentes, contextos industriales, plataformas y expectativas de impacto",
     projectCode: '"PRODUCE" (PID2024-160145NB-C21)',
     whatTitle: "¿Qué es PRODUCE?",
-    whatText: "Partiendo del legado del anterior proyecto <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a>, PRODUCE es un proyecto de investigación financiado por el Ministerio de Ciencia, Innovación y Universidades español que va más allá del estudio de la representación para explorar el verdadero motor del contenido audiovisual: los creadores y los contextos de producción. Entre 2026 y 2029, este proyecto investigará cómo se produce en España el contenido audiovisual sobre personas LGBTIQ+ en un rico ecosistema de medios culturales – desde el cine y la televisión hasta las redes sociales, la creación independiente y el activismo. PRODUCE busca comprender cómo las dinámicas de producción configuran no solo el contenido LGBTIQ+, sino también las realidades de quienes lo crean, y finalmente cómo dicho contenido puede reducir prejuicios y fomentar una sociedad más inclusiva.",
+    whatText: "Partiendo del legado del anterior proyecto <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a>, PRODUCE extiende la investigación en producción de contenidos audiovisuales LGBTIQ+.",
     whatdoTitle: "¿Qué hacemos?",
-    whatdoText: "PRODUCE investiga las dinámicas de producción de contenido LGBTIQ+, entendiendo cómo los contextos de producción y variables interseccionales como la edad, el género, la etnia y la clase de profesionales, aficionados, activistas y creadores en línea influyen en las rutinas productivas, los procesos creativos, el valor profesional percibido, el bienestar y las representaciones LGBTIQ+ resultantes. También identificaremos roles emergentes (por ejemplo, consultores de autenticidad LGBTIQ+ y coordinadores de intimidad), oportunidades y tensiones en la industria, estudiando cómo las estructuras mediáticas actuales y las nuevas prácticas culturales afectan la autoestima creativa, la agencia y el potencial de reducción de prejuicios LGBTIQ+.",
+    whatdoText: "PRODUCE investiga las dinámicas de producción de contenido LGBTIQ+, entendiendo cómo los contextos de producción y variables interseccionales configuran la creación de contenidos.",
     outcomesTitle: "Resultados Esperados",
-    outcomesText: "PRODUCE tiene como objetivo cartografiar cómo las dinámicas de producción configuran el contenido audiovisual LGBTIQ+ en el Estado español. Nuestra investigación se difundirá a través de publicaciones revisadas por pares, cursos de formación para la educación universitaria, manuales de buenas prácticas para la industria audiovisual y dos congresos internacionales sobre medios, género y sexualidad.",
+    outcomesText: "PRODUCE tiene como objetivo cartografiar cómo las dinámicas de producción configuran el contenido audiovisual LGBTIQ+ en el Estado español.",
     aboutTitle: "Sobre nosotros",
-    aboutText: "PRODUCE es un esfuerzo coordinado posible gracias a la participación activa de <strong>X investigadores</strong> de <strong>Y universidades e instituciones</strong> en <strong>Z países</strong>.",
+    aboutText: "PRODUCE es un esfuerzo coordinado posible gracias a la participación activa de investigadores de múltiples universidades e instituciones.",
     aboutText2: "El proyecto está liderado por la Universitat Autònoma de Barcelona, en colaboración con socios internacionales.",
     teamHeading: "EQUIPO",
     teamMembers: "Miembros",
     teamMembersText: "[Añade miembros del equipo]",
-    pubsHeading: "PUBLICACIONES", pubsJournal: "Artículos revisados por pares", pubsJournalText: "[Añade publicaciones en revistas]",
-    pubsBooks: "Libros y capítulos", pubsBooksText: "[Monografías, volúmenes editados]",
-    pubsOpen: "Acceso abierto y preprints", pubsOpenText: "[Repositorios, DOIs]",
-    thesisHeading: "TESIS", thesisPhd: "Tesis doctorales", thesisPhdText: "[Proyectos de doctorado asociados a PRODUCE]",
-    thesisMaster: "Trabajos de máster", thesisMasterText: "[Proyectos finales supervisados]",
-    thesisPredoc: "Contratos predoctorales", thesisPredocText: "[Programa de formación y financiación]",
-    eventsHeading: "EVENTOS", eventsCongress: "Congresos internacionales", eventsCongressText: "3º y 4º ICMGS (2027, 2029) – Benasque, España.",
-    eventsWorkshops: "Talleres y formación", eventsWorkshopsText: "[Cursos para estudiantes de Comunicación Audiovisual]",
-    eventsConf: "Presentaciones en conferencias", eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",
-    pressHeading: "PRENSA", pressMedia: "Cobertura mediática", pressMediaText: "[Entrevistas, artículos, podcasts]",
-    pressOutreach: "Actividades de divulgación", pressOutreachText: "[#científicas, 11F, boletines institucionales]",
-    pressKit: "Dosier de prensa", pressKitText: "[Recursos descargables]",
-    contactHeading: "CONTACTO", contactPi: "Investigadora principal", contactPiName: "Dra. María Teresa Soto Sanfel",
-    contactPiEmail: "Correo electrónico: [tu correo]", contactProject: "Gestión del proyecto",
-    contactProjectEmail: "Correo electrónico: produce.project@[universidad].es", contactAddress: "Dirección",
+    pubsHeading: "PUBLICACIONES",
+    pubsScreensLabel: "Publicaciones de LGBTIQ+ Screens",
+    pubs2026: "2026", pubs2025: "2025", pubs2024: "2024", pubs2023: "2023",
+    thesisHeading: "TESIS",
+    thesisPhd: "Tesis doctorales",
+    thesisPhdText: "[Proyectos de doctorado asociados a PRODUCE]",
+    thesisMaster: "Trabajos de máster",
+    thesisMasterText: "[Proyectos finales supervisados]",
+    thesisPredoc: "Contratos predoctorales",
+    thesisPredocText: "[Programa de formación y financiación]",
+    eventsHeading: "EVENTOS",
+    eventsCongress: "Congresos internacionales",
+    eventsCongressText: "3º y 4º ICMGS (2027, 2029) – Benasque, España.",
+    eventsWorkshops: "Talleres y formación",
+    eventsWorkshopsText: "[Cursos para estudiantes de Comunicación Audiovisual]",
+    eventsConf: "Presentaciones en conferencias",
+    eventsConfText: "[ICA, IAMCR, ECREA, AE-IC]",
+    pressHeading: "PRENSA",
+    pressMedia: "Cobertura mediática",
+    pressMediaText: "[Entrevistas, artículos, podcasts]",
+    pressOutreach: "Actividades de divulgación",
+    pressOutreachText: "[#científicas, 11F, boletines institucionales]",
+    pressKit: "Dosier de prensa",
+    pressKitText: "[Recursos descargables]",
+    contactHeading: "CONTACTO",
+    contactPi: "Investigadora principal",
+    contactPiName: "Dra. María Teresa Soto Sanfel",
+    contactPiEmail: "Correo electrónico: [tu correo]",
+    contactProject: "Gestión del proyecto",
+    contactProjectEmail: "Correo electrónico: produce.project@[universidad].es",
+    contactAddress: "Dirección",
     contactAddressText: "Departamento de Comunicación Audiovisual y Publicidad<br>Universitat Autònoma de Barcelona<br>Bellaterra, Barcelona (España)",
     footer: "© 2026–2029 PRODUCE – Ministerio de Ciencia, Innovación y Universidades. Todos los derechos reservados.",
-    pubsScreensLabel: "Publicaciones de LGBTIQ+ Screens",
     dissHeading: "DIFUSIÓN",
     dissSubPubs: "Publicaciones",
     dissSubConf: "Ponencias en congresos",
     dissConfScreens: "Ponencias en congresos de <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a>",
-    dissPubs2026: "2026", dissPubs2025: "2025", dissPubs2024: "2024", dissPubs2023: "2023", dissPubs2022: "2022", dissPubs2021: "2021",
-    dissPubsPast: "Publicaciones anteriores",
-    dissConf2024: "2024", dissConf2023: "2023", dissConf2022: "2022", dissConf2021: "2021",
-    dissConfPast: "Ponencias anteriores",
+    dissPubs2026: "2026", dissPubs2025: "2025",
+    dissConf2024: "2024", dissConf2023: "2023",
   }
 };
 
@@ -784,10 +656,10 @@ function setLang(lang) {
   // Update nav labels
   set('nav-home', t.navHome);
   set('nav-team', t.navTeam);
-  set('nav-publications', t.navPubs);
+  set('nav-pubs', t.navPubs);
   set('nav-thesis', t.navThesis);
   set('nav-events', t.navEvents);
-set('nav-dissemination', t.navDiss);
+  set('nav-diss', t.navDiss);
   set('nav-press', t.navPress);
   set('nav-contact', t.navContact);
 
@@ -796,25 +668,21 @@ set('nav-dissemination', t.navDiss);
   set('full-title', t.fullTitle);
   set('project-code', t.projectCode);
   set('what-title', t.whatTitle);
-set('what-text', t.whatText, true);
+  set('what-text', t.whatText, true);
   set('whatdo-title', t.whatdoTitle);
   set('whatdo-text', t.whatdoText);
   set('outcomes-title', t.outcomesTitle);
   set('outcomes-text', t.outcomesText);
   set('about-title', t.aboutTitle);
-  set('about-text', t.aboutText, true);
+  set('about-text', t.aboutText);
   set('about-text2', t.aboutText2);
 
+  set('team-heading', t.teamHeading);
   set('team-members', t.teamMembers);
   set('team-members-text', t.teamMembersText);
 
   set('pubs-heading', t.pubsHeading);
-  set('pubs-journal', t.pubsJournal);
-  set('pubs-journal-text', t.pubsJournalText);
-  set('pubs-books', t.pubsBooks);
-  set('pubs-books-text', t.pubsBooksText);
-  set('pubs-open', t.pubsOpen);
-  set('pubs-open-text', t.pubsOpenText);
+  set('pubs-screens-link', t.pubsScreensLabel);
 
   set('thesis-heading', t.thesisHeading);
   set('thesis-phd', t.thesisPhd);
@@ -849,24 +717,17 @@ set('what-text', t.whatText, true);
   set('contact-address', t.contactAddress);
   set('contact-address-text', t.contactAddressText, true);
   set('footer-text', t.footer);
-set('pubs-screens-link', t.pubsScreensLabel);
+
   set('diss-heading', t.dissHeading);
   set('diss-pubs-heading', t.dissSubPubs);
   set('diss-conf-heading', t.dissSubConf);
   set('diss-conf-screens-heading', t.dissConfScreens, true);
   set('diss-pubs-2026', t.dissPubs2026);
   set('diss-pubs-2025', t.dissPubs2025);
-  set('diss-pubs-2024', t.dissPubs2024);
-  set('diss-pubs-2023', t.dissPubs2023);
-  set('diss-pubs-2022', t.dissPubs2022);
-  set('diss-pubs-2021', t.dissPubs2021);
-  set('diss-pubs-past', t.dissPubsPast);
   set('diss-conf-2024', t.dissConf2024);
   set('diss-conf-2023', t.dissConf2023);
-  set('diss-conf-2022', t.dissConf2022);
-  set('diss-conf-2021', t.dissConf2021);
-  set('diss-conf-past', t.dissConfPast);
 }
 </script>
+
 </body>
 </html>
