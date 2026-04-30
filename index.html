@@ -298,7 +298,7 @@
   <section id="publications" class="section">
     <h2 id="pubs-heading">PUBLICATIONS</h2>
     <p style="margin-bottom:1.8rem;font-size:0.95rem;color:var(--mid);">
-      <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;font-weight:600;' id="pubs-screens-link">LGBTIQ+ Screens Publications</a>
+      <span id="pubs-screen-intro">Related publications from</span> <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;font-weight:600;'>LGBTIQ+ Screens</a>
     </p>
 
     <div class="card">
@@ -476,7 +476,7 @@ const T = {
     teamMembers: "Members",
     teamMembersText: "[Add team members]",
     pubsHeading: "PUBLICATIONS",
-    pubsScreensLabel: "LGBTIQ+ Screens Publications",
+    pubsScreenIntro: "Related publications from",
     pubs2026: "2026", pubs2025: "2025", pubs2024: "2024", pubs2023: "2023",
     thesisHeading: "THESIS",
     thesisPhd: "Doctoral dissertations",
@@ -535,7 +535,7 @@ const T = {
     teamMembers: "Membres",
     teamMembersText: "[Afegeix membres de l'equip]",
     pubsHeading: "PUBLICACIONS",
-    pubsScreensLabel: "Publicacions de LGBTIQ+ Screens",
+    pubsScreenIntro: "Publicacions relacionades de",
     pubs2026: "2026", pubs2025: "2025", pubs2024: "2024", pubs2023: "2023",
     thesisHeading: "TESIS",
     thesisPhd: "Tesis doctorals",
@@ -570,7 +570,7 @@ const T = {
     dissHeading: "DIFUSIÓ",
     dissSubPubs: "Publicacions",
     dissSubConf: "Ponències en congressos",
-    dissConfScreens: "Ponències en congressos de <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a>",
+    dissConfScreens: "<a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a> Ponències en congressos",
     dissPubs2026: "2026", dissPubs2025: "2025",
     dissConf2024: "2024", dissConf2023: "2023",
   },
@@ -594,7 +594,7 @@ const T = {
     teamMembers: "Miembros",
     teamMembersText: "[Añade miembros del equipo]",
     pubsHeading: "PUBLICACIONES",
-    pubsScreensLabel: "Publicaciones de LGBTIQ+ Screens",
+    pubsScreenIntro: "Publicaciones relacionadas de",
     pubs2026: "2026", pubs2025: "2025", pubs2024: "2024", pubs2023: "2023",
     thesisHeading: "TESIS",
     thesisPhd: "Tesis doctorales",
@@ -629,7 +629,7 @@ const T = {
     dissHeading: "DIFUSIÓN",
     dissSubPubs: "Publicaciones",
     dissSubConf: "Ponencias en congresos",
-    dissConfScreens: "Ponencias en congresos de <a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a>",
+    dissConfScreens: "<a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a> Ponencias en congresos",
     dissPubs2026: "2026", dissPubs2025: "2025",
     dissConf2024: "2024", dissConf2023: "2023",
   }
@@ -682,7 +682,7 @@ function setLang(lang) {
   set('team-members-text', t.teamMembersText);
 
   set('pubs-heading', t.pubsHeading);
-  set('pubs-screens-link', t.pubsScreensLabel);
+  set('pubs-screen-intro', t.pubsScreenIntro);
 
   set('thesis-heading', t.thesisHeading);
   set('thesis-phd', t.thesisPhd);
