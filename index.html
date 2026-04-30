@@ -355,7 +355,7 @@
     <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--dark);border-left:4px solid var(--purple-mid);padding-left:1rem;margin-bottom:1.2rem;margin-top:2rem;" id="diss-conf-heading">Conference Lectures</h3>
 
     <div class="card">
-      <h3 id="diss-conf-screens-heading"><a href="https://www.lgbtiq-screens.org/home-en" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">LGBTIQ+ Screens</a> Conference Papers</h3>
+      <h3 id="diss-conf-screens-heading"><span id="diss-conf-intro">Conference presentations from</span> <a href="https://www.lgbtiq-screens.org/home-en" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">LGBTIQ+ Screens</a></h3>
 
       <h3 id="diss-conf-2024" style="margin-top:1rem;">2024</h3>
       <p id="diss-conf-2024-text">
@@ -511,7 +511,7 @@ const T = {
     dissHeading: "DISSEMINATION",
     dissSubPubs: "Publications",
     dissSubConf: "Conference Lectures",
-    dissConfScreens: "<a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a> Conference Papers",
+    dissConfIntro: "Conference presentations from",
     dissPubs2026: "2026", dissPubs2025: "2025",
     dissConf2024: "2024", dissConf2023: "2023",
   },
@@ -570,7 +570,7 @@ const T = {
     dissHeading: "DIFUSIÓ",
     dissSubPubs: "Publicacions",
     dissSubConf: "Ponències en congressos",
-    dissConfScreens: "<a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a> Ponències en congressos",
+    dissConfIntro: "Ponències de",
     dissPubs2026: "2026", dissPubs2025: "2025",
     dissConf2024: "2024", dissConf2023: "2023",
   },
@@ -629,7 +629,7 @@ const T = {
     dissHeading: "DIFUSIÓN",
     dissSubPubs: "Publicaciones",
     dissSubConf: "Ponencias en congresos",
-    dissConfScreens: "<a href='https://www.lgbtiq-screens.org/home-en' target='_blank' rel='noopener noreferrer' style='color:var(--purple);text-decoration:underline;text-underline-offset:2px;'>LGBTIQ+ Screens</a> Ponencias en congresos",
+    dissConfIntro: "Ponencias de",
     dissPubs2026: "2026", dissPubs2025: "2025",
     dissConf2024: "2024", dissConf2023: "2023",
   }
@@ -721,7 +721,7 @@ function setLang(lang) {
   set('diss-heading', t.dissHeading);
   set('diss-pubs-heading', t.dissSubPubs);
   set('diss-conf-heading', t.dissSubConf);
-  set('diss-conf-screens-heading', t.dissConfScreens, true);
+  set('diss-conf-intro', t.dissConfIntro);
   set('diss-pubs-2026', t.dissPubs2026);
   set('diss-pubs-2025', t.dissPubs2025);
   set('diss-conf-2024', t.dissConf2024);
